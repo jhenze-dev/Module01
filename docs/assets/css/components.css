@@ -1,0 +1,229 @@
+/* =========================================================
+   COMPONENTS
+   Herbruikbare onderwijscomponenten
+
+   Algemene typografie komt uit style.css.
+   Componentlabels mogen bewust compacter zijn.
+   ========================================================= */
+
+
+/* =========================================================
+   UNDERSTANDING
+   ========================================================= */
+
+.understanding {
+  max-width: 760px;
+
+  margin: 16px 0;
+  padding: 12px 14px;
+
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-left: 3px solid var(--md-primary-fg-color);
+
+  background: var(--md-default-bg-color);
+}
+
+
+/* ---------------------------------------------------------
+   Componentlabel
+
+   Bewust kleiner dan gewone tekst:
+   dit is een label, geen inhoudelijke H3.
+   --------------------------------------------------------- */
+
+.understanding h3 {
+  margin: 0 0 8px;
+  padding: 0;
+
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 16px;
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: var(--md-primary-fg-color);
+}
+
+
+/* ---------------------------------------------------------
+   Items
+   --------------------------------------------------------- */
+
+.understanding-item {
+  padding: 8px 0;
+}
+
+.understanding-item + .understanding-item {
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+
+/* ---------------------------------------------------------
+   Inhoud
+
+   Gewone paginatekst:
+   16px / 24px / 400
+   --------------------------------------------------------- */
+
+.understanding-item p {
+  margin: 0 0 4px;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.understanding-item p:last-child {
+  margin-bottom: 0;
+}
+
+
+.understanding-item strong {
+  font-weight: 700;
+
+  color: rgb(33, 37, 41);
+}
+
+
+.understanding-item a {
+  color: var(--md-primary-fg-color);
+
+  text-decoration: none;
+}
+
+.understanding-item a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.understanding-item a:focus-visible {
+  outline: 2px solid var(--md-primary-fg-color);
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   LEERDOELEN
+   ========================================================= */
+
+.learning-goals {
+  max-width: 760px;
+
+  margin: 16px 0;
+  padding: 12px 14px;
+
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+
+/* ---------------------------------------------------------
+   Domeinlabel
+
+   Bewust kleiner dan gewone tekst.
+   --------------------------------------------------------- */
+
+.learning-goals__domain {
+  margin: 0 0 6px;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: var(--md-default-fg-color--light);
+}
+
+
+/* ---------------------------------------------------------
+   Inhoud
+   --------------------------------------------------------- */
+
+.learning-goals p {
+  margin: 0 0 8px;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+
+.learning-goals ul {
+  margin: 4px 0 0;
+  padding-left: 1.5rem;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+
+.learning-goals li {
+  margin-bottom: 2px;
+
+  line-height: 24px;
+}
+
+.learning-goals li:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   TEST / CHECK
+   ========================================================= */
+
+.solution-test {
+  max-width: 760px;
+
+  margin: 16px 0;
+  padding: 10px 12px;
+
+  border-left: 2px solid var(--md-default-fg-color--light);
+
+  background: var(--md-default-fg-color--lightest);
+}
+
+
+/* ---------------------------------------------------------
+   Inhoud
+   --------------------------------------------------------- */
+
+.solution-test p {
+  margin: 0;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+
+   Alleen layout verandert.
+   De inhoud blijft 16px / 24px.
+   ========================================================= */
+
+@media screen and (max-width: 800px) {
+
+  .understanding,
+  .learning-goals,
+  .solution-test {
+    max-width: 100%;
+  }
+
+  .understanding,
+  .learning-goals {
+    padding: 10px 12px;
+  }
+}

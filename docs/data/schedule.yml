@@ -1,0 +1,14 @@
+weeks:
+
+  3:
+    title: "Slimme keuzes"
+
+    pset:
+      deadline: "2026-09-25 23:59"
+
+    vakflex:
+      - date: "2026-09-22"
+        topic: "Flowcharts en beslisstructuren"
+
+      - date: "2026-09-24"
+        topic: "if, elif en else"

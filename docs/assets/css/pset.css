@@ -1,0 +1,205 @@
+/* =========================================================
+   PROBLEM SET
+   Alleen styling die specifiek is voor individuele PSETs.
+
+   Algemene typografie komt uit style.css.
+   ========================================================= */
+
+
+/* =========================================================
+   HINTS
+   Gebaseerd op CS50 details / summary:
+
+   details:
+   16px / 24px / 400
+
+   summary:
+   16px / 24px / 700
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   Hint container
+
+   Material-container verwijderen.
+   Typografie wordt geërfd uit .module-page / style.css.
+   --------------------------------------------------------- */
+
+.pset-page details.hint {
+  width: 100%;
+
+  margin: 0 0 16px !important;
+  padding: 0 !important;
+
+  border: none !important;
+  border-radius: 0 !important;
+
+  background: transparent !important;
+  box-shadow: none !important;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  color: inherit;
+}
+
+
+/* ---------------------------------------------------------
+   Hinttitel
+
+   Zelfde grootte als gewone tekst, maar bold.
+   --------------------------------------------------------- */
+
+.pset-page details.hint > summary {
+  margin: 0 !important;
+  padding: 0 0 0 1.2rem !important;
+
+  border: none !important;
+
+  background: transparent !important;
+  box-shadow: none !important;
+
+  font-family: inherit !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 24px !important;
+
+  color: inherit !important;
+
+  cursor: pointer;
+}
+
+
+/* ---------------------------------------------------------
+   Material hint-icoon verwijderen
+   --------------------------------------------------------- */
+
+.pset-page details.hint > summary::before {
+  display: none !important;
+}
+
+
+/* ---------------------------------------------------------
+   Bestaand Material-uitklappijltje links plaatsen
+
+   Voorlopig behouden we het bestaande pijltje.
+   --------------------------------------------------------- */
+
+.pset-page details.hint > summary::after {
+  right: auto !important;
+  left: 0 !important;
+}
+
+
+/* ---------------------------------------------------------
+   Normale tekst binnen geopende hint
+
+   Zelfde typografie als gewone paginatekst.
+   --------------------------------------------------------- */
+
+.pset-page details.hint > p {
+  width: 100%;
+
+  margin: 16px 0 !important;
+  padding: 0 !important;
+
+  font-family: inherit !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 24px !important;
+
+  color: inherit !important;
+}
+
+
+/* ---------------------------------------------------------
+   Lijsten binnen hints
+
+   Zelfde typografie als gewone lijsten.
+   --------------------------------------------------------- */
+
+.pset-page details.hint > ul,
+.pset-page details.hint > ol {
+  margin: 16px 0 !important;
+
+  font-family: inherit !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 24px !important;
+
+  color: inherit !important;
+}
+
+
+/* ---------------------------------------------------------
+   Inline code binnen hints
+
+   Niet opnieuw stylen:
+   komt uit style.css.
+   --------------------------------------------------------- */
+
+
+/* ---------------------------------------------------------
+   Geen Material focus-glow
+   --------------------------------------------------------- */
+
+.pset-page details.hint:focus,
+.pset-page details.hint:focus-within {
+  box-shadow: none !important;
+}
+
+.pset-page details.hint > summary:focus {
+  box-shadow: none !important;
+}
+
+
+/* =========================================================
+   UNDERSTANDING
+   ========================================================= */
+
+.pset-page .understanding-link {
+  display: inline-block;
+
+  margin-top: 0.15rem;
+}
+
+
+/* =========================================================
+   STARTCODE
+   Voor later gebruik
+   ========================================================= */
+
+.pset-page .starter-code {
+  width: 100%;
+
+  margin: 0.5rem 0 0.8rem;
+}
+
+
+/* =========================================================
+   DEMO
+   Voor later gebruik
+   ========================================================= */
+
+.pset-page .demo {
+  width: 100%;
+
+  margin: 0.5rem 0 0.8rem;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+
+   Geen kleinere PSET-typografie.
+   De 16px bodytekst blijft ook op smallere schermen behouden.
+   ========================================================= */
+
+@media screen and (max-width: 800px) {
+
+  .pset-page details.hint {
+    width: 100%;
+  }
+}

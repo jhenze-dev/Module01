@@ -1,0 +1,107 @@
+site_name: Module 01
+site_description: Computational Thinking met Python
+site_author: Jack Henze
+
+# Aanpassen als het naar de ONC github repo gaat
+site_url: https://jhenze-dev.github.io/Module01/
+
+theme:
+  name: material
+  language: nl
+  custom_dir: overrides
+
+  features:
+    # - navigation.instant
+    - navigation.tracking
+    - toc.follow
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
+plugins:
+  - search
+  - macros:
+      include_yaml:
+        - schedule: docs/data/schedule.yml
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+
+  - toc:
+      permalink: false
+
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+  # Maakt --8<-- "week03/tset03.md" mogelijk
+  - pymdownx.snippets:
+      base_path:
+        - docs
+      check_paths: true
+
+  - pymdownx.details
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+
+  - pymdownx.inlinehilite
+
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  - pymdownx.keys
+
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Start:
+      - Module 01: index.md
+      - Over deze module: start/index.md
+      - Software: start/software.md
+      - Werkwijze: start/werkwijze.md
+      - Portfolio: start/portfolio.md
+
+  - Module:
+      - Week 0 — Denken als een computer: weeks/00/index.md
+      - Week 1 — Mens en machine: weeks/01/index.md
+      - Week 2 — Werken met informatie: weeks/02/index.md
+      - Week 3 — Slimme keuzes: weeks/03/index.md
+      - Week 4 — Blijven herhalen: weeks/04/index.md
+      - Week 5 — Gegevens verzamelen: weeks/05/index.md
+      - Week 6 — Patronen ontdekken: weeks/06/index.md
+      - Week 7 — Informatie interpreteren: weeks/07/index.md
+      - Week 8 — Slimmer structureren: weeks/08/index.md
+      - Week 9 — Modulaire systemen: weeks/09/index.md
+      - Week 10 — Herinneringen beheren: weeks/10/index.md
+      - Week 11 — Schoolexamen: weeks/11/index.md
+
+  - Kennisbank:
+      - Computational Thinking: concepts/computational-thinking.md
+      - Visual First: concepts/visual-first.md
+      - Python: concepts/python.md
+      - Git: concepts/git.md
+
+extra_css:
+  - assets/css/navigation.css
+  - assets/css/style.css
+  - assets/css/badges.css
+  - assets/css/homepage.css
+  - assets/css/week.css
+  - assets/css/tset.css
+  - assets/css/pset-index.css
+  - assets/css/pset.css
+  - assets/css/components.css
+  - assets/css/video.css
+  
+extra_javascript:
+  - https://unpkg.com/mermaid@11/dist/mermaid.min.js
