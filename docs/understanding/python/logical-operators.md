@@ -3,6 +3,6 @@ title: Logical Operators
 template: understanding.html
 ---
 
-# Conditionals
+# Logical Operators
 
 --8<-- "understanding/_content/logical-operators.md"
