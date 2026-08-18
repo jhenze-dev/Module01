@@ -42,7 +42,7 @@ flowchart TD
     E --> F
 ```
 
-[Meer over flowcharts](../../understanding/visual-first/flowcharts.md)
+[Meer over flowcharts](../../understanding/visual-first/flowcharts-decisions.md)
 
 ## Test jullie oplossing
 
