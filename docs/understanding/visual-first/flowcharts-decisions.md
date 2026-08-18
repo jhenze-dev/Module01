@@ -7,4 +7,4 @@ template: understanding.html
 
 --8<-- "understanding/_content/flowcharts.md"
 
---8<-- "understanding/_content/flowcharts-decisions.md"
+--8<-- "understanding/_content/flowchart-decisions.md"
