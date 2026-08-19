@@ -43,9 +43,9 @@ Een computer kan alleen berekeningen uitvoeren wanneer informatie uit de werkeli
 
 ## Understanding
 
---8<-- "understanding/_content/variables.md"
+--8<-- "understanding/_content/python/variables.md"
 
---8<-- "understanding/_content/arithmetic-expressions.md"
+--8<-- "understanding/_content/python/arithmetic-expressions.md"
 
 [Meer over IPO-diagrammen](../../understanding/visual-first/ipo.md)
 

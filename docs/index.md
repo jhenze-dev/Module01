@@ -65,8 +65,8 @@ Deze route helpt je om iedere week te weten waar je begint en waar je naartoe we
 
 Lees eerst hoe de module werkt en controleer of je de benodigde software hebt.
 
-- [Bekijk de werkwijze](start/werkwijze.md)
-- [Controleer de benodigde software](start/software.md)
-- [Lees hoe je portfolio wordt opgebouwd](start/portfolio.md)
+- [Bekijk de werkwijze](guide/werkwijze.md)
+- [Controleer de benodigde software](guide/software.md)
+- [Lees hoe je portfolio wordt opgebouwd](guide/portfolio.md)
 
 Daarna kun je beginnen bij **Week 0** in de navigatie.

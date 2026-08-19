@@ -10,7 +10,7 @@ inhoud van een Python Understanding.
 
 Dit bestand staat in:
 
-    docs/understanding/_content/[ONDERWERP].md
+    docs/understanding/_content/python/[BESTAND].md
 
 Het bevat de daadwerkelijke, herbruikbare onderwijsinhoud
 over een Python-concept of een logisch samenhangend cluster
@@ -24,7 +24,7 @@ Dezelfde content kan worden gebruikt:
 
 2. als include binnen bijvoorbeeld een Problem Set:
 
-   --8<-- "understanding/_content/[ONDERWERP].md"
+   --8<-- "understanding/_content/python/[BESTAND].md"
 
 Daarom bevat dit bestand GEEN:
 
@@ -800,7 +800,7 @@ De content begint rechtstreeks met de conceptuele uitleg.
 
 
 ============================================================
-30. GEEN PAGINATITEL IN _CONTENT
+30. EERSTE H3 EN GEEN PAGINATITEL IN _CONTENT
 ============================================================
 
 Gebruik in `_content` geen H1:
@@ -809,20 +809,53 @@ Gebruik in `_content` geen H1:
 
 De zelfstandige wrapper bevat de paginatitel.
 
-Binnen `_content` beginnen inhoudelijke onderdelen waar nodig
-met:
+Ieder `_content`-bestand begint direct met een inhoudelijke H3:
 
     ### [ONDERWERP]
 
-Dit sluit aan op het gerealiseerde ontwerp en maakt de content
-ook geschikt om binnen andere pagina's te includen.
+Deze eerste H3 blijft ALTIJD in `_content` staan.
+
+De zelfstandige Understanding-wrapper plaatst direct vóór de
+include de marker:
+
+    <div class="understanding-article-start"></div>
+
+De Understanding-CSS verbergt daardoor alleen op de
+zelfstandige Understanding-pagina de eerste H3.
+
+Wanneer dezelfde `_content` in een PSET, TSET, ander document
+of samengestelde PDF wordt opgenomen, blijft die eerste H3
+juist zichtbaar en geeft zij het ingevoegde kennisdeel een
+duidelijke inhoudelijke kop.
+
+Plaats de marker `understanding-article-start` NOOIT in
+`_content`; die hoort uitsluitend in de wrapper.
 
 Gebruik `####` voor een logisch subonderdeel binnen zo'n
 sectie wanneer dat nodig is.
 
 
 ============================================================
-31. LEESBAARHEID
+31. BESTANDSENCODING
+============================================================
+
+Sla alle `_content`-bestanden op als:
+
+    UTF-8 zonder BOM
+
+Dit is een technische ontwerpregel.
+
+Een UTF-8 BOM vóór de eerste `###` kan ervoor zorgen dat
+Markdown die eerste regel niet als heading herkent. Daardoor
+kan bijvoorbeeld letterlijk `### Decisions` of `### elif`
+op de pagina verschijnen.
+
+Controleer daarom bij automatisch genereren of herschrijven van
+bestanden expliciet dat geen BOM wordt toegevoegd.
+
+
+============================================================
+32. LEESBAARHEID
 ============================================================
 
 Schrijf voor leerlingen die het concept nog niet beheersen.
@@ -849,7 +882,7 @@ zwaar te worden.
 
 
 ============================================================
-32. REFERENTIE-ONTWERP
+33. REFERENTIE-ONTWERP
 ============================================================
 
 De gerealiseerde Python-content vormt de referentie voor
@@ -1054,7 +1087,10 @@ STRUCTUUR
 --------
 [ ] Staat er geen frontmatter in _content?
 [ ] Staat er geen H1 in _content?
-[ ] Begint inhoud waar nodig met ###?
+[ ] Is de eerste H3 in _content behouden en niet naar de wrapper verplaatst?
+[ ] Staat er geen `understanding-article-start` marker in _content?
+[ ] Is het bestand UTF-8 zonder BOM?
+[ ] Begint het bestand direct met een inhoudelijke H3 (`###`)?
 [ ] Zijn alleen inhoudelijk noodzakelijke tussenkoppen
     gebruikt?
 [ ] Is geen kunstmatig vast hoofdstukformat afgedwongen?
@@ -1085,6 +1121,7 @@ EINDCONTROLE
 [ ] Werken alle codevoorbeelden?
 [ ] Klopt eventuele uitvoer?
 [ ] Zijn tabellen alleen gebruikt waar ze meerwaarde hebben?
+[ ] Verwijst hergebruik naar `understanding/_content/python/[BESTAND].md`?
 [ ] Kan het bestand zonder aanpassing via een wrapper én via
     een andere pagina worden geïncludeerd?
 ============================================================

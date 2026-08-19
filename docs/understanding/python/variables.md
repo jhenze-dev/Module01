@@ -3,6 +3,12 @@ title: Variables
 template: understanding.html
 ---
 
-# Variables
+# Python *Variables*
 
---8<-- "understanding/_content/variables.md"
+<div class="understanding-article-start"></div>
+
+--8<-- "understanding/_content/python/variables.md"
+
+---
+
+[Terug naar Variables & Values](../index.md#variables-values) · [Variable Names →](variable-names.md)

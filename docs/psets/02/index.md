@@ -27,14 +27,14 @@ template: pset-index.html
 
 1. Werk je lokale repository bij met Git voordat je begint.  
    Commit en push tijdens het werken regelmatig, zodat in je Git-history zichtbaar wordt hoe je werk zich ontwikkelt.  
-   [Werken met Git](../../understanding/git/update.md)
+   [Werken met Git](../../guide/git-github.md)
 
 2. Maak één van de volgende versies:
     - [Deze versie van How Fast Is Forrest?](he-sure-is-fast-less.md), als je je minder vertrouwd voelt met de stof.
     - [Deze versie van How Fast Is Forrest?](he-sure-is-fast-more.md), als je je meer vertrouwd voelt met de stof.
 
 3. Werk **Portfolio 2** bij.  
-   [Werken aan je portfolio](../../understanding/portfolio/index.md)
+   [Werken aan je portfolio](../../guide/portfolio.md)
 
 
 ## Aanvullende uitleg en oefening

@@ -49,7 +49,21 @@ Doel:
 
 ## Understanding
 
---8<-- "understanding/_content/conditionals.md"
+--8<-- "understanding/_content/python/boolean-expressions.md"
+
+--8<-- "understanding/_content/python/comparison-operators.md"
+
+--8<-- "understanding/_content/python/conditions.md"
+
+--8<-- "understanding/_content/python/if.md"
+
+--8<-- "understanding/_content/python/else.md"
+
+--8<-- "understanding/_content/python/elif.md"
+
+--8<-- "understanding/_content/python/indentation.md"
+
+--8<-- "understanding/_content/python/branches.md"
 
 ## Opdracht
 
@@ -169,3 +183,4 @@ Controleer voordat je de Problem Set afrondt:
 - je laatste versie staat in Git.
 
 Werk daarna **Portfolio 3** bij.
+

@@ -3,6 +3,12 @@ title: Arithmetic Expressions
 template: understanding.html
 ---
 
-# Arithmetic Expressions
+# Python *Arithmetic Expressions*
 
---8<-- "understanding/_content/arithmetic-expressions.md"
+<div class="understanding-article-start"></div>
+
+--8<-- "understanding/_content/python/arithmetic-expressions.md"
+
+---
+
+[← Arithmetic Operators](arithmetic-operators.md) · [Terug naar Expressions](../index.md#expressions)

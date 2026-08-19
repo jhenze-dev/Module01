@@ -68,7 +68,9 @@ Doel:
 
 ## Understanding
 
---8<-- "understanding/_content/logical-operators.md"
+--8<-- "understanding/_content/python/and.md"
+
+--8<-- "understanding/_content/python/or.md"
 
 ## Opdracht
 
@@ -211,3 +213,4 @@ Controleer voordat je de Problem Set afrondt:
 - je laatste versie staat in Git.
 
 Werk daarna **Portfolio 3** bij.
+

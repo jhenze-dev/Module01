@@ -24,7 +24,7 @@ template: pset-index.html
 
 1. Werk je lokale repository bij met Git voordat je begint.  
    Commit en push tijdens het werken regelmatig, zodat in je Git-history zichtbaar wordt hoe je werk zich ontwikkelt.  
-   [Werken met Git](../../understanding/git/update.md)
+   [Werken met Git](../../guide/git-github.md)
 
 2. Maak één van de volgende versies:
     - [Deze versie van Jellybeans in a Jar](jellybeans-less.md), als je je minder vertrouwd voelt met de stof.
@@ -35,7 +35,7 @@ template: pset-index.html
     - [Deze versie van Rock Paper Scissors](rock-paper-scissors-more.md), als je je meer vertrouwd voelt met de stof.
 
 4. Werk **Portfolio 3** bij.  
-   [Werken aan je portfolio](../../understanding/portfolio/index.md)
+   [Werken aan je portfolio](../../guide/portfolio.md)
 
 ## Aanvullende uitleg en oefening
 
@@ -76,3 +76,4 @@ Tijdens de Vakflexuren kun je extra uitleg en ondersteuning krijgen.
 {{ moment.topic }}
 
 {% endfor %}
+

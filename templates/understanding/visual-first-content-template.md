@@ -10,7 +10,7 @@ van de inhoud van een Visual First Understanding.
 
 Dit bestand staat in:
 
-    docs/understanding/_content/[ONDERWERP].md
+    docs/understanding/_content/visual-first/[PAD]/[BESTAND].md
 
 Het bevat de daadwerkelijke, herbruikbare onderwijsinhoud
 over een Visual First-representatie.
@@ -626,7 +626,7 @@ De content begint direct inhoudelijk.
 
 
 ============================================================
-27. GEEN H1 IN _CONTENT
+27. EERSTE H3 EN GEEN H1 IN _CONTENT
 ============================================================
 
 Gebruik geen:
@@ -635,20 +635,54 @@ Gebruik geen:
 
 De wrapper bevat de paginatitel.
 
-Gebruik inhoudelijk waar nodig:
+Ieder `_content`-bestand begint direct met een inhoudelijke H3:
 
     ### [ONDERWERP]
 
-en voor een logisch subonderdeel:
+Deze eerste H3 blijft ALTIJD in `_content` staan.
+
+De zelfstandige Understanding-wrapper plaatst direct vóór de
+include de marker:
+
+    <div class="understanding-article-start"></div>
+
+De Understanding-CSS verbergt daardoor alleen op de
+zelfstandige Understanding-pagina de eerste H3.
+
+Wanneer dezelfde `_content` vanuit een TSET wordt gebruikt,
+in een PSET wordt opgenomen of later in een samengestelde PDF
+terechtkomt, blijft die eerste H3 zichtbaar en geeft zij het
+kennisdeel een duidelijke inhoudelijke kop.
+
+Plaats de marker `understanding-article-start` NOOIT in
+`_content`; die hoort uitsluitend in de wrapper.
+
+Gebruik voor een logisch subonderdeel:
 
     #### [SUBONDERDEEL]
 
-Dit maakt de content ook geschikt om binnen andere pagina's
-te includen.
+
+============================================================
+28. BESTANDSENCODING
+============================================================
+
+Sla alle `_content`-bestanden op als:
+
+    UTF-8 zonder BOM
+
+Dit is een technische ontwerpregel.
+
+Een UTF-8 BOM vóór de eerste `###` kan ervoor zorgen dat
+Markdown die eerste regel niet als heading herkent. Daardoor
+kan bijvoorbeeld letterlijk `### Decisions` op de pagina
+verschijnen.
+
+Controleer daarom bij automatisch genereren of herschrijven van
+bestanden expliciet dat geen BOM wordt toegevoegd.
 
 
 ============================================================
-28. LEESBAARHEID
+29. LEESBAARHEID
 ============================================================
 
 Visual First Understanding moet visueel én tekstueel rustig
@@ -672,7 +706,7 @@ Vermijd:
 
 
 ============================================================
-29. REFERENTIE-ONTWERP
+30. REFERENTIE-ONTWERP
 ============================================================
 
 De gerealiseerde flowchart-content vormt het eerste
@@ -911,6 +945,10 @@ STRUCTUUR
 --------
 [ ] Staat er geen frontmatter in _content?
 [ ] Staat er geen H1?
+[ ] Begint het bestand direct met een inhoudelijke H3 (`###`)?
+[ ] Is de eerste H3 in _content behouden en niet naar de wrapper verplaatst?
+[ ] Staat er geen `understanding-article-start` marker in _content?
+[ ] Is het bestand UTF-8 zonder BOM?
 [ ] Zijn alleen inhoudelijk noodzakelijke headings gebruikt?
 [ ] Zijn geen leerdoelen toegevoegd?
 [ ] Zijn geen hints toegevoegd?
@@ -939,6 +977,7 @@ EINDCONTROLE
 [ ] Zijn alle placeholders verwijderd?
 [ ] Werken alle diagrammen?
 [ ] Werken eventuele links?
+[ ] Verwijst hergebruik naar `understanding/_content/visual-first/[PAD]/[BESTAND].md`?
 [ ] Kan het bestand zowel zelfstandig via een wrapper als
     waar nodig via een include worden gebruikt?
 [ ] Helpt de content leerlingen de representatie zelfstandig

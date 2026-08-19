@@ -64,12 +64,13 @@ markdown_extensions:
       custom_checkbox: true
 
 nav:
-  - Start:
+  - Guide:
       - Module 01: index.md
-      - Over deze module: start/index.md
-      - Software: start/software.md
-      - Werkwijze: start/werkwijze.md
-      - Portfolio: start/portfolio.md
+      - Over deze module: guide/index.md
+      - Software: guide/software.md
+      - Werkwijze: guide/werkwijze.md
+      - Portfolio: guide/portfolio.md
+      - Git & GitHub: guide/git-github.md
 
   - Module:
       - Week 0 — Denken als een computer: weeks/00/index.md
@@ -85,15 +86,13 @@ nav:
       - Week 10 — Herinneringen beheren: weeks/10/index.md
       - Week 11 — Schoolexamen: weeks/11/index.md
 
-  - Kennisbank:
-      - Computational Thinking: concepts/computational-thinking.md
-      - Visual First: concepts/visual-first.md
-      - Python: concepts/python.md
-      - Git: concepts/git.md
+  - Understanding: understanding/index.md
 
 extra_css:
   - assets/css/navigation.css
   - assets/css/style.css
+  - assets/css/details.css
+  - assets/css/understanding.css
   - assets/css/badges.css
   - assets/css/homepage.css
   - assets/css/week.css

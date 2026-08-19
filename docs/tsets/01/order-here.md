@@ -41,7 +41,7 @@ flowchart TD
     D --> E([Einde])
 ```
 
-[Meer over flowcharts](../../understanding/visual-first/flowcharts.md)
+[Meer over flowcharts](../../understanding/visual-first/flowcharts/basics.md)
 
 
 ## Test jullie oplossing

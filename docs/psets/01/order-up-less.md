@@ -37,7 +37,7 @@ Een klant moet zonder hulp van een medewerker kunnen begrijpen wat het systeem v
 
 ## Understanding
 
---8<-- "understanding/_content/sequential-programs.md"
+--8<-- "understanding/_content/python/sequential-execution.md"
 
 
 ## Opdracht

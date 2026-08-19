@@ -39,7 +39,7 @@ De bestelzuil moet steeds duidelijk maken wie aan de beurt is en iedere persoon 
 
 ## Understanding
 
---8<-- "understanding/_content/sequential-programs.md"
+--8<-- "understanding/_content/python/sequential-execution.md"
 
 
 ## Opdracht

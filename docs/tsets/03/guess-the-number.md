@@ -42,7 +42,7 @@ flowchart TD
     E --> F
 ```
 
-[Meer over flowcharts](../../understanding/visual-first/flowcharts-decisions.md)
+[Meer over flowcharts](../../understanding/visual-first/flowcharts/decisions-branches.md)
 
 ## Test jullie oplossing
 
@@ -51,3 +51,4 @@ Geef jullie flowchart aan een andere groep.
 Laat hen verschillende situaties door jullie beslissysteem doorlopen.
 
 **Komt het systeem in iedere situatie tot de juiste beslissing?**
+

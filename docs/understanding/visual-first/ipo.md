@@ -1,8 +1,14 @@
 ---
-title: IPO-diagram
+title: IPO Diagram
 template: understanding.html
 ---
 
-# IPO-diagram
+# Visual First *IPO Diagram*
 
---8<-- "understanding/_content/ipo.md"
+<div class="understanding-article-start"></div>
+
+--8<-- "understanding/_content/visual-first/ipo.md"
+
+---
+
+[Terug naar IPO Diagram](../index.md#ipo-diagram)
