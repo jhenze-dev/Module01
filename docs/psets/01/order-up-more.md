@@ -1,6 +1,8 @@
 ---
-title: Order Up! — meer vertrouwd
+title: Order Up!
 template: pset.html
+week: 1
+level: more
 ---
 
 # Order Up!

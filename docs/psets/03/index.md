@@ -1,6 +1,7 @@
 ---
 title: Problem Set 3
 template: pset-index.html
+week: 3
 ---
 
 # Problem Set 3

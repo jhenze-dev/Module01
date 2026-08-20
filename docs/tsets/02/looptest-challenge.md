@@ -1,6 +1,7 @@
 ---
-title: Thinking Set 2 — Looptest Challenge
+title: Looptest Challenge
 template: tset.html
+week: 2
 ---
 
 # Thinking Set 2 *Looptest Challenge*

@@ -1,6 +1,8 @@
 ---
-title: Rock Paper Scissors Lizard Spock — meer vertrouwd
+title: Rock Paper Scissors Lizard Spock
 template: pset.html
+week: 3
+level: more
 ---
 
 # Rock Paper Scissors Lizard Spock

@@ -1,6 +1,10 @@
 ---
-title: Thinking Set [NUMMER] — [TITEL]
+title: [TITEL]
 template: tset.html
+week: [NUMMER]
+
+understanding:
+  - [UNDERSTANDING-ID]
 ---
 
 # Thinking Set [NUMMER] *[TITEL]*
@@ -28,6 +32,35 @@ beredeneerd, ontworpen en gerepresenteerd moet worden.
 
 De TSET is daarom nadrukkelijk GEEN plaats voor uitgebreide
 instructie vooraf.
+
+
+
+============================================================
+0. METADATA-CONTRACT
+============================================================
+
+Gebruik in de frontmatter:
+
+    title: [TITEL]
+    template: tset.html
+    week: [NUMMER]
+
+    understanding:
+      - [UNDERSTANDING-ID]
+
+`title` bevat alleen de inhoudelijke titel van de Thinking Set.
+Zet `Thinking Set [NUMMER]` NIET in `title`.
+
+`template: tset.html` bepaalt het documenttype en `week`
+bepaalt het nummer. De presentatielaag kan daaruit zichtbaar
+`Thinking Set [NUMMER]` combineren met de inhoudelijke titel.
+
+`understanding` bevat alleen de stabiele IDs van eventuele
+Understanding-onderdelen waarnaar vanuit de TSET wordt
+verwezen. Laat het veld weg wanneer geen verwijzing nodig is.
+
+Bij een TSET blijft gelden dat uitgebreide Understanding niet
+vooraf de thinking task mag oplossen of voorsorteren.
 
 
 ============================================================

@@ -1,6 +1,7 @@
 ---
-title: Week 3 — Slimme keuzes
+title: Slimme keuzes
 template: week.html
+week: 3
 ---
 
 # Week 3 *Slimme keuzes*

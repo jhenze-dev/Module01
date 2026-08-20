@@ -1,6 +1,11 @@
 ---
-title: [TITEL] — [minder vertrouwd / meer vertrouwd]
+title: [TITEL]
 template: pset.html
+week: [NUMMER]
+level: [less / more]
+
+understanding:
+  - [UNDERSTANDING-ID]
 ---
 
 # [Titel Problem Set]
@@ -19,6 +24,47 @@ wordt ontworpen.
 
 De onderwijsinhoud wordt NIET door deze template bepaald.
 Daarvoor is het moduleframework leidend.
+
+
+
+============================================================
+0. METADATA-CONTRACT
+============================================================
+
+Gebruik in de frontmatter:
+
+    title: [TITEL]
+    template: pset.html
+    week: [NUMMER]
+    level: [less / more]
+
+    understanding:
+      - [UNDERSTANDING-ID]
+
+`title` bevat alleen de inhoudelijke titel van de opdracht.
+Zet `minder vertrouwd` of `meer vertrouwd` NIET in `title`.
+
+`week` koppelt de PSET structureel aan de juiste week.
+
+`level` bevat uitsluitend:
+
+    less
+
+of:
+
+    more
+
+De leerlingzichtbare formulering `minder vertrouwd` /
+`meer vertrouwd` blijft presentatie en wordt niet in `title`
+opgeslagen.
+
+`understanding` bevat de stabiele IDs van de Understanding-
+onderdelen die deze PSET gebruikt. Laat het veld weg wanneer
+geen Understanding-verwijzingen nodig zijn.
+
+De PDF-renderpipeline gebruikt deze IDs later voor inline
+Understanding of voor paginaverwijzingen, afhankelijk van de
+render-mode.
 
 
 ============================================================

@@ -1,6 +1,10 @@
 ---
-title: Thinking Set 3 — Guess the Number
+title: Guess the Number
 template: tset.html
+week: 3
+
+understanding:
+  - visual-first.flowcharts-decisions-branches
 ---
 
 # Thinking Set 3 *Guess the Number*

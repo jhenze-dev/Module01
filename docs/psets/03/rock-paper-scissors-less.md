@@ -1,6 +1,8 @@
 ---
-title: Rock Paper Scissors — minder vertrouwd
+title: Rock Paper Scissors
 template: pset.html
+week: 3
+level: less
 ---
 
 # Rock Paper Scissors

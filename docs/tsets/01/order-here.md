@@ -1,6 +1,7 @@
 ---
-title: Thinking Set 1 — Order Here!
+title: Order Here!
 template: tset.html
+week: 1
 ---
 
 # Thinking Set 1 *Order Here!*

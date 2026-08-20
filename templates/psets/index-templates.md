@@ -1,6 +1,7 @@
 ---
 title: Problem Set [NUMMER]
 template: pset-index.html
+week: [NUMMER]
 ---
 
 # Problem Set [NUMMER]
@@ -28,6 +29,25 @@ De pagina maakt voor de leerling zichtbaar:
 - wanneer extra ondersteuning beschikbaar is.
 
 De PSET-index bepaalt NIET zelfstandig de onderwijsinhoud.
+
+
+
+============================================================
+0. METADATA-CONTRACT
+============================================================
+
+Gebruik in de frontmatter:
+
+    title: Problem Set [NUMMER]
+    template: pset-index.html
+    week: [NUMMER]
+
+`title` is hier bewust de volledige HTML-paginatitel.
+
+`week` is daarnaast de structurele metadata waarmee web- en
+PDF-rendering de PSET-index aan de juiste week kunnen koppelen.
+
+Het weeknummer in `title` en `week` moet altijd gelijk zijn.
 
 
 ============================================================

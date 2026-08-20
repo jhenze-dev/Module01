@@ -1,6 +1,18 @@
 ---
-title: Jellybeans in a Jar — minder vertrouwd
+title: Jellybeans in a Jar
 template: pset.html
+week: 3
+level: less
+
+understanding:
+  - python.boolean-expressions
+  - python.comparison-operators
+  - python.conditions
+  - python.if
+  - python.else
+  - python.elif
+  - python.indentation
+  - python.branches
 ---
 
 # Jellybeans in a Jar

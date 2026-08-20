@@ -1,6 +1,7 @@
 ﻿---
-title: Week 1 — Mens en Machine
+title: Mens en Machine
 template: week.html
+week: 1
 ---
 
 # Week 1 *Mens en Machine*

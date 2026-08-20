@@ -1,6 +1,7 @@
 ﻿---
-title: Week 2 — Werken met Informatie
+title: Werken met Informatie
 template: week.html
+week: 2
 ---
 
 # Week 2 *Werken met Informatie*

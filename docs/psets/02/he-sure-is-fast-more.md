@@ -1,6 +1,8 @@
 ---
-title: How Fast Is Forrest? — meer vertrouwd
+title: How Fast Is Forrest?
 template: pset.html
+week: 2
+level: more
 ---
 
 # How Fast Is Forrest?

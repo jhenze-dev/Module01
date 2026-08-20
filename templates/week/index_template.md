@@ -1,6 +1,7 @@
 ---
-title: Week [NUMMER] — [TITEL]
+title: [TITEL]
 template: week.html
+week: [NUMMER]
 ---
 
 # Week [NUMMER] *[TITEL]*
@@ -29,6 +30,31 @@ De week-index is GEEN overzichtspagina waarop alle theorie,
 leerdoelen, planning of opdrachten opnieuw worden uitgelegd.
 
 De inhoudelijke bron blijft het MODULEFRAMEWORK.
+
+
+
+============================================================
+0. METADATA-CONTRACT
+============================================================
+
+Gebruik in de frontmatter:
+
+    title: [TITEL]
+    template: week.html
+    week: [NUMMER]
+
+`title` bevat alleen de inhoudelijke weektitel, bijvoorbeeld:
+
+    title: Slimme keuzes
+
+Zet `Week [NUMMER] —` NIET in `title`.
+
+`template: week.html` bepaalt het documenttype en `week`
+bepaalt het weeknummer. De presentatielaag kan daaruit
+zichtbaar bijvoorbeeld `Week 3 — Slimme keuzes` maken.
+
+Deze scheiding maakt dezelfde metadata bruikbaar voor zowel
+de webpagina als de PDF-renderpipeline.
 
 
 ============================================================
