@@ -20,3 +20,11 @@ Thumbs.db
 
 # Generated file tree
 filetree*.txt
+
+# Generated / local output
+build/
+node_modules/
+
+# Local backups / repair copies
+backup/
+docs-before-encoding-repair/

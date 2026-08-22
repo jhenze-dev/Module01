@@ -11,6 +11,8 @@ Een flowchart wordt van stap naar stap gevolgd.
 Pijlen geven aan welke stap daarna wordt uitgevoerd. Dit noemen we de **flow**.
 
 ```mermaid
+%% id: flowcharts-basics-01
+
 flowchart TD
     A[Stap] --> B[Volgende stap]
 ```
@@ -20,6 +22,8 @@ flowchart TD
 Een flowchart heeft een duidelijk begin en einde.
 
 ```mermaid
+%% id: flowcharts-basics-02
+
 flowchart TD
     A([Start]) --> B([End])
 ```
@@ -31,6 +35,8 @@ De afgeronde vorm wordt gebruikt voor het begin en einde van een algoritme.
 Wanneer een programma informatie ontvangt of toont, gebruik je een **input/output**-symbool.
 
 ```mermaid
+%% id: flowcharts-basics-03
+
 flowchart TD
     A[/Vraag om input/] --> B[/Toon output/]
 ```
@@ -44,6 +50,8 @@ flowchart TD
 Een bewerking of instructie wordt weergegeven met een **process**.
 
 ```mermaid
+%% id: flowcharts-basics-04
+
 flowchart TD
     A[Voer een bewerking uit]
 ```

@@ -287,6 +287,60 @@ Badges
 ### Inleveren
 
 
+
+<!--
+============================================================
+CONTENT-ELEMENTEN — OPTIONEEL
+============================================================
+
+Binnen de bestaande secties mogen functionele content-elementen
+worden toegevoegd wanneer het PSET-ontwerp daar aanleiding toe geeft.
+
+Denk bijvoorbeeld aan:
+
+- codeblokken;
+- tabellen;
+- afbeeldingen;
+- Mermaid-diagrammen;
+- andere representaties die binnen de bestaande infrastructuur
+  worden ondersteund.
+
+Zo'n element maakt GEEN nieuwe vaste sectie van de PSET.
+
+Gebruik een content-element alleen wanneer het inhoudelijk nodig is
+op de plek waar het staat. Voeg dus niet automatisch een diagram,
+afbeelding of tabel toe omdat de template die mogelijkheid biedt.
+
+MERMAID
+
+Wanneer Mermaid wordt gebruikt, bevat ieder Mermaid-blok direct na
+de opening een stabiele ID:
+
+```mermaid
+%% id: [HERKENBARE-NAAM]-01
+
+flowchart TD
+    [DIAGRAM]
+```
+
+Regels:
+
+- gebruik lowercase letters, cijfers en koppeltekens;
+- gebruik een herkenbare inhoudelijke naam;
+- nummer meerdere diagrammen met -01, -02, enzovoort;
+- dezelfde afbeelding in Less en More mag bewust dezelfde ID hebben;
+- dezelfde ID mag nooit voor verschillende Mermaid-broncode worden
+  gebruikt;
+- de buildpipeline maakt hieruit automatisch:
+
+      build/assets/mermaid/sets/[MERMAID-ID].png
+
+De Markdown verwijst NIET zelf naar de gegenereerde PNG.
+De renderpipeline bepaalt hoe het diagram op web en in PDF wordt
+weergegeven.
+-->
+
+
 ============================================================
 9. TEKST EN LEESBAARHEID
 ============================================================

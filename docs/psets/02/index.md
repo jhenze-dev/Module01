@@ -1,4 +1,4 @@
----
+﻿---
 title: Problem Set 2
 template: pset-index.html
 week: 2
@@ -31,8 +31,10 @@ week: 2
    [Werken met Git](../../guide/git-github.md)
 
 2. Maak één van de volgende versies:
-    - [Deze versie van How Fast Is Forrest?](he-sure-is-fast-less.md), als je je minder vertrouwd voelt met de stof.
-    - [Deze versie van How Fast Is Forrest?](he-sure-is-fast-more.md), als je je meer vertrouwd voelt met de stof.
+    - [How Fast Is Forrest?](he-sure-is-fast-less.md) — **Minder vertrouwd**  
+      *Kies deze versie als je je minder vertrouwd voelt met de stof.*
+    - [How Fast Is Forrest?](he-sure-is-fast-more.md) — **Meer vertrouwd**  
+      *Kies deze versie als je je meer vertrouwd voelt met de stof.*
 
 3. Werk **Portfolio 2** bij.  
    [Werken aan je portfolio](../../guide/portfolio.md)
@@ -83,3 +85,8 @@ Tijdens de Vakflexuren kun je extra uitleg en ondersteuning krijgen.
 {{ moment.topic }}
 
 {% endfor %}
+
+
+
+
+

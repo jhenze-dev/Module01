@@ -5,6 +5,8 @@ Soms hangt de volgende stap in een flowchart af van een **condition**.
 Daarvoor gebruik je een **decision**.
 
 ```mermaid
+%% id: flowcharts-decisions-branches-01
+
 flowchart TD
     A{temperature < 20?}
     A -->|True| B[Actie A]
@@ -27,6 +29,8 @@ Bij een Boolean condition zijn er twee mogelijke uitkomsten:
 Iedere branch kan naar een andere volgende stap leiden.
 
 ```mermaid
+%% id: flowcharts-decisions-branches-02
+
 flowchart TD
     A{condition?}
     A -->|True| B[Actie A]
@@ -40,6 +44,8 @@ Een algoritme kan meerdere decisions bevatten.
 Na een decision kan bijvoorbeeld opnieuw een decision nodig zijn:
 
 ```mermaid
+%% id: flowcharts-decisions-branches-03
+
 flowchart TD
     A{condition 1?}
     A -->|True| B[Actie A]

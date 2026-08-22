@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>{{ document_title | default("Module 01") }}</title>
+
+  {% if pdf_css %}
+  <link rel="stylesheet" href="{{ pdf_css }}">
+  {% endif %}
+</head>
+
+
+<body class="pdf pdf--module">
+
+  <main class="pdf-document">
+
+    {% if document_title %}
+    <header class="pdf-document-header">
+      <h1>{{ document_title }}</h1>
+    </header>
+    {% endif %}
+
+
+    {% for week in weeks %}
+
+    <section
+      class="pdf-week"
+      id="week-{{ '%02d' | format(week.number) }}"
+      data-week="{{ week.number }}"
+    >
+
+      <!--
+      ==========================================================
+      WEEKOPENING
+      ----------------------------------------------------------
+      Wordt samengesteld uit:
+
+      - docs/weeks/XX/index.md
+      - docs/tsets/XX/[TSET].md
+
+      De buildpipeline levert hier reeds gerenderde HTML aan.
+
+      De weekindex en Thinking Set worden in de module-PDF
+      als één doorlopend onderdeel behandeld.
+      ==========================================================
+      -->
+
+      <section class="pdf-week-opening">
+
+        {% if week.week_intro_html %}
+        <div class="pdf-week-intro module-page">
+          {{ week.week_intro_html | safe }}
+        </div>
+        {% endif %}
+
+
+        {% if week.tset_html %}
+        <div
+          class="pdf-week-tset"
+          {% if week.tset_slug %}
+          id="tset-{{ '%02d' | format(week.number) }}-{{ week.tset_slug }}"
+          {% endif %}
+        >
+          {{ week.tset_html | safe }}
+        </div>
+        {% endif %}
+
+      </section>
+
+
+      <!--
+      ==========================================================
+      PROBLEM SET
+      ----------------------------------------------------------
+      Na weekintro + TSET volgen:
+
+      1. PSET-index
+      2. Less
+      3. More
+
+      In render_mode=module_pdf bevatten PSETs geen volledige
+      Understanding-includes.
+
+      Die zijn vervangen door de automatisch gegenereerde
+      paginaverwijzing.
+      ==========================================================
+      -->
+
+      {% if week.pset_index_html or week.psets %}
+
+      <section class="pdf-week-psets">
+
+        {% if week.pset_index_html %}
+        <div class="pdf-pset-index">
+          {{ week.pset_index_html | safe }}
+        </div>
+        {% endif %}
+
+
+        {% for pset in week.psets %}
+
+        <article
+          class="pdf-pset pdf-pset--{{ pset.variant }}"
+          id="pset-{{ '%02d' | format(week.number) }}-{{ pset.slug }}"
+          data-variant="{{ pset.variant }}"
+        >
+          {{ pset.html | safe }}
+        </article>
+
+        {% endfor %}
+
+      </section>
+
+      {% endif %}
+
+    </section>
+
+
+    {% if not loop.last %}
+    <div class="pdf-page-break pdf-page-break--week"></div>
+    {% endif %}
+
+
+    {% endfor %}
+
+  </main>
+
+</body>
+
+</html>

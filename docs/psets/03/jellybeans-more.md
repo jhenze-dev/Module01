@@ -61,6 +61,12 @@ Doel:
 
 ## Understanding
 
+{% if render_mode == "module_pdf" %}
+
+{{ understanding_reference(understanding) }}
+
+{% else %}
+
 --8<-- "understanding/_content/python/boolean-expressions.md"
 
 --8<-- "understanding/_content/python/comparison-operators.md"
@@ -76,6 +82,10 @@ Doel:
 --8<-- "understanding/_content/python/indentation.md"
 
 --8<-- "understanding/_content/python/branches.md"
+
+{% endif %}
+
+## Opdracht
 
 ## Opdracht
 

@@ -220,6 +220,56 @@ Maak dus NIET automatisch secties zoals:
 wanneer de conceptuele uitleg daar niet om vraagt.
 
 
+
+<!--
+============================================================
+CONTENT-ELEMENTEN — OPTIONEEL
+============================================================
+
+Python Understanding heeft geen vaste set content-elementen.
+
+Gebruik waar dit het concept helpt bijvoorbeeld:
+
+- Python-codeblokken;
+- tabellen;
+- afbeeldingen;
+- kleine diagrammen;
+- Mermaid, wanneer een diagram werkelijk helpt om het concept
+  te begrijpen.
+
+Een content-element is ondersteunend aan de conceptuele uitleg.
+Voeg het niet automatisch toe en maak er geen verplichte vaste
+sectie van.
+
+MERMAID
+
+Wanneer Mermaid wordt gebruikt, bevat ieder Mermaid-blok direct na
+de opening een stabiele ID:
+
+```mermaid
+%% id: [HERKENBARE-NAAM]-01
+
+flowchart TD
+    [GENERIEK DIAGRAM]
+```
+
+Regels:
+
+- gebruik lowercase letters, cijfers en koppeltekens;
+- gebruik een herkenbare inhoudelijke naam;
+- nummer meerdere diagrammen met -01, -02, enzovoort;
+- de ID is de bestandsnaam zonder extensie;
+- dezelfde ID mag nooit voor verschillende Mermaid-broncode worden
+  gebruikt;
+- de buildpipeline maakt hieruit automatisch:
+
+      build/assets/mermaid/understanding/[MERMAID-ID].png
+
+De `_content` verwijst NIET zelf naar de gegenereerde PNG.
+De renderpipeline bepaalt hoe het diagram wordt weergegeven.
+-->
+
+
 ============================================================
 7. CONCEPTUELE OPBOUW
 ============================================================

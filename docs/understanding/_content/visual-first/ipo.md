@@ -13,6 +13,8 @@ Deze informatiestroom kun je zichtbaar maken met een **IPO-diagram**.
 Een IPO-diagram beschrijft dus:
 
 ```mermaid
+%% id: ipo-01
+
 flowchart LR
     A[Input] --> B[Processing] --> C[Output]
 ```
@@ -31,6 +33,8 @@ Daarvoor zijn twee gegevens nodig:
 In een IPO-diagram kan dat worden weergegeven als:
 
 ```mermaid
+%% id: ipo-02
+
 flowchart LR
     A["Input<br/>lengte<br/>breedte"]
 ```
@@ -44,6 +48,8 @@ Input beschrijft de **informatie** die het systeem binnenkomt. Het beschrijft no
 Voor het berekenen van de oppervlakte is dat:
 
 ```mermaid
+%% id: ipo-03
+
 flowchart LR
     A["Processing<br/>lengte × breedte"]
 ```
@@ -59,6 +65,8 @@ Soms kan het resultaat van een berekening nodig zijn voor een volgende berekenin
 In het voorbeeld is dat:
 
 ```mermaid
+%% id: ipo-04
+
 flowchart LR
     A["Output<br/>oppervlakte"]
 ```
@@ -66,6 +74,8 @@ flowchart LR
 Het volledige IPO-diagram wordt daarmee:
 
 ```mermaid
+%% id: ipo-05
+
 flowchart LR
     A["Input<br/>lengte<br/>breedte"]
     --> B["Processing<br/>lengte × breedte"]
@@ -81,6 +91,8 @@ Stel dat een programma een totaalprijs berekent.
 Het programma krijgt:
 
 ```mermaid
+%% id: ipo-06
+
 flowchart LR
     A["Input<br/>prijs<br/>aantal"]
 ```
@@ -90,6 +102,8 @@ De totaalprijs hoeft dan niet ook als input te worden gegeven.
 Deze kan worden berekend:
 
 ```mermaid
+%% id: ipo-07
+
 flowchart LR
     A["Processing<br/>prijs × aantal"]
 ```
@@ -97,6 +111,8 @@ flowchart LR
 en wordt vervolgens output:
 
 ```mermaid
+%% id: ipo-08
+
 flowchart LR
     A["Output<br/>totaalprijs"]
 ```
@@ -104,6 +120,8 @@ flowchart LR
 Het IPO-diagram maakt daarmee zichtbaar waar informatie vandaan komt:
 
 ```mermaid
+%% id: ipo-09
+
 flowchart LR
     A["Input<br/>prijs<br/>aantal"]
     --> B["Processing<br/>prijs × aantal"]

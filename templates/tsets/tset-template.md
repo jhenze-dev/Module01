@@ -604,6 +604,28 @@ Wanneer Mermaid geschikt is voor de betreffende Visual
 First-representatie, kan een generiek Mermaid-voorbeeld
 worden opgenomen.
 
+Ieder Mermaid-blok bevat direct na de opening een stabiele ID:
+
+    %% id: [HERKENBARE-NAAM]-01
+
+Regels:
+
+- gebruik lowercase letters, cijfers en koppeltekens;
+- gebruik een herkenbare inhoudelijke naam;
+- nummer meerdere diagrammen met -01, -02, enzovoort;
+- dezelfde afbeelding in een TSET en PSET mag bewust dezelfde
+  ID gebruiken;
+- dezelfde ID mag nooit voor verschillende Mermaid-broncode
+  worden gebruikt.
+
+Voor TSET/PSET-content genereert de buildpipeline:
+
+    build/assets/mermaid/sets/[MERMAID-ID].png
+
+De Markdown verwijst NIET zelf naar de PNG. De renderpipeline
+vervangt het Mermaid-blok automatisch door de juiste afbeelding
+voor de uitvoervorm.
+
 Gebruik Mermaid niet automatisch.
 
 De gekozen representatie komt uit het framework.
@@ -636,6 +658,8 @@ Voor een flowchart kan dit bijvoorbeeld de gerealiseerde
 vorm zijn:
 
 ```mermaid
+%% id: [HERKENBARE-NAAM]-01
+
 flowchart TD
     A([Start]) --> B[Stap uitvoeren]
     B --> C{Beslissing}
@@ -796,6 +820,7 @@ EINDCONTROLE
 [ ] Kloppen titel en nummer?
 [ ] Kloppen badges?
 [ ] Zijn alle placeholders vervangen?
+[ ] Heeft ieder Mermaid-blok een stabiele `%% id:`?
 [ ] Werkt eventuele Mermaid-code?
 [ ] Werken alle links?
 [ ] Kan de leerling snel van lezen naar denken?

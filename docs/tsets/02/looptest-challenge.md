@@ -36,6 +36,8 @@ Werk jullie oplossing uit als een **IPO-diagram**.
 Een IPO-diagram maakt zichtbaar welke informatie een systeem ontvangt, hoe deze informatie wordt verwerkt en welke informatie het systeem oplevert.
 
 ```mermaid
+%% id: looptest-challenge-01
+
 flowchart LR
     A[Input] --> B[Verwerking] --> C[Output]
 ```

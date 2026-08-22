@@ -1,0 +1,32 @@
+python.boolean-expressions:
+  page: 34
+
+python.comparison-operators:
+  page: 35
+
+python.conditions:
+  page: 36
+
+python.if:
+  page: 37
+
+python.else:
+  page: 38
+
+python.elif:
+  page: 39
+
+python.indentation:
+  page: 40
+
+python.branches:
+  page: 41
+
+visual-first.flowcharts-basics:
+  page: 42
+
+visual-first.flowcharts-decisions-branches:
+  page: 43
+
+visual-first.ipo:
+  page: 44

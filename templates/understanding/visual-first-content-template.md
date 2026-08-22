@@ -280,6 +280,8 @@ Bijvoorbeeld bij een flowchart:
 WEL:
 
 ```mermaid
+%% id: [HERKENBARE-NAAM]-01
+
 flowchart TD
     A[Stap] --> B[Volgende stap]
 ```
@@ -300,12 +302,30 @@ geven.
 
 Voor flowcharts is Mermaid geschikt.
 
-Gebruik:
+Ieder Mermaid-blok bevat direct na de opening een stabiele ID:
 
 ```mermaid
+%% id: [HERKENBARE-NAAM]-01
+
 flowchart TD
     [GENERIEK DIAGRAM]
 ```
+
+Regels:
+
+- gebruik lowercase letters, cijfers en koppeltekens;
+- gebruik een herkenbare inhoudelijke naam;
+- nummer meerdere diagrammen met -01, -02, enzovoort;
+- de ID is de bestandsnaam zonder extensie;
+- dezelfde ID mag nooit voor verschillende Mermaid-broncode
+  worden gebruikt;
+- de buildpipeline genereert:
+
+      build/assets/mermaid/understanding/[MERMAID-ID].png
+
+De `_content` verwijst NIET zelf naar de PNG.
+De renderpipeline bepaalt hoe het diagram op web en in PDF
+wordt weergegeven.
 
 Mermaid is een WEERGAVEMIDDEL.
 
@@ -328,6 +348,8 @@ Bijvoorbeeld:
 ### Flow
 
 ```mermaid
+%% id: [HERKENBARE-NAAM]-01
+
 flowchart TD
     A[Stap] --> B[Volgende stap]
 ```
@@ -769,6 +791,8 @@ is.
 [Uitleg.]
 
 ```mermaid
+%% id: [HERKENBARE-NAAM]-01
+
 [GENERIEK DIAGRAM]
 ```
 
@@ -898,6 +922,7 @@ DIAGRAMMEN
 [ ] Is ieder diagram generiek?
 [ ] Geeft geen diagram een actuele PSET/TSET-oplossing weg?
 [ ] Is Mermaid alleen gebruikt wanneer passend?
+[ ] Heeft ieder Mermaid-blok een stabiele `%% id:`?
 [ ] Werkt de Mermaid-syntax?
 
 

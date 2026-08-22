@@ -23,8 +23,12 @@ theme:
 plugins:
   - search
   - macros:
+      module_name: main
       include_yaml:
         - schedule: docs/data/schedule.yml
+        - understanding_catalog: docs/data/understanding.yml
+        - resources_catalog: docs/data/resources.yml
+        - understanding_pages: docs/data/generated/understanding-pages.yml
 
 markdown_extensions:
   - admonition
@@ -42,7 +46,6 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 
-  # Maakt --8<-- "week03/tset03.md" mogelijk
   - pymdownx.snippets:
       base_path:
         - docs
@@ -89,18 +92,26 @@ nav:
   - Understanding: understanding/index.md
 
 extra_css:
-  - assets/css/navigation.css
+  # Basis
   - assets/css/style.css
-  - assets/css/details.css
-  - assets/css/understanding.css
+  - assets/css/navigation.css
+
+  # Componenten
+  - assets/css/reference.css
+  - assets/css/goals.css
+  - assets/css/test.css
   - assets/css/badges.css
+  - assets/css/details.css
+  - assets/css/video.css
+  - assets/css/mermaid.css
+
+  # Paginatypes
   - assets/css/homepage.css
   - assets/css/week.css
   - assets/css/tset.css
   - assets/css/pset-index.css
   - assets/css/pset.css
-  - assets/css/components.css
-  - assets/css/video.css
+  - assets/css/understanding.css
   
 extra_javascript:
   - https://unpkg.com/mermaid@11/dist/mermaid.min.js

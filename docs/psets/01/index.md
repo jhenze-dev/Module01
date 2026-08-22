@@ -1,4 +1,4 @@
----
+﻿---
 title: Problem Set 1
 template: pset-index.html
 week: 1
@@ -30,8 +30,10 @@ week: 1
    [Werken met Git](../../guide/git-github.md)
 
 2. Maak één van de volgende versies:
-    - [Deze versie van Order Up!](order-up-less.md), als je je minder vertrouwd voelt met de stof.
-    - [Deze versie van Order Up!](order-up-more.md), als je je meer vertrouwd voelt met de stof.
+    - [Order Up!](order-up-less.md) — **Minder vertrouwd**  
+      *Kies deze versie als je je minder vertrouwd voelt met de stof.*
+    - [Order Up!](order-up-more.md) — **Meer vertrouwd**  
+      *Kies deze versie als je je meer vertrouwd voelt met de stof.*
 
 3. Werk **Portfolio 1** bij.  
    [Werken aan je portfolio](../../guide/portfolio.md)
@@ -73,3 +75,8 @@ Tijdens de Vakflexuren kun je extra uitleg en ondersteuning krijgen.
 {{ moment.topic }}
 
 {% endfor %}
+
+
+
+
+

@@ -1,0 +1,56 @@
+python:
+  boolean-expressions:
+    id: python.boolean-expressions
+    title: Boolean Expressions
+    source: understanding/_content/python/boolean-expressions.md
+
+  comparison-operators:
+    id: python.comparison-operators
+    title: Comparison Operators
+    source: understanding/_content/python/comparison-operators.md
+
+  conditions:
+    id: python.conditions
+    title: Conditions
+    source: understanding/_content/python/conditions.md
+
+  if:
+    id: python.if
+    title: if
+    source: understanding/_content/python/if.md
+
+  else:
+    id: python.else
+    title: else
+    source: understanding/_content/python/else.md
+
+  elif:
+    id: python.elif
+    title: elif
+    source: understanding/_content/python/elif.md
+
+  indentation:
+    id: python.indentation
+    title: Indentation
+    source: understanding/_content/python/indentation.md
+
+  branches:
+    id: python.branches
+    title: Branches
+    source: understanding/_content/python/branches.md
+
+visual-first:
+  flowcharts-basics:
+    id: visual-first.flowcharts-basics
+    title: Flowcharts
+    source: understanding/_content/visual-first/flowcharts/basics.md
+
+  flowcharts-decisions-branches:
+    id: visual-first.flowcharts-decisions-branches
+    title: Flowcharts — Decisions & Branches
+    source: understanding/_content/visual-first/flowcharts/decisions-branches.md
+
+  ipo:
+    id: visual-first.ipo
+    title: IPO
+    source: understanding/_content/visual-first/ipo.md

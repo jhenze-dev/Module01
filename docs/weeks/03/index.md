@@ -2,6 +2,9 @@
 title: Slimme keuzes
 template: week.html
 week: 3
+
+resources:
+  - video.jellybeans
 ---
 
 # Week 3 *Slimme keuzes*

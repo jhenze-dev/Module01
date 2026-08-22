@@ -1,4 +1,4 @@
----
+﻿---
 title: Guess the Number
 template: tset.html
 week: 3
@@ -37,6 +37,8 @@ Werk jullie oplossing uit als een **flowchart**.
 Een flowchart laat zien welke stappen worden uitgevoerd en waar beslissingen worden genomen.
 
 ```mermaid
+%% id: guess-the-number-01
+
 flowchart TD
     A([Start]) --> B[Stap uitvoeren]
     B --> C{Beslissing}
@@ -46,7 +48,9 @@ flowchart TD
     E --> F
 ```
 
-[Meer over flowcharts](../../understanding/visual-first/flowcharts/decisions-branches.md)
+## Understanding
+
+{{ understanding_reference(understanding) }}
 
 ## Test jullie oplossing
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: Order Here!
 template: tset.html
 week: 1
@@ -35,6 +35,8 @@ Werk jullie oplossing uit als een **flowchart**.
 Een flowchart maakt zichtbaar in welke volgorde de stappen van een proces worden uitgevoerd.
 
 ```mermaid
+%% id: order-here-01
+
 flowchart TD
     A([Start]) --> B[/Output/]
     B --> C[/Input/]

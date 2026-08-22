@@ -1,7 +1,10 @@
----
+﻿---
 title: Problem Set 3
 template: pset-index.html
 week: 3
+
+resources:
+  - w3schools.week3
 ---
 
 # Problem Set 3
@@ -28,12 +31,16 @@ week: 3
    [Werken met Git](../../guide/git-github.md)
 
 2. Maak één van de volgende versies:
-    - [Deze versie van Jellybeans in a Jar](jellybeans-less.md), als je je minder vertrouwd voelt met de stof.
-    - [Deze versie van Jellybeans in a Jar](jellybeans-more.md), als je je meer vertrouwd voelt met de stof.
+    - [Jellybeans in a Jar](jellybeans-less.md) — **Minder vertrouwd**  
+      *Kies deze versie als je je minder vertrouwd voelt met de stof.*
+    - [Jellybeans in a Jar](jellybeans-more.md) — **Meer vertrouwd**  
+      *Kies deze versie als je je meer vertrouwd voelt met de stof.*
 
 3. Maak één van de volgende versies:
-    - [Deze versie van Rock Paper Scissors](rock-paper-scissors-less.md), als je je minder vertrouwd voelt met de stof.
-    - [Deze versie van Rock Paper Scissors](rock-paper-scissors-more.md), als je je meer vertrouwd voelt met de stof.
+    - [Rock Paper Scissors](rock-paper-scissors-less.md) — **Minder vertrouwd**  
+      *Kies deze versie als je je minder vertrouwd voelt met de stof.*
+    - [Rock Paper Scissors](rock-paper-scissors-more.md) — **Meer vertrouwd**  
+      *Kies deze versie als je je meer vertrouwd voelt met de stof.*
 
 4. Werk **Portfolio 3** bij.  
    [Werken aan je portfolio](../../guide/portfolio.md)
@@ -58,11 +65,7 @@ Wil je extra oefenen? Maak dan **Exercise 5.3**.
 
 Gebruik de volgende pagina's als naslagwerk voor de onderwerpen van deze week:
 
-- [Python Booleans](https://www.w3schools.com/python/python_booleans.asp)
-- [Python Comparison Operators](https://www.w3schools.com/python/python_operators_comparison.asp)
-- [Python If](https://www.w3schools.com/python/python_conditions.asp)
-- [Python Elif](https://www.w3schools.com/python/python_if_elif.asp)
-- [Python Else](https://www.w3schools.com/python/python_if_else.asp)
+{{ resource_group("w3schools.week3") }}
 
 ## Wanneer moet het af zijn?
 
@@ -77,4 +80,9 @@ Tijdens de Vakflexuren kun je extra uitleg en ondersteuning krijgen.
 {{ moment.topic }}
 
 {% endfor %}
+
+
+
+
+
 

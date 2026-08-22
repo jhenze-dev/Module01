@@ -1,0 +1,19 @@
+w3schools:
+  week3:
+    label: W3Schools
+    type: group
+    links:
+      - label: Python Booleans
+        url: https://www.w3schools.com/python/python_booleans.asp
+
+      - label: Python Comparison Operators
+        url: https://www.w3schools.com/python/python_operators_comparison.asp
+
+      - label: Python If
+        url: https://www.w3schools.com/python/python_conditions.asp
+
+      - label: Python Elif
+        url: https://www.w3schools.com/python/python_if_elif.asp
+
+      - label: Python Else
+        url: https://www.w3schools.com/python/python_if_else.asp
