@@ -24,7 +24,7 @@ De pagina maakt voor de leerling zichtbaar:
 - hoe het werken aan de Problem Set is georganiseerd;
 - welke opdrachten gemaakt moeten worden;
 - welke Less/More-keuzes beschikbaar zijn;
-- welke aanvullende uitleg en oefening beschikbaar is;
+- welke aanvullende uitleg en bronnen beschikbaar zijn;
 - wanneer de volledige Problem Set af moet zijn;
 - wanneer extra ondersteuning beschikbaar is.
 
@@ -152,9 +152,12 @@ Bepaal uit het concrete PSET-ontwerp:
 
 Bepaal voor aanvullende bronnen:
 
-- welke Think Python-onderdelen aansluiten;
-- welke oefening eventueel passend is;
-- welke W3Schools-pagina's bruikbaar zijn als naslagwerk.
+- welke resourcegroepen bij deze Problem Set horen;
+- welke resources daarin beschikbaar zijn;
+- of deze resources werkelijk aansluiten op de inhoud van deze week.
+
+De concrete resourcegegevens worden centraal beheerd en worden
+niet opnieuw in de PSET-index opgeslagen.
 
 Planning komt NIET uit het framework of uit deze template.
 
@@ -185,7 +188,8 @@ LESS / MORE
   inhoudelijke verschillen hier al uit te leggen?
 
 BRONNEN
-- Welke aanvullende bronnen sluiten werkelijk aan?
+- Welke resourcegroepen sluiten werkelijk aan?
+- Zijn de juiste resource-ID's centraal aan deze groepen gekoppeld?
 - Zijn deze aanvullend en niet noodzakelijk om ontbrekende
   uitleg in de module te compenseren?
 
@@ -210,11 +214,9 @@ Verantwoord leren
 
 ## Wat moet je doen?
 
-## Aanvullende uitleg en oefening
+## Aanvullende uitleg en bronnen
 
-**Think Python**
-
-**W3Schools**
+{{ resource_group("[RESOURCE-GROEP]") }}
 
 ## Wanneer moet het af zijn?
 
@@ -234,7 +236,7 @@ De leerling moet eenvoudig kunnen vinden:
 
 - wat moet ik doen?
 - welke variant kies ik?
-- waar vind ik aanvullende uitleg?
+- waar vind ik aanvullende uitleg en bronnen?
 - wanneer moet het af zijn?
 - waar kan ik extra hulp krijgen?
 
@@ -418,11 +420,11 @@ Pas daarna het nummer van de Portfolio-stap aan.
    [Werken aan je portfolio](../../understanding/portfolio/index.md)
 
 
-## Aanvullende uitleg en oefening
+## Aanvullende uitleg en bronnen
 
 <!--
 ============================================================
-AANVULLENDE UITLEG EN OEFENING
+AANVULLENDE UITLEG EN BRONNEN
 ============================================================
 
 FUNCTIE
@@ -444,62 +446,36 @@ Gebruik ze niet om noodzakelijke module-inhoud naar externe
 websites of boeken te verplaatsen.
 
 
-VASTE PRESENTATIE
------------------
-Behoud de gerealiseerde presentatie:
+CENTRAAL RESOURCEBEHEER
+-----------------------
+Resources worden centraal beheerd.
 
-**Think Python**
+De PSET-index bevat daarom niet opnieuw handmatig:
 
-...
+- boektitels;
+- hoofdstukken of paragrafen;
+- oefeningen;
+- externe URL's;
+- resourcebeschrijvingen.
 
-**W3Schools**
+Gebruik op de PSET-index alleen de resourcegroep die voor deze
+Problem Set is samengesteld.
 
-Maak hiervan niet zonder aparte ontwerpbeslissing nieuwe
-Markdown-headings.
+De renderer bepaalt vervolgens hoe de resources voor web en
+PDF worden weergegeven.
 
 
-BRONKEUZE
----------
-Bepaal de inhoud iedere week opnieuw vanuit:
+GEBRUIK
+-------
+Gebruik:
 
-- het moduleframework;
-- de daadwerkelijke PSET's van die week.
+    {{ resource_group("[RESOURCE-GROEP]") }}
 
-Neem hoofdstukken, paragrafen, oefeningen of links nooit
-automatisch over uit een eerdere week.
+Vervang [RESOURCE-GROEP] door de stabiele ID van de
+resourcegroep voor deze Problem Set.
 -->
 
-De uitleg bij de Problem Sets bevat de kennis die je nodig hebt om aan de opdrachten te kunnen werken. Wil je de onderwerpen uitgebreider bestuderen of extra oefenen? Gebruik dan **Think Python**. Daarnaast kun je **W3Schools** gebruiken als naslagwerk tijdens het programmeren.
-
-**Think Python**
-
-<!--
-Kies het hoofdstuk en de paragrafen die daadwerkelijk
-aansluiten bij de onderwijsinhoud van deze week.
-
-Controleer ook of een genoemde oefening werkelijk past.
--->
-
-Lees in hoofdstuk [HOOFDSTUK] — *[TITEL]*:
-
-- [PARAGRAAF]
-- [PARAGRAAF]
-- [PARAGRAAF]
-
-Wil je extra oefenen? Maak dan **[OEFENING]**.
-
-**W3Schools**
-
-<!--
-Neem alleen pagina's op die bruikbaar zijn als naslagwerk
-voor de onderwerpen van deze week.
--->
-
-Gebruik de volgende pagina's als naslagwerk voor de onderwerpen van deze week:
-
-- [[TITEL]]([URL])
-- [[TITEL]]([URL])
-- [[TITEL]]([URL])
+{{ resource_group("[RESOURCE-GROEP]") }}
 
 
 ## Wanneer moet het af zijn?
@@ -588,7 +564,7 @@ REFERENTIE-ONTWERP
 [ ] Is de bestaande leerlingzichtbare structuur behouden?
 [ ] Zijn geen nieuwe headings of secties geïntroduceerd?
 [ ] Is vaste leerlingtekst niet zonder ontwerpbesluit herschreven?
-[ ] Is de presentatie van Think Python en W3Schools behouden?
+[ ] Is de centrale resourcepresentatie behouden?
 
 
 BADGES
@@ -619,10 +595,10 @@ LINKS
 
 BRONNEN
 -------
-[ ] Sluit Think Python aan op de inhoud van deze week?
-[ ] Kloppen hoofdstuk en paragrafen?
-[ ] Is een eventuele oefening inhoudelijk passend?
-[ ] Zijn W3Schools-links relevante naslag?
+[ ] Is de juiste resourcegroep voor deze Problem Set gebruikt?
+[ ] Wordt `resource_group(...)` gebruikt?
+[ ] Zijn geen resourcegegevens handmatig in de index gedupliceerd?
+[ ] Sluiten de centraal beheerde resources aan op de inhoud van deze week?
 [ ] Zijn externe bronnen aanvullend en niet noodzakelijk om
     ontbrekende module-uitleg te compenseren?
 

@@ -78,12 +78,16 @@ Module-PDF verwezen naar de betreffende Understanding-pagina of het
 betreffende paginabereik.
 
 
-### Understanding-PDF
+### Understanding in de complete Module-PDF
 
-De Understanding-PDF bevat de volledige kennisbank in een logische,
-doorlopende volgorde.
+Understanding wordt in de complete Module-PDF één keer als centrale,
+doorlopende kennisbank opgenomen.
 
-Deze PDF vormt de bron voor paginaverwijzingen vanuit de Module-PDF.
+PSETs en TSETs verwijzen vanuit hun eigen positie naar deze centrale
+Understanding-pagina's.
+
+De paginaposities worden tijdens de build bepaald en vormen de bron voor
+de automatisch gegenereerde verwijzingen.
 
 
 ## 3. Renderingmatrix
@@ -97,7 +101,8 @@ Deze PDF vormt de bron voor paginaverwijzingen vanuit de Module-PDF.
 | Demo | embed | QR-code | QR-code |
 | Video | embed | QR-code | QR-code |
 | Mermaid-diagram | gegenereerde PNG | gegenereerde PNG | gegenereerde PNG |
-| Understanding | inline | inline | verwijzing |
+| Understanding | inline | inline | centrale sectie + verwijzing |
+| Resources | webweergave | PDF-weergave | PDF-weergave |
 | Opdracht | tonen | tonen | tonen |
 | Hints | uitklapbaar | zichtbaar | zichtbaar |
 | Testen | tonen | tonen | tonen |
@@ -139,15 +144,17 @@ Paginanummers worden NOOIT handmatig in een PSET of TSET geschreven.
 
 ## 5. Paginanummers en cross-references
 
-Paginanummers worden centraal beheerd.
+Paginanummers worden centraal beheerd en tijdens de PDF-build bepaald.
 
-Voorkeursrichting:
+De gerealiseerde richting is:
 
-    Understanding bouwen
+    Understanding-secties opbouwen
             ↓
     beginpagina per Understanding-ID bepalen
             ↓
-    gegenereerde cross-reference-data
+    generated/understanding-pages.yml
+            ↓
+    PSET/TSET-verwijzingen opbouwen
             ↓
     Module-PDF renderen
 
@@ -168,13 +175,57 @@ understanding:
     page: 46
 ```
 
-Wanneer automatische paginadetectie nog niet beschikbaar is, mag deze
-YAML tijdelijk handmatig worden onderhouden.
+De gegenereerde paginadata is build-data en wordt niet handmatig in
+PSETs of TSETs onderhouden.
+
+Bij één Understanding-item wordt één titel met één paginanummer getoond.
+Bij meerdere opeenvolgende items wordt een bereik opgebouwd van het eerste
+tot en met het laatste item.
 
 De PSET- en TSET-bronnen blijven daarvan onafhankelijk.
 
 
-## 6. Multimedia
+## 6. Resources
+
+Resources worden via stabiele IDs centraal geregistreerd.
+
+De onderwijsbestanden bevatten dus niet opnieuw handmatig:
+
+- URL's;
+- boektitels;
+- hoofdstuk- of paginagegevens;
+- resourcebeschrijvingen;
+- PDF-specifieke verwijzingen.
+
+Resourcegegevens worden centraal beheerd in de resource-data.
+
+Een pagina kan in de frontmatter aangeven welke resources zij gebruikt:
+
+```yaml
+resources:
+  - video.jellybeans
+```
+
+Een PSET-index kan een samengestelde resourcegroep tonen via:
+
+```jinja
+{{ resource_group("[RESOURCE-GROEP]") }}
+```
+
+De renderer bepaalt hoe dezelfde resource in web en PDF verschijnt.
+
+Website:
+- passende link, embed of resourcepresentatie.
+
+PDF:
+- printvriendelijk resourceblok;
+- waar passend een QR-code;
+- geen afhankelijkheid van klikbare webnavigatie.
+
+De onderwijsbron blijft onafhankelijk van de concrete presentatie.
+
+
+## 7. Multimedia
 
 Multimedia wordt via een stabiele ID opgenomen.
 
@@ -216,7 +267,7 @@ PDF:
 De QR-code verwijst naar dezelfde URL als de web-embed.
 
 
-## 6A. Mermaid en gegenereerde diagrammen
+## 8. Mermaid en gegenereerde diagrammen
 
 Mermaid-broncode blijft onderdeel van de Markdown en is de
 source of truth voor het diagram.
@@ -276,7 +327,7 @@ De gegenereerde PNG is build-output en wordt niet als afzonderlijke
 onderwijsbron onderhouden.
 
 
-## 7. Demo's
+## 9. Demo's
 
 Een demo laat zien WAT het gewenste product of programma doet.
 
@@ -290,7 +341,7 @@ De inhoud van de PSET of TSET mag niet afhankelijk worden van een
 specifieke embed-techniek.
 
 
-## 8. Video
+## 10. Video
 
 Video ondersteunt uitleg of demonstratie, maar vervangt noodzakelijke
 geschreven instructie niet.
@@ -309,7 +360,7 @@ PDF:
     QR-code + titel / korte omschrijving
 
 
-## 9. Hints
+## 11. Hints
 
 Hints blijven onderdeel van de onderwijsinhoud.
 
@@ -320,14 +371,14 @@ Website:
 
 PDF:
 
-- hints mogen volledig worden opgenomen;
-- zij worden duidelijk als HINT gemarkeerd;
+- alle hints worden volledig zichtbaar opgenomen;
+- zij worden als herkenbare HINT-blokken gepresenteerd;
 - de volgorde en inhoud blijven gelijk aan de webversie.
 
 Er wordt geen aparte inhoudelijke hintversie voor PDF onderhouden.
 
 
-## 10. Thinking Sets en productieve worsteling
+## 12. Thinking Sets en productieve worsteling
 
 Een TSET blijft een thinking task, ongeacht het medium.
 
@@ -347,7 +398,7 @@ De kernregels blijven:
 Web en PDF mogen visueel verschillen, maar niet didactisch van functie.
 
 
-## 11. Problem Sets
+## 13. Problem Sets
 
 Een PSET moet in iedere uitvoervorm dezelfde probleemstructuur behouden.
 
@@ -372,7 +423,7 @@ De broninhoud blijft leidend; de renderer verandert presentatie, geen
 didactische betekenis.
 
 
-## 12. Weekpagina's
+## 14. Weekpagina's
 
 Weekpagina's hebben primair een organiserende functie.
 
@@ -388,11 +439,15 @@ Zij verbinden:
 Een weekpagina hoeft daarom niet automatisch dezelfde interne
 architectuur te krijgen als Understanding, PSET of TSET.
 
-Voor PDF-generatie wordt later afzonderlijk bepaald welke onderdelen
-van de weekpagina in de Module-PDF thuishoren.
+In de complete Module-PDF vormt de weekopening samen met de bijbehorende
+Thinking Set het begin van een week. Daarna volgen de PSET-index en de
+bijbehorende Problem Sets.
+
+De renderer bepaalt welke web-only presentatie uit de weekpagina wordt
+weggelaten of vervangen.
 
 
-## 13. Web-only presentatie
+## 15. Web-only presentatie
 
 Onderstaande elementen zijn presentatie en worden niet letterlijk naar
 PDF gekopieerd:
@@ -408,13 +463,14 @@ De onderliggende inhoud of functie blijft wel beschikbaar via een
 PDF-passende vorm.
 
 
-## 14. PDF-only presentatie
+## 16. PDF-only presentatie
 
 PDF mag specifieke presentatie-elementen toevoegen zonder een tweede
 inhoudsbron te creëren.
 
 Voorbeelden:
 
+- dezelfde visuele badges als op de website, aangepast aan print/PDF;
 - QR-codes;
 - paginanummers;
 - "Zie Understanding, p. …";
@@ -425,7 +481,7 @@ Voorbeelden:
 - interne PDF-links.
 
 
-## 15. Geen duplicatie van onderwijsinhoud
+## 17. Geen duplicatie van onderwijsinhoud
 
 Maak geen bestanden zoals:
 
@@ -438,7 +494,7 @@ Gebruik één bron en laat de renderer beslissen hoe onderdelen worden
 weergegeven.
 
 
-## 16. Data buiten de onderwijsinhoud
+## 18. Data buiten de onderwijsinhoud
 
 Veranderlijke of presentatie-afhankelijke gegevens worden waar mogelijk
 centraal opgeslagen.
@@ -446,7 +502,9 @@ centraal opgeslagen.
 Voorbeelden:
 
 - deadlines;
-- Understanding-paginanummers;
+- Understanding-catalogus;
+- gegenereerde Understanding-paginanummers;
+- resourcecatalogus en resourcegroepen;
 - multimedia-URL's;
 - QR-doelen;
 - eventueel documentmetadata.
@@ -455,23 +513,37 @@ Dit sluit aan op de bestaande werkwijze waarbij data zoals deadlines
 via YAML in pagina's kan worden ingevoegd.
 
 
-## 17. Volgorde van implementatie
+## 19. Gerealiseerde architectuur en vervolg
 
-De PDF-architectuur wordt stapsgewijs ingevoerd.
+De oorspronkelijke referentie-implementatie is inmiddels doorontwikkeld
+tot een werkende complete Module-PDF-pipeline.
 
-1. PSET 3 — Jellybeans Less als referentie-PSET.
-2. TSET 3 — Guess the Number als referentie-TSET.
-3. PSET- en TSET-contracten definitief maken.
-4. Overige bestaande PSETs en TSETs migreren.
-5. Weekpagina's afzonderlijk analyseren.
-6. Multimedia-ID's en media-YAML invoeren.
-7. Understanding-cross-references en paginanummers invoeren.
-8. Losse PDF-rendering testen.
-9. Complete Module-PDF samenstellen.
-10. Demo's als laatste toevoegen wanneer solutions definitief zijn.
+Gerealiseerd:
+
+1. Weekopeningen, Thinking Sets, PSET-indexen en Problem Sets worden uit
+   dezelfde Markdown-bronnen samengesteld.
+2. Understanding wordt centraal geregistreerd met stabiele IDs.
+3. De Module-PDF gebruikt automatisch gegenereerde Understanding-
+   paginaverwijzingen.
+4. Mermaid-broncode wordt tijdens de build naar gedeelde PNG-assets
+   gerenderd.
+5. Video en andere geschikte resources kunnen via centrale IDs worden
+   verwerkt en in PDF een passende QR-presentatie krijgen.
+6. Hints blijven één inhoudsbron: uitklapbaar op web, volledig zichtbaar
+   in PDF.
+7. Badges blijven visueel herkenbaar in de PDF.
+8. De complete Module-PDF wordt via een eigen renderpipeline samengesteld.
+9. De website blijft vanuit dezelfde bronnen met MkDocs gebouwd.
+
+Vervolgwerk wordt alleen aan dit contract toegevoegd wanneer een nieuwe
+uitvoervorm of renderregel daadwerkelijk wordt ontworpen of gerealiseerd.
+
+Losse PSET/TSET-PDF's en eventuele afzonderlijke Understanding-PDF's
+blijven aparte uitvoervormen; hun precieze implementatie hoeft de
+Module-PDF-architectuur niet te dupliceren.
 
 
-## 18. Ontwerpcontrole
+## 20. Ontwerpcontrole
 
 Controleer bij iedere wijziging:
 
@@ -482,7 +554,10 @@ Controleer bij iedere wijziging:
 - [ ] Wordt Understanding in een losse PSET/TSET-PDF inline opgenomen?
 - [ ] Wordt Understanding in de Module-PDF via een cross-reference weergegeven?
 - [ ] Zijn paginanummers niet hardcoded in onderwijsinhoud?
-- [ ] Wordt multimedia op web embedded en in PDF via QR aangeboden?
+- [ ] Worden resources via stabiele IDs en centrale data beheerd?
+- [ ] Wordt multimedia op web embedded en in PDF passend via QR aangeboden?
+- [ ] Gebruiken Mermaid-diagrammen één bron en gegenereerde gedeelde assets?
+- [ ] Blijven badges herkenbaar in web én PDF?
 - [ ] Blijven hints inhoudelijk identiek?
 - [ ] Blijft een TSET productieve worsteling ondersteunen?
 - [ ] Worden web-only presentatie-elementen niet als inhoud behandeld?

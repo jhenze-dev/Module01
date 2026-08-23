@@ -293,6 +293,46 @@ de Thinking Set zelf moeten oplossen.
 
 
 ============================================================
+
+CENTRALE UNDERSTANDING-REGISTRATIE
+---------------------------------
+Iedere zelfstandige Understanding heeft een stabiele Understanding-ID.
+
+Die ID is de koppeling tussen:
+
+- de centrale Understanding-content;
+- de zelfstandige webpagina;
+- PSETs en TSETs die deze Understanding gebruiken;
+- de complete Module-PDF;
+- automatisch gegenereerde PDF-paginaverwijzingen.
+
+De Understanding-ID is iets anders dan een Mermaid `%% id:`.
+Een Mermaid-ID identificeert een diagramasset; een Understanding-ID
+identificeert een inhoudelijk Understanding-onderdeel.
+
+PSETs en TSETs slaan daarom geen vaste Understanding-URL's of
+PDF-paginanummers op.
+
+
+WEBSITE EN MODULE-PDF
+---------------------
+Op de website kan centrale Understanding-content inline worden
+weergegeven waar de pagina-architectuur dat voorschrijft.
+
+In de complete Module-PDF wordt Understanding centraal opgenomen.
+PSETs en TSETs kunnen daar met:
+
+    {{ understanding_reference(understanding) }}
+
+naar de relevante Understanding-pagina('s) verwijzen.
+
+De paginanummers worden tijdens de PDF-build bepaald. Bij meerdere
+opeenvolgende Understanding-onderdelen kan de renderer een bereik
+van de eerste tot en met de laatste pagina tonen.
+
+Schrijf daarom nooit vaste PDF-paginanummers in `_content`.
+
+
 11. MERMAID
 ============================================================
 

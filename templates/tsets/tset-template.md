@@ -390,6 +390,8 @@ badges
 
 ## Maak je denken zichtbaar
 
+## Understanding
+
 ## Test jullie oplossing
 
 Deze structuur wordt niet tijdens het invullen van een
@@ -633,15 +635,24 @@ De gekozen representatie komt uit het framework.
 
 UNDERSTANDING
 -------------
-Wanneer er een zelfstandige Understanding-pagina over de
-representatie bestaat, plaats daarna een korte link:
+Wanneer de TSET verwijst naar Understanding, worden de stabiele
+IDs in de frontmatter opgenomen.
 
-[Meer over [representatie]](...)
+Plaats de Understanding-verwijzing als een aparte sectie NA
+"Maak je denken zichtbaar":
 
-De leerling hoeft deze Understanding niet noodzakelijk vóór
-de Thinking Task volledig te bestuderen.
+## Understanding
 
-De link biedt aanvullende ondersteuning/naslag.
+{{ understanding_reference(understanding) }}
+
+Schrijf dus geen handmatige link naar één specifieke
+Understanding-pagina.
+
+De renderer bepaalt op basis van de uitvoervorm hoe de
+Understanding-verwijzing wordt weergegeven.
+
+De Thinking Task blijft daardoor compact en de bron blijft
+onafhankelijk van vaste URL's of paginanummers.
 -->
 
 Werk jullie oplossing uit als een **[VISUAL FIRST-REPRESENTATIE]**.
@@ -675,7 +686,32 @@ Verwijder het voorbeeld wanneer leerlingen de representatie
 al voldoende kennen.
 -->
 
-[Meer over [REPRESENTATIE]]([LINK-NAAR-UNDERSTANDING])
+## Understanding
+
+<!--
+============================================================
+UNDERSTANDING
+============================================================
+
+Gebruik deze sectie alleen wanneer in de frontmatter
+`understanding` is opgenomen.
+
+De verwijzing wordt centraal opgebouwd uit de stabiele
+Understanding-ID's.
+
+Voorbeeld:
+
+    understanding:
+      - visual-first.flowcharts-decisions-branches
+
+Gebruik altijd:
+
+    {{ understanding_reference(understanding) }}
+
+Schrijf hier geen handmatige URL of vast paginanummer.
+-->
+
+{{ understanding_reference(understanding) }}
 
 
 ## Test jullie oplossing
@@ -783,8 +819,10 @@ UNDERSTANDING
 -------------
 [ ] Staat er geen volledige Understanding vóór de challenge?
 [ ] Is eventuele uitleg beperkt tot wat noodzakelijk is?
-[ ] Is een Understanding-link ondersteunend in plaats van
-    verplichte oplossingsinstructie?
+[ ] Staan de juiste stabiele Understanding-ID's in de frontmatter?
+[ ] Staat de Understanding-verwijzing na "Maak je denken zichtbaar"?
+[ ] Wordt `understanding_reference(understanding)` gebruikt?
+[ ] Is geen handmatige URL of vast paginanummer opgenomen?
 
 
 VISUAL FIRST

@@ -71,12 +71,40 @@ De exacte submap volgt de afgesproken Understanding-filetree.
 
 Verzin geen extra mappen alleen voor de wrapper.
 
-Dezelfde _content kan daarnaast:
+Dezelfde _content wordt centraal hergebruikt in verschillende
+uitvoervormen.
 
-- vanuit een TSET worden geopend;
-- waar passend in een PSET worden opgenomen;
-- vanuit andere modulepagina's worden gelinkt;
-- later onderdeel zijn van een samengestelde PDF.
+De normale koppeling vanuit PSETs en TSETs verloopt via stabiele
+Understanding-ID's. Daardoor hoeven deze onderwijsbronnen geen vaste
+Understanding-URL, bestandslocatie of PDF-paginanummer te kennen.
+
+Op de website kan de centrale _content inline worden weergegeven waar
+de pagina-architectuur dat voorschrijft.
+
+In de complete Module-PDF wordt Understanding centraal opgenomen.
+PSETs en TSETs kunnen daar via `understanding_reference(understanding)`
+naar de relevante Understanding-pagina('s) verwijzen. De paginanummers
+worden tijdens de PDF-build automatisch bepaald.
+
+
+CENTRALE UNDERSTANDING-REGISTRATIE
+---------------------------------
+Iedere zelfstandige Understanding heeft een stabiele Understanding-ID.
+
+Deze ID verbindt:
+
+- de centrale _content;
+- de zelfstandige Understanding-pagina;
+- PSETs en TSETs die deze Understanding gebruiken;
+- de centrale Understanding-sectie in de Module-PDF;
+- automatisch gegenereerde PDF-paginaverwijzingen.
+
+De Understanding-ID is niet hetzelfde als een Mermaid `%% id:`.
+Een Understanding-ID identificeert inhoud; een Mermaid-ID identificeert
+een diagramasset.
+
+De wrapper bevat zelf geen vaste PDF-paginanummers. Die worden tijdens
+de PDF-build bepaald en centraal als build-data beheerd.
 
 
 ============================================================
@@ -156,13 +184,13 @@ Understanding-CSS gebruikt deze marker om de eerste inhoudelijke H3
 alleen op de zelfstandige wiki-pagina te verbergen wanneer deze
 dezelfde naam heeft als de paginatitel.
 
-De heading blijft in _content behouden zodat dezelfde inhoud:
+De heading blijft in _content behouden zodat dezelfde inhoud buiten
+de zelfstandige wrapper een natuurlijke inhoudelijke structuur houdt.
 
-- in een PSET;
-- in een ander document;
-- in een samengestelde PDF;
-
-een natuurlijke inhoudelijke structuur houdt.
+Op de website kan de content inline worden weergegeven waar de
+pagina-architectuur dat voorschrijft. In samengestelde uitvoervormen,
+waaronder de Module-PDF, blijft de heading onderdeel van de centrale
+Understanding-content.
 
 
 ============================================================
@@ -263,22 +291,6 @@ Gebruik altijd:
 
 
 ============================================================
-12. PAD TIJDENS REFACTOR
-============================================================
-
-Tijdens de bouwfase kan een include tijdelijk beginnen met:
-
-    understanding_new/
-
-Na de definitieve omschakeling wordt dit:
-
-    understanding/
-
-Deze tijdelijke naam hoort niet bij het uiteindelijke
-architectuurcontract.
-
-
-============================================================
 LAATSTE ONTWERPCONTROLE
 ============================================================
 
@@ -289,6 +301,9 @@ LAATSTE ONTWERPCONTROLE
 [ ] Staat er geen extra clusterregel boven de inhoud?
 [ ] Staat understanding-article-start direct vóór de include?
 [ ] Verwijst de include naar het juiste Visual First _content-bestand?
+[ ] Is de wrapper gekoppeld aan de juiste centrale Understanding?
+[ ] Worden geen vaste Understanding-URL's of PDF-paginanummers toegevoegd?
+[ ] Blijft de koppeling vanuit PSET/TSET gebaseerd op stabiele Understanding-ID's?
 [ ] Is geen onderwijsinhoud toegevoegd aan de wrapper?
 [ ] Is een dubbele eerste H3 alleen via CSS verborgen?
 [ ] Staat onder de content een horizontale scheiding?

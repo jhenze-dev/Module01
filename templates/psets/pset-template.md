@@ -62,9 +62,15 @@ opgeslagen.
 onderdelen die deze PSET gebruikt. Laat het veld weg wanneer
 geen Understanding-verwijzingen nodig zijn.
 
-De PDF-renderpipeline gebruikt deze IDs later voor inline
-Understanding of voor paginaverwijzingen, afhankelijk van de
-render-mode.
+De renderpipeline gebruikt deze IDs afhankelijk van de
+uitvoervorm.
+
+In de complete Module-PDF wordt `understanding_reference(...)`
+gebruikt om een verwijzing naar de centrale Understanding-
+pagina's met paginanummer(s) op te bouwen.
+
+Op de website blijft de centrale Understanding-content inline
+in de PSET beschikbaar.
 
 
 ============================================================
@@ -633,20 +639,29 @@ Understanding mag NIET:
 
 ALGEMENE UNDERSTANDING
 ----------------------
-Algemene kennis wordt bij voorkeur centraal onderhouden.
+Algemene kennis wordt centraal onderhouden.
 
-Er zijn twee toepassingen:
+De PSET registreert in de frontmatter welke stabiele
+Understanding-ID's zij gebruikt.
 
-1. geïntegreerde content:
-   understanding/_content/[onderwerp].md
+Dezelfde centrale Understanding-content kan vervolgens in
+verschillende uitvoervormen anders worden gepresenteerd:
 
-   Deze kan in een PSET worden opgenomen met een snippet.
+WEBSITE
+-------
+De benodigde `_content` wordt inline in de PSET opgenomen.
 
-2. zelfstandige Understanding-pagina:
-   understanding/[categorie]/[onderwerp].md
+COMPLETE MODULE-PDF
+-------------------
+De PSET neemt de Understanding niet opnieuw volledig op.
+Gebruik daar:
 
-   Deze gebruikt:
-   template: understanding.html
+    {{ understanding_reference(understanding) }}
+
+De renderer bouwt daarmee een verwijzing naar de centrale
+Understanding-pagina's en de bijbehorende paginanummers.
+
+Schrijf nooit vaste paginanummers in de PSET zelf.
 
 Kopieer algemene theorie niet opnieuw naar verschillende
 PSET's wanneer een bestaande Understanding kan worden
@@ -668,15 +683,26 @@ De focusdimensie van de week krijgt extra nadruk, maar beide
 processen blijven aanwezig.
 -->
 
---8<-- "understanding/_content/[ONDERWERP].md"
+{% if render_mode == "module_pdf" %}
+
+{{ understanding_reference(understanding) }}
+
+{% else %}
+
+--8<-- "understanding/_content/[ONDERWERP-1].md"
 
 <!--
-Of, wanneer een include niet passend is:
+Voeg hier voor iedere Understanding-ID uit de frontmatter
+de bijbehorende centrale `_content`-include toe, in dezelfde
+inhoudelijke volgorde.
 
-[Probleemgerichte Understanding.]
+Voorbeeld bij meerdere onderdelen:
 
-[Eventuele link naar zelfstandige Understanding-pagina.]
+--8<-- "understanding/_content/[ONDERWERP-2].md"
+--8<-- "understanding/_content/[ONDERWERP-3].md"
 -->
+
+{% endif %}
 
 
 ## Opdracht
@@ -820,6 +846,20 @@ BELANGRIJK
 Een hint mag een obstakel verkleinen.
 
 Een hint mag niet ongemerkt de volledige oplossing worden.
+
+UITVOERVORM
+-----------
+De inhoud en volgorde van hints blijven in iedere uitvoervorm
+gelijk.
+
+Website:
+- hints blijven uitklapbaar;
+- de leerling kiest welke hint wordt geopend.
+
+PDF:
+- alle hints worden zichtbaar opgenomen;
+- de renderer markeert ze als herkenbare HINT-blokken;
+- er wordt geen aparte PDF-versie van de hintinhoud onderhouden.
 -->
 
 Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
@@ -1060,6 +1100,9 @@ UNDERSTANDING
 [ ] Geeft Understanding noodzakelijke kennis?
 [ ] Voorkomt Understanding dat de oplossing wordt weggegeven?
 [ ] Is bestaande algemene Understanding hergebruikt?
+[ ] Staan de juiste stabiele Understanding-ID's in de frontmatter?
+[ ] Gebruikt de Module-PDF `understanding_reference(understanding)`?
+[ ] Bevat de PSET geen hardcoded Understanding-paginanummers?
 
 LESS / MORE
 [ ] Past de variant bij dezelfde plaats in de leerlijn?
@@ -1071,6 +1114,7 @@ HINTS
 [ ] Is ondersteuning progressief?
 [ ] Kan een leerling na iedere hint weer zelfstandig verder?
 [ ] Wordt nergens onnodig de volledige oplossing gegeven?
+[ ] Blijven inhoud en volgorde van hints gelijk tussen web en PDF?
 
 TESTEN
 [ ] Volgt de teststrategie uit het probleem?

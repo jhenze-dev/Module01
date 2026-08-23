@@ -61,14 +61,42 @@ De structuur is:
                     ↓
     understanding/_content/python/[BESTAND].md
 
-Dezelfde _content kan daarnaast:
+Dezelfde _content wordt centraal hergebruikt in verschillende
+uitvoervormen.
 
-- rechtstreeks in een PSET worden opgenomen;
-- vanuit een TSET worden geraadpleegd;
-- vanuit andere modulepagina's worden gelinkt;
-- later onderdeel zijn van een samengestelde PDF.
+De normale koppeling vanuit PSETs en TSETs verloopt via stabiele
+Understanding-ID's. Daardoor hoeven deze onderwijsbronnen geen vaste
+Understanding-URL, bestandslocatie of PDF-paginanummer te kennen.
+
+Op de website kan de centrale _content inline worden weergegeven waar
+de pagina-architectuur dat voorschrijft.
+
+In de complete Module-PDF wordt Understanding centraal opgenomen.
+PSETs en TSETs kunnen daar via `understanding_reference(understanding)`
+naar de relevante Understanding-pagina('s) verwijzen. De paginanummers
+worden tijdens de PDF-build automatisch bepaald.
 
 De wrapper mag daarom geen inhoud dupliceren of wijzigen.
+
+
+CENTRALE UNDERSTANDING-REGISTRATIE
+---------------------------------
+Iedere zelfstandige Understanding heeft een stabiele Understanding-ID.
+
+Deze ID verbindt:
+
+- de centrale _content;
+- de zelfstandige Understanding-pagina;
+- PSETs en TSETs die deze Understanding gebruiken;
+- de centrale Understanding-sectie in de Module-PDF;
+- automatisch gegenereerde PDF-paginaverwijzingen.
+
+De Understanding-ID is niet hetzelfde als een Mermaid `%% id:`.
+Een Understanding-ID identificeert inhoud; een Mermaid-ID identificeert
+een diagramasset.
+
+De wrapper bevat zelf geen vaste PDF-paginanummers. Die worden tijdens
+de PDF-build bepaald en centraal als build-data beheerd.
 
 
 ============================================================
@@ -150,13 +178,13 @@ wanneer deze dezelfde naam heeft als het onderwerp in de paginatitel.
 
 De heading blijft WEL in _content staan.
 
-Dat is noodzakelijk omdat dezelfde _content:
+Dat is noodzakelijk omdat dezelfde _content buiten de zelfstandige
+wrapper opnieuw kan worden gebruikt.
 
-- inline in een PSET;
-- in een ander document;
-- in een samengestelde PDF;
-
-wel een inhoudelijke tussenkop nodig kan hebben.
+Op de website kan de content inline worden weergegeven waar de
+pagina-architectuur dat voorschrijft. In samengestelde uitvoervormen,
+waaronder de Module-PDF, blijft de inhoudelijke heading onderdeel van
+de centrale Understanding-content.
 
 
 ============================================================
@@ -275,26 +303,6 @@ als de overige Understanding-pagina's.
 
 
 ============================================================
-12. PAD TIJDENS REFACTOR
-============================================================
-
-Tijdens de bouwfase kan de include tijdelijk verwijzen naar:
-
-    understanding_new/_content/python/[BESTAND].md
-
-Na het hernoemen van de map naar:
-
-    understanding/
-
-moet dit worden aangepast naar:
-
-    understanding/_content/python/[BESTAND].md
-
-Dit is een tijdelijke technische situatie en geen onderdeel van
-het definitieve ontwerp.
-
-
-============================================================
 LAATSTE ONTWERPCONTROLE
 ============================================================
 
@@ -305,6 +313,9 @@ LAATSTE ONTWERPCONTROLE
 [ ] Staat er geen extra clusterregel boven de inhoud?
 [ ] Staat understanding-article-start direct vóór de include?
 [ ] Verwijst de include naar het juiste _content-bestand?
+[ ] Is de wrapper gekoppeld aan de juiste centrale Understanding?
+[ ] Worden geen vaste Understanding-URL's of PDF-paginanummers toegevoegd?
+[ ] Blijft de koppeling vanuit PSET/TSET gebaseerd op stabiele Understanding-ID's?
 [ ] Is geen onderwijsinhoud in de wrapper toegevoegd?
 [ ] Is de eerste H3 alleen via CSS verborgen en niet verwijderd?
 [ ] Staat onder de content een horizontale scheiding?

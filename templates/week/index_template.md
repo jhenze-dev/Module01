@@ -2,6 +2,10 @@
 title: [TITEL]
 template: week.html
 week: [NUMMER]
+
+# Alleen opnemen wanneer deze week resources gebruikt.
+resources:
+  - [RESOURCE-ID]
 ---
 
 # Week [NUMMER] *[TITEL]*
@@ -43,6 +47,11 @@ Gebruik in de frontmatter:
     template: week.html
     week: [NUMMER]
 
+Wanneer de week externe of multimedia-resources gebruikt:
+
+    resources:
+      - [RESOURCE-ID]
+
 `title` bevat alleen de inhoudelijke weektitel, bijvoorbeeld:
 
     title: Slimme keuzes
@@ -52,6 +61,15 @@ Zet `Week [NUMMER] —` NIET in `title`.
 `template: week.html` bepaalt het documenttype en `week`
 bepaalt het weeknummer. De presentatielaag kan daaruit
 zichtbaar bijvoorbeeld `Week 3 — Slimme keuzes` maken.
+
+`resources` bevat de stabiele IDs van resources die op deze
+weekpagina worden gebruikt, bijvoorbeeld een video.
+
+Laat `resources` volledig weg wanneer de week geen resources
+gebruikt.
+
+De concrete resourcegegevens worden centraal beheerd en worden
+niet opnieuw in de week-index opgeslagen.
 
 Deze scheiding maakt dezelfde metadata bruikbaar voor zowel
 de webpagina als de PDF-renderpipeline.
