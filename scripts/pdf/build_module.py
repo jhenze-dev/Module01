@@ -1442,7 +1442,7 @@ def main():
     )
 
     resources = inventory_qr_resources(
-        docs_root=ROOT / "docs" / "nl",
+        docs_root=ROOT / "docs",
         assets_root=ASSETS_DIR,
     )
 
