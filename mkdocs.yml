@@ -68,28 +68,28 @@ markdown_extensions:
 
 nav:
   - Guide:
-      - Module 01: index.md
-      - Over deze module: guide/index.md
-      - Software: guide/software.md
-      - Werkwijze: guide/werkwijze.md
-      - Portfolio: guide/portfolio.md
-      - Git & GitHub: guide/git-github.md
+      - Module 01: nl/index.md
+      - Over deze module: nl/guide/index.md
+      - Software: nl/guide/software.md
+      - Werkwijze: nl/guide/werkwijze.md
+      - Portfolio: nl/guide/portfolio.md
+      - Git & GitHub: nl/guide/git-github.md
 
   - Module:
-      - Week 0 — Denken als een computer: weeks/00/index.md
-      - Week 1 — Mens en machine: weeks/01/index.md
-      - Week 2 — Werken met informatie: weeks/02/index.md
-      - Week 3 — Slimme keuzes: weeks/03/index.md
-      - Week 4 — Blijven herhalen: weeks/04/index.md
-      - Week 5 — Gegevens verzamelen: weeks/05/index.md
-      - Week 6 — Patronen ontdekken: weeks/06/index.md
-      - Week 7 — Informatie interpreteren: weeks/07/index.md
-      - Week 8 — Slimmer structureren: weeks/08/index.md
-      - Week 9 — Modulaire systemen: weeks/09/index.md
-      - Week 10 — Herinneringen beheren: weeks/10/index.md
-      - Week 11 — Schoolexamen: weeks/11/index.md
+      - Week 0 — Denken als een computer: nl/weeks/00/index.md
+      - Week 1 — Mens en machine: nl/weeks/01/index.md
+      - Week 2 — Werken met informatie: nl/weeks/02/index.md
+      - Week 3 — Slimme keuzes: nl/weeks/03/index.md
+      - Week 4 — Blijven herhalen: nl/weeks/04/index.md
+      - Week 5 — Gegevens verzamelen: nl/weeks/05/index.md
+      - Week 6 — Patronen ontdekken: nl/weeks/06/index.md
+      - Week 7 — Informatie interpreteren: nl/weeks/07/index.md
+      - Week 8 — Slimmer structureren: nl/weeks/08/index.md
+      - Week 9 — Modulaire systemen: nl/weeks/09/index.md
+      - Week 10 — Herinneringen beheren: nl/weeks/10/index.md
+      - Week 11 — Schoolexamen: nl/weeks/11/index.md
 
-  - Understanding: understanding/index.md
+  - Understanding: nl/understanding/index.md
 
 extra_css:
   # Basis

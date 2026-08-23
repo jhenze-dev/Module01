@@ -26,6 +26,7 @@ def _get_entry(
 
 def get_resource_page_path(
     item: str,
+    language: str = "nl",
 ) -> str:
     """
     Bepaal het publieke pad van de zelfstandige
@@ -35,9 +36,9 @@ def get_resource_page_path(
 
         w3schools.week3
 
-    wordt:
+    wordt voor Nederlands:
 
-        pdf-resources/03/w3schools/
+        nl/pdf-resources/03/w3schools/
     """
 
     domain, key = item.split(
@@ -61,6 +62,7 @@ def get_resource_page_path(
     week_key = f"{week_number:02d}"
 
     return (
+        f"{language}/"
         f"pdf-resources/"
         f"{week_key}/"
         f"{domain}/"
@@ -237,6 +239,7 @@ def resource_page(
 def get_resource_target_url(
     item: str,
     site_url: str,
+    language: str = "nl",
 ) -> str:
     """
     Bouw de publieke URL van de zelfstandige
@@ -246,16 +249,17 @@ def get_resource_target_url(
 
         w3schools.week3
 
-    wordt:
+    wordt voor Nederlands:
 
         https://jhenze-dev.github.io/Module01/
-        pdf-resources/03/w3schools/
+        nl/pdf-resources/03/w3schools/
     """
 
     base_url = site_url.rstrip("/")
 
     path = get_resource_page_path(
-        item
+        item=item,
+        language=language,
     ).lstrip("/")
 
     return f"{base_url}/{path}"
@@ -265,6 +269,7 @@ def get_resource_qr_data(
     catalog: dict,
     site_url: str,
     source_path: str | Path,
+    language: str = "nl",
 ) -> dict:
     """
     Bouw de gegevens waarmee een QR-resource kan worden gemaakt.
@@ -303,6 +308,7 @@ def get_resource_qr_data(
         "target": get_resource_target_url(
             item=item,
             site_url=site_url,
+            language=language,
         ),
         "source_path": Path(
             source_path

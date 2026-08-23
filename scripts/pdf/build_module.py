@@ -234,7 +234,7 @@ def extract_content(path: Path) -> str:
 
     return replace_mermaid_blocks_for_pdf(
         html=html,
-        docs_root=ROOT / "docs",
+        docs_root=ROOT / "docs" / "nl",
         assets_root=ASSETS_DIR,
         pdf_output_dir=OUTPUT_DIR,
     )
@@ -480,7 +480,7 @@ def extract_tset(path: Path) -> str:
 
     return replace_mermaid_blocks_for_pdf(
         html=html,
-        docs_root=ROOT / "docs",
+        docs_root=ROOT / "docs" / "nl",
         assets_root=ASSETS_DIR,
         pdf_output_dir=OUTPUT_DIR,
     )
@@ -697,6 +697,7 @@ def get_week_video(
     markdown_path = (
         ROOT
         / "docs"
+        / "nl"
         / "weeks"
         / week_key
         / "index.md"
@@ -779,6 +780,7 @@ def get_pset_resource_ids(
     markdown_path = (
         ROOT
         / "docs"
+        / "nl"
         / "psets"
         / week_key
         / "index.md"
@@ -857,6 +859,7 @@ def build_pset_qr_resources(
             source_path=(
                 ROOT
                 / "docs"
+                / "nl"
                 / "psets"
                 / f"{week_number:02d}"
                 / "index.md"
@@ -893,6 +896,7 @@ def _find_single_tset(
 
     week_dir = (
         PDF_MKDOCS_DIR
+        / "nl"
         / "tsets"
         / week_key
     )
@@ -935,6 +939,7 @@ def _find_psets(
 
     week_dir = (
         PDF_MKDOCS_DIR
+        / "nl"
         / "psets"
         / week_key
     )
@@ -1146,6 +1151,7 @@ def build_week(
 
     week_index = (
         PDF_MKDOCS_DIR
+        / "nl"
         / "weeks"
         / week_key
         / "index.html"
@@ -1174,6 +1180,7 @@ def build_week(
 
     pset_index_path = (
         PDF_MKDOCS_DIR
+        / "nl"
         / "psets"
         / week_key
         / "index.html"
@@ -1223,6 +1230,7 @@ def discover_week_numbers() -> list[int]:
 
     weeks_dir = (
         PDF_MKDOCS_DIR
+        / "nl"
         / "weeks"
     )
 
@@ -1265,7 +1273,7 @@ def build_weeks(
     if not week_numbers:
         raise RuntimeError(
             "Geen weken gevonden in de Module-PDF MkDocs-build:\n"
-            f"  {PDF_MKDOCS_DIR / 'weeks'}"
+            f"  {PDF_MKDOCS_DIR / 'nl' / 'weeks'}"
         )
 
     return [
@@ -1434,7 +1442,7 @@ def main():
     )
 
     resources = inventory_qr_resources(
-        docs_root=ROOT / "docs",
+        docs_root=ROOT / "docs" / "nl",
         assets_root=ASSETS_DIR,
     )
 
