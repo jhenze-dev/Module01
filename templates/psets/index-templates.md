@@ -2,6 +2,9 @@
 title: Problem Set [NUMMER]
 template: pset-index.html
 week: [NUMMER]
+
+resources:
+  - [RESOURCE-GROEP]
 ---
 
 # Problem Set [NUMMER]
@@ -41,6 +44,14 @@ Gebruik in de frontmatter:
     title: Problem Set [NUMMER]
     template: pset-index.html
     week: [NUMMER]
+
+    resources:
+      - [RESOURCE-GROEP]
+
+`resources` bevat de stabiele ID van de resourcegroep die deze
+PSET gebruikt. Deze technische declaratie wordt door de
+PDF-renderpipeline gebruikt om de resources voor de PDF-build
+te inventariseren.
 
 `title` is hier bewust de volledige HTML-paginatitel.
 
@@ -461,6 +472,11 @@ De PSET-index bevat daarom niet opnieuw handmatig:
 Gebruik op de PSET-index alleen de resourcegroep die voor deze
 Problem Set is samengesteld.
 
+Dezelfde ID staat in de frontmatter bij `resources` en wordt op
+de pagina gebruikt met:
+
+    {{ resource_group("[RESOURCE-GROEP]") }}
+
 De renderer bepaalt vervolgens hoe de resources voor web en
 PDF worden weergegeven.
 
@@ -596,7 +612,8 @@ LINKS
 BRONNEN
 -------
 [ ] Is de juiste resourcegroep voor deze Problem Set gebruikt?
-[ ] Wordt `resource_group(...)` gebruikt?
+[ ] Staat deze resourcegroep ook in `resources:` in de frontmatter?
+[ ] Wordt dezelfde ID gebruikt in `resource_group(...)`?
 [ ] Zijn geen resourcegegevens handmatig in de index gedupliceerd?
 [ ] Sluiten de centraal beheerde resources aan op de inhoud van deze week?
 [ ] Zijn externe bronnen aanvullend en niet noodzakelijk om
