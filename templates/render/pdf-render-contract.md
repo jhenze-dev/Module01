@@ -227,28 +227,24 @@ De onderwijsbron blijft onafhankelijk van de concrete presentatie.
 
 ## 7. Multimedia
 
-Multimedia wordt via een stabiele ID opgenomen.
+Multimedia wordt via stabiele resource-ID's en centrale componenten
+opgenomen.
+
+Onderwijsbestanden verwijzen naar een resource of mediacomponent via
+een stabiele ID. De concrete presentatie en resourcegegevens worden
+door de centrale resource-/video-infrastructuur beheerd.
 
 Voorbeelden:
 
     demo.jellybeans-less
-    video.conditionals
+    video.jellybeans
 
-De concrete URL staat centraal in data, niet verspreid door meerdere
-onderwijsbestanden.
+De concrete URL wordt niet handmatig over meerdere onderwijsbestanden
+verspreid.
 
-Bijvoorbeeld:
-
-```yaml
-media:
-  demo.jellybeans-less:
-    type: asciinema
-    url: https://...
-
-  video.conditionals:
-    type: youtube
-    url: https://...
-```
+Een webcomponent kan bijvoorbeeld een video-resource declareren via
+een stabiele ID. De centrale video-infrastructuur bevat vervolgens de
+concrete embed-URL en de presentatie voor de website.
 
 Rendering:
 
@@ -264,7 +260,10 @@ PDF:
 - korte omschrijving;
 - eventueel zichtbare korte URL wanneer dat functioneel is.
 
-De QR-code verwijst naar dezelfde URL als de web-embed.
+De QR-code verwijst naar dezelfde video of resource als de webpresentatie.
+De doel-URL kan daarbij worden aangepast aan het medium. Voor YouTube
+wordt een embed-URL bijvoorbeeld automatisch genormaliseerd naar de
+reguliere watch-URL voor de QR-code.
 
 
 ## 8. Mermaid en gegenereerde diagrammen
@@ -319,9 +318,10 @@ PNG. De renderpipeline:
         ↓
     vervangt het Mermaid-blok in de uitvoervorm door de afbeelding
 
-Dezelfde gegenereerde PNG wordt gebruikt voor web en PDF. Hierdoor
-is de weergave niet afhankelijk van Mermaid-rendering in de browser
-en blijft de visuele output tussen uitvoervormen gelijk.
+De renderer gebruikt de gegenereerde PNG als gedeelde visuele asset
+voor de uitvoervormen waarin Mermaid direct door een afbeelding wordt
+vervangen. Hierdoor is de uiteindelijke visuele output niet afhankelijk
+van Mermaid-rendering in de browser.
 
 De gegenereerde PNG is build-output en wordt niet als afzonderlijke
 onderwijsbron onderhouden.
@@ -527,8 +527,9 @@ Gerealiseerd:
    paginaverwijzingen.
 4. Mermaid-broncode wordt tijdens de build naar gedeelde PNG-assets
    gerenderd.
-5. Video en andere geschikte resources kunnen via centrale IDs worden
-   verwerkt en in PDF een passende QR-presentatie krijgen.
+5. Video en andere geschikte resources worden via stabiele IDs en de
+   centrale resource-/video-infrastructuur verwerkt; in PDF kunnen zij
+   een passende QR-presentatie krijgen.
 6. Hints blijven één inhoudsbron: uitklapbaar op web, volledig zichtbaar
    in PDF.
 7. Badges blijven visueel herkenbaar in de PDF.

@@ -689,7 +689,7 @@ processen blijven aanwezig.
 
 {% else %}
 
---8<-- "understanding/_content/[ONDERWERP-1].md"
+--8<-- "nl/understanding/_content/[ONDERWERP-1].md"
 
 <!--
 Voeg hier voor iedere Understanding-ID uit de frontmatter
@@ -698,8 +698,8 @@ inhoudelijke volgorde.
 
 Voorbeeld bij meerdere onderdelen:
 
---8<-- "understanding/_content/[ONDERWERP-2].md"
---8<-- "understanding/_content/[ONDERWERP-3].md"
+--8<-- "nl/understanding/_content/[ONDERWERP-2].md"
+--8<-- "nl/understanding/_content/[ONDERWERP-3].md"
 -->
 
 {% endif %}

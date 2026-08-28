@@ -20,7 +20,7 @@ De pagina zelf blijft bewust DUN.
 
 De daadwerkelijke leerlingzichtbare onderwijsinhoud staat in:
 
-    docs/understanding/_content/python/[BESTAND].md
+    docs/nl/understanding/_content/python/[BESTAND].md
 
 De wrapper maakt die centrale content zelfstandig toegankelijk
 binnen de Understanding-wiki.
@@ -57,9 +57,9 @@ wiki-pagina wordt aangeboden.
 
 De structuur is:
 
-    understanding/python/[ONDERWERP].md
+    nl/understanding/python/[ONDERWERP].md
                     ↓
-    understanding/_content/python/[BESTAND].md
+    nl/understanding/_content/python/[BESTAND].md
 
 Dezelfde _content wordt centraal hergebruikt in verschillende
 uitvoervormen.
@@ -168,7 +168,7 @@ Plaats de include altijd binnen:
 
     <div class="understanding-article-start"></div>
 
-    --8<-- "understanding/_content/python/[BESTAND].md"
+    --8<-- "nl/understanding/_content/python/[BESTAND].md"
 
 
 De marker understanding-article-start staat direct vóór de include.
@@ -331,7 +331,7 @@ LAATSTE ONTWERPCONTROLE
 
 <div class="understanding-article-start"></div>
 
---8<-- "understanding/_content/python/[BESTAND].md"
+--8<-- "nl/understanding/_content/python/[BESTAND].md"
 
 
 ---

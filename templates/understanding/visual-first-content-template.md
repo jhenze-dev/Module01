@@ -10,7 +10,7 @@ van de inhoud van een Visual First Understanding.
 
 Dit bestand staat in:
 
-    docs/understanding/_content/visual-first/[PAD]/[BESTAND].md
+    docs/nl/understanding/_content/visual-first/[PAD]/[BESTAND].md
 
 Het bevat de daadwerkelijke, herbruikbare onderwijsinhoud
 over een Visual First-representatie.
@@ -1042,7 +1042,7 @@ EINDCONTROLE
 [ ] Zijn alle placeholders verwijderd?
 [ ] Werken alle diagrammen?
 [ ] Werken eventuele links?
-[ ] Verwijst hergebruik naar `understanding/_content/visual-first/[PAD]/[BESTAND].md`?
+[ ] Verwijst hergebruik naar `nl/understanding/_content/visual-first/[PAD]/[BESTAND].md`?
 [ ] Kan het bestand zowel zelfstandig via een wrapper als
     waar nodig via een include worden gebruikt?
 [ ] Helpt de content leerlingen de representatie zelfstandig

@@ -20,7 +20,7 @@ De pagina zelf blijft bewust DUN.
 
 De daadwerkelijke leerlingzichtbare onderwijsinhoud staat in:
 
-    docs/understanding/_content/visual-first/[PAD]/[BESTAND].md
+    docs/nl/understanding/_content/visual-first/[PAD]/[BESTAND].md
 
 De wrapper maakt die centrale content zelfstandig toegankelijk
 binnen de Understanding-wiki.
@@ -57,15 +57,15 @@ wiki-pagina wordt aangeboden.
 
 De structuur kan bijvoorbeeld zijn:
 
-    understanding/visual-first/flowcharts/basics.md
+    nl/understanding/visual-first/flowcharts/basics.md
                          ↓
-    understanding/_content/visual-first/flowcharts/basics.md
+    nl/understanding/_content/visual-first/flowcharts/basics.md
 
 of:
 
-    understanding/visual-first/ipo.md
+    nl/understanding/visual-first/ipo.md
                          ↓
-    understanding/_content/visual-first/ipo.md
+    nl/understanding/_content/visual-first/ipo.md
 
 De exacte submap volgt de afgesproken Understanding-filetree.
 
@@ -176,7 +176,7 @@ Plaats de include altijd binnen:
 
     <div class="understanding-article-start"></div>
 
-    --8<-- "understanding/_content/visual-first/[PAD]/[BESTAND].md"
+    --8<-- "nl/understanding/_content/visual-first/[PAD]/[BESTAND].md"
 
 
 De marker understanding-article-start staat direct vóór de include.
@@ -318,7 +318,7 @@ LAATSTE ONTWERPCONTROLE
 
 <div class="understanding-article-start"></div>
 
---8<-- "understanding/_content/visual-first/[PAD]/[BESTAND].md"
+--8<-- "nl/understanding/_content/visual-first/[PAD]/[BESTAND].md"
 
 
 ---

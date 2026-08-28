@@ -10,7 +10,7 @@ inhoud van een Python Understanding.
 
 Dit bestand staat in:
 
-    docs/understanding/_content/python/[BESTAND].md
+    docs/nl/understanding/_content/python/[BESTAND].md
 
 Het bevat de daadwerkelijke, herbruikbare onderwijsinhoud
 over een Python-concept of een logisch samenhangend cluster
@@ -20,11 +20,11 @@ Dezelfde content kan worden gebruikt:
 
 1. via een zelfstandige Understanding-pagina:
 
-   understanding/python/[ONDERWERP].md
+   nl/understanding/python/[ONDERWERP].md
 
 2. als include binnen bijvoorbeeld een Problem Set:
 
-   --8<-- "understanding/_content/python/[BESTAND].md"
+   --8<-- "nl/understanding/_content/python/[BESTAND].md"
 
 Daarom bevat dit bestand GEEN:
 
@@ -1211,7 +1211,7 @@ EINDCONTROLE
 [ ] Werken alle codevoorbeelden?
 [ ] Klopt eventuele uitvoer?
 [ ] Zijn tabellen alleen gebruikt waar ze meerwaarde hebben?
-[ ] Verwijst hergebruik naar `understanding/_content/python/[BESTAND].md`?
+[ ] Verwijst hergebruik naar `nl/understanding/_content/python/[BESTAND].md`?
 [ ] Kan het bestand zonder aanpassing via een wrapper én via
     een andere pagina worden geïncludeerd?
 ============================================================
