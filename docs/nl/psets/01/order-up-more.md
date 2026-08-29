@@ -3,6 +3,9 @@ title: Order Up!
 template: pset.html
 week: 1
 level: more
+
+understanding:
+  - python.sequential-execution
 ---
 
 # Order Up!
@@ -41,7 +44,7 @@ De bestelzuil moet steeds duidelijk maken wie aan de beurt is en iedere persoon 
 
 ## Understanding
 
---8<-- "nl/understanding/_content/python/sequential-execution.md"
+{{ understanding_reference(understanding) }}
 
 
 ## Opdracht
@@ -148,7 +151,7 @@ Controleer daarbij:
 - komt daarna steeds de juiste volgende persoon;
 - stopt de interactie pas nadat persoon 4 klaar is.
 
-Bepaal vooraf welke stappen je verwacht. Voer daarna de test uit en vergelijk wat werkelijk gebeurt met je verwachting.
+Bepaal **vooraf** welke route je programma bij iedere test moet doorlopen en wat je verwacht dat het programma doet. Voer daarna de test uit en vergelijk de werkelijke route met je verwachting.
 
 **Kunnen vier personen de bestelroute achter elkaar zonder uitleg doorlopen en leidt iedere stap logisch naar de volgende?**
 

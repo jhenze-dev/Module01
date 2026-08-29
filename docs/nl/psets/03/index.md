@@ -45,7 +45,7 @@ resources:
 4. Werk **Portfolio 3** bij.  
    [Werken aan je portfolio](../../guide/portfolio.md)
 
-## Aanvullende uitleg en oefening
+## Aanvullende uitleg en oefeningen
 
 De uitleg bij de Problem Sets bevat de kennis die je nodig hebt om aan de opdrachten te kunnen werken. Wil je de onderwerpen uitgebreider bestuderen of extra oefenen? Gebruik dan **Think Python**. Daarnaast kun je **W3Schools** gebruiken als naslagwerk tijdens het programmeren.
 

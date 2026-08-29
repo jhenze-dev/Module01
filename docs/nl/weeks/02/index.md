@@ -2,6 +2,9 @@
 title: Werken met Informatie
 template: week.html
 week: 2
+
+resources:
+  - video.forrest-gump
 ---
 
 # Week 2 *Werken met Informatie*

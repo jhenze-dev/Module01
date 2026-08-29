@@ -2,6 +2,9 @@
 title: Mens en Machine
 template: week.html
 week: 1
+
+resources:
+  - video.five-easy-pieces
 ---
 
 # Week 1 *Mens en Machine*

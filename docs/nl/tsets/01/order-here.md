@@ -2,6 +2,9 @@
 title: Order Here!
 template: tset.html
 week: 1
+
+understanding:
+  - visual-first.flowcharts-basics
 ---
 
 # Thinking Set 1 *Order Here!*
@@ -44,7 +47,9 @@ flowchart TD
     D --> E([Einde])
 ```
 
-[Meer over flowcharts](../../understanding/visual-first/flowcharts/basics.md)
+## Understanding
+
+{{ understanding_reference(understanding) }}
 
 
 ## Test jullie oplossing

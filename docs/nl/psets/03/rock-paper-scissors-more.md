@@ -1,8 +1,15 @@
----
+﻿---
 title: Rock Paper Scissors Lizard Spock
 template: pset.html
 week: 3
 level: more
+
+resources:
+  - video.rpsls
+
+understanding:
+  - python.and
+  - python.or
 ---
 
 # Rock Paper Scissors Lizard Spock
@@ -70,9 +77,7 @@ Doel:
 
 ## Understanding
 
---8<-- "nl/understanding/_content/python/and.md"
-
---8<-- "nl/understanding/_content/python/or.md"
+{{ understanding_reference(understanding) }}
 
 ## Opdracht
 
@@ -215,4 +220,5 @@ Controleer voordat je de Problem Set afrondt:
 - je laatste versie staat in Git.
 
 Werk daarna **Portfolio 3** bij.
+
 

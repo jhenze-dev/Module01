@@ -683,26 +683,7 @@ De focusdimensie van de week krijgt extra nadruk, maar beide
 processen blijven aanwezig.
 -->
 
-{% if render_mode == "module_pdf" %}
-
 {{ understanding_reference(understanding) }}
-
-{% else %}
-
---8<-- "nl/understanding/_content/[ONDERWERP-1].md"
-
-<!--
-Voeg hier voor iedere Understanding-ID uit de frontmatter
-de bijbehorende centrale `_content`-include toe, in dezelfde
-inhoudelijke volgorde.
-
-Voorbeeld bij meerdere onderdelen:
-
---8<-- "nl/understanding/_content/[ONDERWERP-2].md"
---8<-- "nl/understanding/_content/[ONDERWERP-3].md"
--->
-
-{% endif %}
 
 
 ## Opdracht

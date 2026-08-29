@@ -2,6 +2,9 @@
 title: Looptest Challenge
 template: tset.html
 week: 2
+
+understanding:
+  - visual-first.ipo
 ---
 
 # Thinking Set 2 *Looptest Challenge*
@@ -42,7 +45,9 @@ flowchart LR
     A[Input] --> B[Verwerking] --> C[Output]
 ```
 
-[Meer over IPO-diagrammen](../../understanding/visual-first/ipo.md)
+## Understanding
+
+{{ understanding_reference(understanding) }}
 
 
 ## Test jullie oplossing

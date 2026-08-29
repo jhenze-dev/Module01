@@ -26,3 +26,7 @@ python.variables:
   page: 10
 python.arithmetic-expressions:
   page: 10
+python.and:
+  page: 11
+python.or:
+  page: 12

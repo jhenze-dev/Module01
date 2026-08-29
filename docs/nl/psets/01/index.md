@@ -2,6 +2,9 @@
 title: Problem Set 1
 template: pset-index.html
 week: 1
+
+resources:
+  - w3schools.week1
 ---
 
 # Problem Set 1
@@ -27,7 +30,7 @@ week: 1
 
 1. Werk je lokale repository bij met Git voordat je begint.  
    Commit en push tijdens het werken regelmatig, zodat in je Git-history zichtbaar wordt hoe je werk zich ontwikkelt.  
-   [Werken met Git](../../guide/git-github.md)
+   [Werken met Git](../../understanding/git/update.md)
 
 2. Maak één van de volgende versies:
     - [Order Up!](order-up-less.md) — **Minder vertrouwd**  
@@ -36,10 +39,10 @@ week: 1
       *Kies deze versie als je je meer vertrouwd voelt met de stof.*
 
 3. Werk **Portfolio 1** bij.  
-   [Werken aan je portfolio](../../guide/portfolio.md)
+   [Werken aan je portfolio](../../understanding/portfolio/index.md)
 
 
-## Aanvullende uitleg en oefening
+## Aanvullende uitleg en oefeningen
 
 De uitleg bij de Problem Sets bevat de kennis die je nodig hebt om aan de opdrachten te kunnen werken. Wil je de onderwerpen uitgebreider bestuderen? Gebruik dan **Think Python**. Daarnaast kun je **W3Schools** gebruiken als naslagwerk tijdens het programmeren.
 
@@ -53,12 +56,9 @@ De uitleg bij de Problem Sets bevat de kennis die je nodig hebt om aan de opdrac
 
 **W3Schools**
 
-Gebruik de volgende pagina's als naslagwerk voor de onderwerpen van deze week:
+{{ resource_group("w3schools.week1") }}
 
-- [Python Statements](https://www.w3schools.com/python/python_statements.asp)
-- [Python Output](https://www.w3schools.com/python/python_output.asp)
-- [Python Comments](https://www.w3schools.com/python/python_comments.asp)
-- [Python User Input](https://www.w3schools.com/python/python_user_input.asp) — gebruik alleen het gedeelte tot **Input Number**. De onderdelen daarna komen later in de module aan bod.
+Gebruik bij **Python User Input** alleen het gedeelte tot **Input Number**. De onderdelen daarna komen later in de module aan bod.
 
 
 ## Wanneer moet het af zijn?
@@ -75,8 +75,3 @@ Tijdens de Vakflexuren kun je extra uitleg en ondersteuning krijgen.
 {{ moment.topic }}
 
 {% endfor %}
-
-
-
-
-

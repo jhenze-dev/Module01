@@ -2,6 +2,9 @@
 title: Problem Set 2
 template: pset-index.html
 week: 2
+
+resources:
+  - w3schools.week2
 ---
 
 # Problem Set 2
@@ -28,7 +31,7 @@ week: 2
 
 1. Werk je lokale repository bij met Git voordat je begint.  
    Commit en push tijdens het werken regelmatig, zodat in je Git-history zichtbaar wordt hoe je werk zich ontwikkelt.  
-   [Werken met Git](../../guide/git-github.md)
+   [Werken met Git](../../understanding/git/update.md)
 
 2. Maak één van de volgende versies:
     - [How Fast Is Forrest?](he-sure-is-fast-less.md) — **Minder vertrouwd**  
@@ -37,10 +40,10 @@ week: 2
       *Kies deze versie als je je meer vertrouwd voelt met de stof.*
 
 3. Werk **Portfolio 2** bij.  
-   [Werken aan je portfolio](../../guide/portfolio.md)
+   [Werken aan je portfolio](../../understanding/portfolio/index.md)
 
 
-## Aanvullende uitleg en oefening
+## Aanvullende uitleg en oefeningen
 
 De uitleg bij de Problem Sets bevat de kennis die je nodig hebt om aan de opdrachten te kunnen werken. Wil je de onderwerpen uitgebreider bestuderen of extra oefenen? Gebruik dan **Think Python**. Daarnaast kun je **W3Schools** gebruiken als naslagwerk tijdens het programmeren.
 
@@ -61,14 +64,7 @@ Lees:
 
 **W3Schools**
 
-Gebruik de volgende pagina's als naslagwerk voor de onderwerpen van deze week:
-
-- [Python Variables](https://www.w3schools.com/python/python_variables.asp)
-- [Python Variable Names](https://www.w3schools.com/python/python_variables_names.asp)
-- [Python Data Types](https://www.w3schools.com/python/python_datatypes.asp)
-- [Python Numbers](https://www.w3schools.com/python/python_numbers.asp)
-- [Python Casting](https://www.w3schools.com/python/python_casting.asp)
-- [Python Arithmetic Operators](https://www.w3schools.com/python/python_operators_arithmetic.asp)
+{{ resource_group("w3schools.week2") }}
 
 
 ## Wanneer moet het af zijn?

@@ -69,3 +69,13 @@ python:
     id: python.arithmetic-expressions
     title: Expressions
     source: nl/understanding/_content/python/arithmetic-expressions.md    
+
+  and:
+    id: python.and
+    title: and
+    source: nl/understanding/_content/python/and.md
+
+  or:
+    id: python.or
+    title: or
+    source: nl/understanding/_content/python/or.md

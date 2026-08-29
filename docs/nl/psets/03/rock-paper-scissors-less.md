@@ -1,8 +1,12 @@
----
+﻿---
 title: Rock Paper Scissors
 template: pset.html
 week: 3
 level: less
+
+understanding:
+  - python.and
+  - python.or
 ---
 
 # Rock Paper Scissors
@@ -59,9 +63,7 @@ Doel:
 
 ## Understanding
 
---8<-- "nl/understanding/_content/python/and.md"
-
---8<-- "nl/understanding/_content/python/or.md"
+{{ understanding_reference(understanding) }}
 
 ## Opdracht
 
@@ -189,4 +191,5 @@ Controleer voordat je de Problem Set afrondt:
 - je laatste versie staat in Git.
 
 Werk daarna **Portfolio 3** bij.
+
 

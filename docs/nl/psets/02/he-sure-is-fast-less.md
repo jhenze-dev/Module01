@@ -3,6 +3,10 @@ title: How Fast Is Forrest?
 template: pset.html
 week: 2
 level: less
+
+understanding:
+  - python.variables
+  - python.arithmetic-expressions
 ---
 
 # How Fast Is Forrest?
@@ -45,9 +49,7 @@ Een computer kan alleen berekeningen uitvoeren wanneer informatie uit de werkeli
 
 ## Understanding
 
---8<-- "nl/understanding/_content/python/variables.md"
-
---8<-- "nl/understanding/_content/python/arithmetic-expressions.md"
+{{ understanding_reference(understanding) }}
 
 [Meer over IPO-diagrammen](../../understanding/visual-first/ipo.md)
 

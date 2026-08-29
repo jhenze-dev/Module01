@@ -225,8 +225,6 @@ Verantwoord leren
 
 ## Wat moet je doen?
 
-## Aanvullende uitleg
-OF
 ## Aanvullende uitleg en oefeningen
 
 {{ resource_group("[RESOURCE-GROEP]") }}
@@ -235,11 +233,8 @@ OF
 
 ## Hulp nodig?
 
-Gebruik `## Aanvullende uitleg` wanneer de gekoppelde
-resources alleen uitleg, leesmateriaal of naslagmateriaal bevatten.
-
-Bevat de resourcegroep daarnaast ook oefenmateriaal, gebruik dan
-`## Aanvullende uitleg en oefeningen`.
+Gebruik deze sectie voor aanvullende uitleg en eventueel
+bijbehorende oefeningen.
 
 Oefeningen die via de resourcegroep worden aangeboden zijn
 aanvullend oefenmateriaal en zijn niet automatisch verplichte
@@ -443,7 +438,7 @@ Pas daarna het nummer van de Portfolio-stap aan.
    [Werken aan je portfolio](../../understanding/portfolio/index.md)
 
 
-## Aanvullende uitleg en bronnen
+## Aanvullende uitleg en oefeningen
 
 <!--
 ============================================================
@@ -471,26 +466,26 @@ websites of boeken te verplaatsen.
 
 CENTRAAL RESOURCEBEHEER
 -----------------------
-Resources worden centraal beheerd.
+Resources kunnen centraal worden beheerd.
 
-De PSET-index bevat daarom niet opnieuw handmatig:
+Een PSET-index kan naast centraal beheerde resources ook
+rechtstreeks aanvullende uitleg, bronnen of oefenmateriaal
+bevatten wanneer dat inhoudelijk onderdeel is van de Problem Set.
 
-- boektitels;
-- hoofdstukken of paragrafen;
-- oefeningen;
-- externe URL's;
-- resourcebeschrijvingen.
-
-Gebruik op de PSET-index alleen de resourcegroep die voor deze
-Problem Set is samengesteld.
+Wanneer voor de Problem Set een centrale resourcegroep is
+samengesteld, gebruik dan de resourcegroep op de PSET-index.
 
 Dezelfde ID staat in de frontmatter bij `resources` en wordt op
 de pagina gebruikt met:
 
     {{ resource_group("[RESOURCE-GROEP]") }}
 
-De renderer bepaalt vervolgens hoe de resources voor web en
-PDF worden weergegeven.
+Centrale resources hoeven dus niet opnieuw handmatig op de
+PSET-index te worden uitgeschreven. Rechtstreeks opgenomen
+aanvullende uitleg, bronnen of oefeningen blijven wel mogelijk.
+
+De renderer bepaalt vervolgens hoe zowel de centraal beheerde
+resources als de overige inhoud voor web en PDF worden weergegeven.
 
 
 GEBRUIK
@@ -501,6 +496,9 @@ Gebruik:
 
 Vervang [RESOURCE-GROEP] door de stabiele ID van de
 resourcegroep voor deze Problem Set.
+
+Gebruik de resourcegroep naast eventuele rechtstreeks opgenomen
+aanvullende uitleg, bronnen of oefeningen wanneer die nodig zijn.
 -->
 
 {{ resource_group("[RESOURCE-GROEP]") }}
@@ -628,8 +626,6 @@ BRONNEN
 [ ] Wordt dezelfde ID gebruikt in `resource_group(...)`?
 [ ] Zijn geen resourcegegevens handmatig in de index gedupliceerd?
 [ ] Sluiten de centraal beheerde resources aan op de inhoud van deze week?
-[ ] Past de heading bij de inhoud van de resourcegroep:
-    "Aanvullende uitleg" of "Aanvullende uitleg en oefeningen"?
 [ ] Zijn externe bronnen aanvullend en niet noodzakelijk om
     ontbrekende module-uitleg te compenseren?
 

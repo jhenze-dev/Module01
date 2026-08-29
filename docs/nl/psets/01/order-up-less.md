@@ -1,8 +1,11 @@
----
+﻿---
 title: Order Up!
 template: pset.html
 week: 1
 level: less
+
+understanding:
+  - python.sequential-execution
 ---
 
 # Order Up!
@@ -39,7 +42,7 @@ Een klant moet zonder hulp van een medewerker kunnen begrijpen wat het systeem v
 
 ## Understanding
 
---8<-- "nl/understanding/_content/python/sequential-execution.md"
+{{ understanding_reference(understanding) }}
 
 
 ## Opdracht
@@ -134,7 +137,7 @@ Test je programma met verschillende antwoorden op de vragen.
 | 2    |                     |                 |                  |
 | 3    |                     |                 |                  |
 
-Bepaal **vooraf** welke stappen het programma moet doorlopen. Voer daarna de test uit en vergelijk wat werkelijk gebeurt met je verwachting.
+Bepaal **vooraf** welke route je programma bij iedere test moet doorlopen en wat je verwacht dat het programma doet. Voer daarna de test uit en vergelijk de werkelijke route met je verwachting.
 
 **Kan iemand anders de volledige bestelroute zonder uitleg doorlopen en leidt iedere stap logisch naar de volgende?**
 
@@ -153,3 +156,5 @@ Controleer voordat je de Problem Set afrondt:
 - je laatste versie staat in Git.
 
 Werk daarna **Portfolio 1** bij.
+
+
