@@ -28,3 +28,4 @@ node_modules/
 # Local backups / repair copies
 backup/
 docs-before-encoding-repair/
+dev/Module01_werkwijze_weekindex.md
