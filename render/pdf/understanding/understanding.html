@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>{{ document_title | default("Understanding") }}</title>
+
+  {% if pdf_css %}
+  <link rel="stylesheet" href="{{ pdf_css }}">
+  {% endif %}
+</head>
+
+<body class="pdf pdf--understanding">
+
+  <main class="pdf-document">
+
+    <header class="pdf-document-header">
+      <h1>Understanding</h1>
+      <p>Naslagwerk</p>
+    </header>
+
+    {% for item in understanding %}
+
+    <article
+      class="pdf-understanding-item"
+      id="{{ item.id }}"
+    >
+      {{ item.html | safe }}
+    </article>
+
+    {% endfor %}
+
+  </main>
+
+</body>
+</html>

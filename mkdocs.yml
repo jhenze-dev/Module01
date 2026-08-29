@@ -27,7 +27,7 @@ plugins:
       include_yaml:
         - schedule: docs/data/schedule.yml
         - understanding_catalog: docs/data/understanding.yml
-        - resources_catalog: docs/data/resources.yml
+        - resources_catalog: docs/data/general-resources.yml
         - understanding_pages: docs/data/generated/understanding-pages.yml
 
 markdown_extensions:
@@ -66,31 +66,6 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
 
-nav:
-  - Guide:
-      - Module 01: nl/index.md
-      - Over deze module: nl/guide/index.md
-      - Software: nl/guide/software.md
-      - Werkwijze: nl/guide/werkwijze.md
-      - Portfolio: nl/guide/portfolio.md
-      - Git & GitHub: nl/guide/git-github.md
-
-  - Module:
-      - Week 0 — Denken als een computer: nl/weeks/00/index.md
-      - Week 1 — Mens en machine: nl/weeks/01/index.md
-      - Week 2 — Werken met informatie: nl/weeks/02/index.md
-      - Week 3 — Slimme keuzes: nl/weeks/03/index.md
-      - Week 4 — Blijven herhalen: nl/weeks/04/index.md
-      - Week 5 — Gegevens verzamelen: nl/weeks/05/index.md
-      - Week 6 — Patronen ontdekken: nl/weeks/06/index.md
-      - Week 7 — Informatie interpreteren: nl/weeks/07/index.md
-      - Week 8 — Slimmer structureren: nl/weeks/08/index.md
-      - Week 9 — Modulaire systemen: nl/weeks/09/index.md
-      - Week 10 — Herinneringen beheren: nl/weeks/10/index.md
-      - Week 11 — Schoolexamen: nl/weeks/11/index.md
-
-  - Understanding: nl/understanding/index.md
-
 extra_css:
   # Basis
   - assets/css/style.css
@@ -115,3 +90,6 @@ extra_css:
   
 extra_javascript:
   - https://unpkg.com/mermaid@11/dist/mermaid.min.js
+
+extra:
+  language: !ENV [LANGUAGE, nl]

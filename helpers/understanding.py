@@ -30,6 +30,10 @@ def _build_pdf_reference(
     """
     Bouw voor de complete Module-PDF een verwijzing
     naar de Understanding-pagina's.
+
+    Tijdens de eerste PDF-pass zijn de paginanummers
+    nog niet beschikbaar. In dat geval wordt alleen
+    de inhoudelijke verwijzing opgebouwd.
     """
 
     entries = []
@@ -41,16 +45,47 @@ def _build_pdf_reference(
             catalog=catalog,
         )
 
+        page = pages.get(
+            item,
+            {}
+        ).get(
+            "page"
+        )
+
         entries.append(
             {
                 "id": item,
                 "title": entry["title"],
-                "page": pages[item]["page"],
+                "page": page,
             }
         )
 
     if not entries:
         return ""
+
+    first = entries[0]
+    last = entries[-1]
+
+    if first["page"] is None:
+        if len(entries) == 1:
+            return first["title"]
+
+        return (
+            f"{first['title']} t/m "
+            f"{last['title']}."
+        )
+
+    if len(entries) == 1:
+        return (
+            f"{first['title']}, "
+            f"p. {first['page']}."
+        )
+
+    return (
+        f"{first['title']} t/m "
+        f"{last['title']}, "
+        f"p. {first['page']}–{last['page']}."
+    )
 
     first = entries[0]
     last = entries[-1]

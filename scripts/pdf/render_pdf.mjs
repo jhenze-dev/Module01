@@ -1,4 +1,4 @@
-import puppeteer from "puppeteer";
+﻿import puppeteer from "puppeteer";
 import { pathToFileURL } from "url";
 import path from "path";
 
@@ -33,7 +33,6 @@ try {
         printBackground: true,
     });
 
-    console.log(`PDF gereed: ${outputPath}`);
 } finally {
     await browser.close();
 }

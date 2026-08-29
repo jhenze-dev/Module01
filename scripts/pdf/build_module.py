@@ -1,4 +1,4 @@
-from pathlib import Path
+﻿from pathlib import Path
 import os
 import subprocess
 import sys
@@ -35,8 +35,9 @@ from helpers.resources import (
 
 BUILD_DIR = ROOT / "build"
 ASSETS_DIR = BUILD_DIR / "assets"
-OUTPUT_DIR = BUILD_DIR / "pdf"
+PDF_OUTPUT_ROOT = BUILD_DIR / "pdf"
 
+OUTPUT_DIR = PDF_OUTPUT_ROOT
 PDF_MKDOCS_DIR = OUTPUT_DIR / "mkdocs"
 
 TEMPLATE_DIR = ROOT / "render" / "pdf" / "module"
@@ -83,6 +84,8 @@ def build_mkdocs():
         cwd=ROOT,
         env=env,
         check=True,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
     )
 
 def _load_main_content(path: Path) -> Tag:
@@ -214,6 +217,11 @@ def transform_pdf_hints(
 
 
 def extract_content(path: Path) -> str:
+    language = os.environ.get(
+        "LANGUAGE",
+        "nl",
+    ).strip().lower()
+
     """
     Generieke extractor.
 
@@ -234,7 +242,7 @@ def extract_content(path: Path) -> str:
 
     return replace_mermaid_blocks_for_pdf(
         html=html,
-        docs_root=ROOT / "docs" / "nl",
+        docs_root=ROOT / "docs" / language,
         assets_root=ASSETS_DIR,
         pdf_output_dir=OUTPUT_DIR,
     )
@@ -426,6 +434,11 @@ def extract_week_opening(
 
 
 def extract_tset(path: Path) -> str:
+    language = os.environ.get(
+        "LANGUAGE",
+        "nl",
+    ).strip().lower()
+
     """
     Haal de Thinking Set op voor de Module-PDF.
 
@@ -480,7 +493,7 @@ def extract_tset(path: Path) -> str:
 
     return replace_mermaid_blocks_for_pdf(
         html=html,
-        docs_root=ROOT / "docs" / "nl",
+        docs_root=ROOT / "docs" / language,
         assets_root=ASSETS_DIR,
         pdf_output_dir=OUTPUT_DIR,
     )
@@ -544,7 +557,7 @@ def load_resource_build_config() -> tuple[dict, str]:
         ROOT
         / "docs"
         / "data"
-        / "resources.yml"
+        / "general-resources.yml"
     )
 
     mkdocs_path = (
@@ -1261,9 +1274,117 @@ def discover_week_numbers() -> list[int]:
     )
 
 
+def build_understanding() -> list[dict]:
+    """
+    Verzamel de centrale Understanding-content voor de Module-PDF.
+
+    De volgorde en selectie worden bepaald door understanding.yml.
+    De content wordt gelezen uit de gerenderde MkDocs-PDF-build.
+    """
+
+    understanding_path = (
+        ROOT
+        / "docs"
+        / "data"
+        / "understanding.yml"
+    )
+
+    if not understanding_path.exists():
+        raise RuntimeError(
+            "Understanding-catalogus ontbreekt:\n"
+            f"  {understanding_path}"
+        )
+
+    with understanding_path.open(
+        "r",
+        encoding="utf-8",
+    ) as file:
+        catalog = yaml.safe_load(file)
+
+    if not isinstance(catalog, dict):
+        raise RuntimeError(
+            "Understanding-catalogus heeft een "
+            "ongeldige structuur."
+        )
+
+    entries: list[dict] = []
+
+    for domain_entries in catalog.values():
+
+        if not isinstance(
+            domain_entries,
+            dict,
+        ):
+            continue
+
+        for entry in domain_entries.values():
+
+            if not isinstance(
+                entry,
+                dict,
+            ):
+                continue
+
+            item_id = entry.get("id")
+            source = entry.get("source")
+            title = entry.get("title")
+
+            if not item_id or not source or not title:
+                raise RuntimeError(
+                    "Onvolledige Understanding-entry:\n"
+                    f"  {entry}"
+                )
+
+            source_path = Path(source)
+
+            parts = list(
+                source_path.parts
+            )
+
+            if "_content" not in parts:
+                raise RuntimeError(
+                    "Understanding-source bevat geen "
+                    f"'_content'-map: {source}"
+                )
+
+            parts.remove("_content")
+
+            rendered_path = (
+                PDF_MKDOCS_DIR
+                / Path(*parts).with_suffix("")
+                / "index.html"
+            )
+
+            if not rendered_path.exists():
+                raise RuntimeError(
+                    "Gerenderde Understanding-pagina "
+                    "ontbreekt:\n"
+                    f"  {rendered_path}\n"
+                    f"  Bron: {source}"
+                )
+
+            content = extract_content(
+                rendered_path
+            )
+
+            entries.append(
+                {
+                    "id": item_id,
+                    "title": title,
+                    "html": content,
+                }
+            )
+
+    return entries
+
+
 def build_weeks(
     resources: list,
 ) -> list[dict]:
+    language = os.environ.get(
+        "LANGUAGE",
+        "nl",
+    ).strip().lower()
     """
     Bouw alle beschikbare weken zonder week-specifieke Python-code.
     """
@@ -1273,7 +1394,7 @@ def build_weeks(
     if not week_numbers:
         raise RuntimeError(
             "Geen weken gevonden in de Module-PDF MkDocs-build:\n"
-            f"  {PDF_MKDOCS_DIR / 'nl' / 'weeks'}"
+            f"  {PDF_MKDOCS_DIR / language / 'weeks'}"
         )
 
     return [
@@ -1306,6 +1427,7 @@ def render_module(
     return template.render(
         document_title="Module 01",
         weeks=weeks,
+        understanding=build_understanding(),
         pdf_css="mkdocs/assets/css/badges.css",
     )
 
@@ -1339,6 +1461,117 @@ def read_pdf_page_map(
         page_map[clean_name] = page_index + 1
 
     return page_map
+
+
+def read_understanding_page_map(
+    pdf_path: Path,
+) -> dict[str, int]:
+    """
+    Zoek de tijdelijke Understanding-markers in de gerenderde PDF
+    en bepaal op welke pagina ieder Understanding-item begint.
+    """
+
+    reader = PdfReader(
+        str(pdf_path)
+    )
+
+    page_map: dict[str, int] = {}
+
+    marker_prefix = "UNDERSTANDING-"
+
+    for page_index, page in enumerate(
+        reader.pages
+    ):
+        text = page.extract_text() or ""
+
+        for line in text.splitlines():
+
+            if marker_prefix not in line:
+                continue
+
+            marker_start = line.find(
+                marker_prefix
+            )
+
+            marker = line[
+                marker_start:
+            ].strip()
+
+            item_id = marker[
+                len(marker_prefix):
+            ]
+
+            if item_id.startswith(
+                (
+                    "python.",
+                    "visual-first.",
+                )
+            ):
+                page_map[item_id] = (
+                    page_index + 1
+                )
+
+    return page_map
+
+
+def write_understanding_page_map(
+    page_map: dict[str, int],
+) -> None:
+    """
+    Schrijf de actuele PDF-paginamap van de centrale
+    Understanding-sectie naar understanding-pages.yml.
+    """
+
+    language = os.environ.get(
+        "LANGUAGE",
+        "nl",
+    ).strip().lower()
+
+    if language not in {"nl", "en"}:
+        raise RuntimeError(
+            f"Ongeldige LANGUAGE: {language}"
+        )
+
+    output_path = (
+        ROOT
+        / "docs"
+        / "data"
+        / "generated"
+        / language
+        / "understanding-pages.yml"
+    )
+
+    understanding_pages: dict[str, dict[str, int]] = {}
+
+    for target_id, page_number in page_map.items():
+
+        if not target_id.startswith(
+            (
+                "python.",
+                "visual-first.",
+            )
+        ):
+            continue
+
+        understanding_pages[target_id] = {
+            "page": page_number,
+        }
+
+    output_path.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    with output_path.open(
+        "w",
+        encoding="utf-8",
+    ) as file:
+        yaml.safe_dump(
+            understanding_pages,
+            file,
+            allow_unicode=True,
+            sort_keys=False,
+        )
 
 
 def apply_pdf_page_map(
@@ -1413,7 +1646,33 @@ def render_pdf(
     )
 
 
-def main():
+def build_module(verbose: bool = False) -> Path:
+    global OUTPUT_DIR, PDF_MKDOCS_DIR
+
+    language = os.environ.get(
+        "LANGUAGE",
+        "nl",
+    ).strip().lower()
+
+    if language not in {"nl", "en"}:
+        raise RuntimeError(
+            f"Ongeldige LANGUAGE: {language}"
+        )
+
+    OUTPUT_DIR = (
+        PDF_OUTPUT_ROOT
+        / language
+    )
+
+    PDF_MKDOCS_DIR = (
+        OUTPUT_DIR
+        / "mkdocs"
+    )
+
+    def log(*args, **kwargs):
+        if verbose:
+            print(*args, **kwargs)
+
     """
     Bouw de volledige Module-PDF.
 
@@ -1431,13 +1690,13 @@ def main():
         exist_ok=True,
     )
 
-    print(
+    log(
         "1. Module-PDF MkDocs-build maken..."
     )
 
     build_mkdocs()
 
-    print(
+    log(
         "2. Resources inventariseren..."
     )
 
@@ -1459,7 +1718,7 @@ def main():
             )
         )
 
-    print(
+    log(
         "3. QR-assets bouwen..."
     )
 
@@ -1468,7 +1727,7 @@ def main():
         assets_root=ASSETS_DIR,
     )
 
-    print(
+    log(
         "4. Weken verzamelen..."
     )
 
@@ -1476,11 +1735,11 @@ def main():
         resources=resources,
     )
 
-    print(
+    log(
         f"   {len(weeks)} weken gevonden."
     )
 
-    print(
+    log(
         "5. Module-wrapper renderen..."
     )
 
@@ -1503,7 +1762,7 @@ def main():
         / "module.pdf"
     )
 
-    print(
+    log(
         "6. Tijdelijke index-pass renderen..."
     )
 
@@ -1522,7 +1781,13 @@ def main():
             index_pdf
         )
 
-    print(
+        understanding_page_map = (
+            read_understanding_page_map(
+                index_pdf
+            )
+        )
+
+    log(
         "7. Paginamap gevonden:"
     )
 
@@ -1536,17 +1801,67 @@ def main():
                 "pset-",
             )
         ):
-            print(
+            log(
                 f"   {target_id} -> {page_number}"
             )
+
+    log(
+        "   Understanding:"
+    )
+
+    for target_id, page_number in sorted(
+        understanding_page_map.items()
+    ):
+        log(
+            f"   {target_id} -> {page_number}"
+        )
+
+    write_understanding_page_map(
+        page_map=understanding_page_map,
+    )
+
+    log(
+        "8. MkDocs-build opnieuw maken met actuele Understanding-paginamap..."
+    )
+
+    build_mkdocs()
+
+    log(
+        "9. Weken opnieuw verzamelen..."
+    )
+
+    weeks = build_weeks(
+        resources=resources,
+    )
+
+    log(
+        f"   {len(weeks)} weken gevonden."
+    )
+
+    log(
+        "10. Module-wrapper opnieuw renderen..."
+    )
+
+    html = render_module(
+        weeks
+    )
+
+    output.write_text(
+        html,
+        encoding="utf-8",
+    )
+
+    log(
+        "11. Paginaverwijzingen toepassen..."
+    )
 
     apply_pdf_page_map(
         html_path=output,
         page_map=page_map,
     )
 
-    print(
-        "8. Definitieve PDF genereren..."
+    log(
+        "12. Definitieve PDF genereren..."
     )
 
     render_pdf(
@@ -1554,20 +1869,18 @@ def main():
         pdf_path=pdf_output,
     )
 
-    print()
+    log()
 
-    print(
-        f"PDF MkDocs-build: {PDF_MKDOCS_DIR}"
-    )
+    return pdf_output
 
-    print(
-        f"HTML gereed:      {output}"
-    )
 
-    print(
-        f"PDF gereed:       {pdf_output}"
-    )
+def main():
+    build_module()
 
 
 if __name__ == "__main__":
     main()
+
+
+
+

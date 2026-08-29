@@ -1,5 +1,6 @@
 import os
 import sys
+import yaml
 from pathlib import Path
 
 
@@ -65,7 +66,30 @@ def define_env(env):
         "web",
     )
 
+    language = os.getenv(
+        "LANGUAGE",
+        "nl",
+    )
+
+    understanding_path = (
+        DOCS_DIR
+        / language
+        / "understanding.yml"
+    )
+
+    with understanding_path.open(
+        "r",
+        encoding="utf-8",
+    ) as file:
+        understanding_catalog = yaml.safe_load(
+            file
+        )
+
     env.variables["render_mode"] = render_mode
+    env.variables["language"] = language
+    env.variables["understanding_catalog"] = (
+        understanding_catalog
+    )
 
     @env.macro
     def understanding_reference(items):
