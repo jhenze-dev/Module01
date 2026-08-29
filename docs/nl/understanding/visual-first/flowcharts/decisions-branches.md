@@ -11,4 +11,4 @@ template: understanding.html
 
 ---
 
-[← Basics](basics.md) · [Terug naar Flowcharts](../../index.md#flowcharts)
+[← Basics](basics.md) · [While Loops →](while-loop.md)

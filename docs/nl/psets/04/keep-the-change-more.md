@@ -1,0 +1,182 @@
+﻿---
+title: Keep the Change
+template: pset.html
+week: 4
+level: more
+
+understanding:
+  - python.while-loops
+---
+
+# Keep the Change
+
+--8<-- "includes/badges.html:more-comfortable"
+--8<-- "includes/badges.html:python-while"
+--8<-- "includes/badges.html:visual-flowchart"
+--8<-- "includes/badges.html:ct-algoritmen"
+--8<-- "includes/badges.html:process-expressing"
+
+--8<-- "includes/videos.html:keep-the-change"
+
+## Waar werk je aan?
+
+Met deze Problem Set werk je aan de volgende leerdoelen:
+
+- Ik kan **beredeneren** hoe een herhalend proces stap voor stap verandert.
+- Ik kan **een algoritmische oplossing ontwerpen** waarin een proces doorgaat zolang het doel nog niet is bereikt.
+- Ik kan **een oplossing automatiseren** door herhalende stappen en een stopvoorwaarde vast te leggen.
+- Ik kan **een algoritmische oplossing programmeren** met een `while`-loop.
+
+## Probleem
+
+In *Home Alone* betaalt een klant meer voor zijn pizza dan nodig is.
+
+De pizzabezorger moet het juiste wisselgeld teruggeven. Een computersysteem moet daarbij niet alleen het eindresultaat bepalen, maar het volledige wisselproces kunnen uitvoeren en zichtbaar maken.
+
+Het systeem moet steeds opnieuw bepalen welke munt kan worden gebruikt en hoeveel wisselgeld daarna nog over is.
+
+De eigenaar van Little Nero's wil bovendien kunnen zien hoe het systeem tot het uiteindelijke wisselgeld komt.
+
+**Hoe ontwerp je een systeem dat wisselgeld stap voor stap teruggeeft en het verloop van het proces zichtbaar maakt?**
+
+## Demo
+
+[DEMO LATER TOEVOEGEN]
+
+## Understanding
+
+{{ understanding_reference(understanding) }}
+
+## Opdracht
+
+Nu ga je deze kennis gebruiken om het probleem van **Keep the Change** op te lossen.
+
+Ontwerp en programmeer een systeem dat het volledige wisselproces uitvoert en zichtbaar maakt.
+
+### Specificatie
+
+Je programma moet:
+
+- een bedrag aan wisselgeld vragen;
+- het wisselgeld teruggeven met Nederlandse munten;
+- steeds opnieuw bepalen welke munt gebruikt kan worden;
+- na iedere munt het resterende bedrag aanpassen;
+- doorgaan zolang er nog wisselgeld over is;
+- stoppen wanneer het volledige bedrag is teruggegeven;
+- tonen welke munten tijdens het proces zijn gebruikt;
+- zichtbaar maken hoe het resterende bedrag tijdens het proces verandert.
+
+Gebruik voor de herhaling een `while`-loop.
+
+Het programma moet het wisselgeld teruggeven met **zo groot mogelijke munten**.
+
+Je oplossing moet voor ieder geldig bedrag zelfstandig het volledige wisselproces uitvoeren.
+
+### Hints
+
+Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
+
+??? hint "1 — Welke informatie moet je tijdens het proces bijhouden?"
+
+    Kijk naar het volledige wisselproces.
+
+    Aan het begin weet je hoeveel wisselgeld moet worden teruggegeven. Na iedere munt verandert deze informatie.
+
+    Bepaal welke informatie je tijdens het proces nodig hebt om de volgende stap te kunnen uitvoeren.
+
+??? hint "2 — Hoe weet je wanneer je klaar bent?"
+
+    Het proces bestaat uit meerdere herhalingen.
+
+    Zoek naar een waarde die tijdens het proces verandert.
+
+    **Welke waarde vertelt je dat er nog werk te doen is?**
+
+    En welke waarde vertelt je dat het proces klaar is?
+
+??? hint "3 — Hoe kun je het proces zichtbaar maken?"
+
+    Maak een **loop-flowchart** waarin je niet alleen het begin en einde laat zien.
+
+    Laat ook zien:
+
+    - welke toestand wordt bekeken;
+    - welke handeling wordt uitgevoerd;
+    - hoe de toestand verandert;
+    - wanneer het proces opnieuw begint.
+
+    Controleer of je flowchart iedere herhaling van het proces kan beschrijven.
+
+??? hint "4 — Hoe vertaal je het proces naar Python?"
+
+    Gebruik je flowchart als ontwerp.
+
+    Een `while`-loop herhaalt code zolang een voorwaarde waar is:
+
+    ```python
+    while voorwaarde:
+        actie
+    ```
+
+    Kijk naar je eigen ontwerp:
+
+    - welke waarde bepaalt of de loop doorgaat?
+    - waar verandert die waarde?
+    - welke handelingen horen bij één herhaling?
+
+    Programmeer vanuit je eigen ontwerp verder.
+
+### Testen
+
+Een programma is pas betrouwbaar als je controleert of **het wisselgeld voor verschillende bedragen correct en volledig wordt teruggegeven**.
+
+Test niet alleen het eindresultaat. Kijk ook naar het verloop van het proces.
+
+Bedenk voor iedere test:
+
+- welk bedrag aan wisselgeld je gebruikt;
+- welke munten je verwacht;
+- welke tussenstappen je verwacht;
+- hoe het resterende bedrag verandert;
+- welke uitkomst je programma werkelijk geeft.
+
+| Test | Wisselgeld | Verwachte munten | Verwacht verloop | Werkelijke uitkomst |
+| ---- | ---------- | ---------------- | ----------------- | ------------------- |
+| 1    |            |                  |                   |                     |
+| 2    |            |                  |                   |                     |
+| 3    |            |                  |                   |                     |
+
+Zorg dat je testgevallen verschillende situaties controleren, bijvoorbeeld:
+
+- een bedrag waarvoor één munt voldoende is;
+- een bedrag waarvoor meerdere munten nodig zijn;
+- een bedrag waarbij verschillende muntwaarden worden gebruikt;
+- een bedrag waarbij de `while`-loop meerdere keren wordt uitgevoerd.
+
+Bepaal **vooraf** wat je verwacht.
+
+Voer daarna je programma uit en vergelijk het werkelijke verloop met je verwachting.
+
+Een test is geslaagd wanneer:
+
+**werkelijke uitkomst = verwachte uitkomst**
+
+Als dat niet zo is, onderzoek dan welke stap in je herhalende proces anders verloopt dan je had verwacht.
+
+**Kun je met je testgevallen aantonen dat je programma het volledige wisselproces correct uitvoert en zichtbaar maakt?**
+
+### Inleveren
+
+Controleer voordat je de Problem Set afrondt:
+
+- je programma voldoet aan de **specificatie**;
+- je gebruikt een `while`-loop voor de herhaling;
+- je maakt het verloop van het wisselproces zichtbaar;
+- het resterende wisselgeld verandert na iedere stap;
+- je programma stopt wanneer het wisselgeld volledig is teruggegeven;
+- je hebt verschillende bedragen en procesverlopen getest;
+- je kunt uitleggen hoe je ontwerp is vertaald naar Python;
+- je hebt tijdens het werken regelmatig gecommit;
+- je laatste versie staat in Git.
+
+Werk daarna je portfolio bij.

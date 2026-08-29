@@ -55,3 +55,46 @@ w3schools:
 
       - label: Python Else
         url: https://www.w3schools.com/python/python_if_else.asp
+
+  week4:
+    label: W3Schools
+    type: group
+    links:
+      - label: Python While Loops
+        url: https://www.w3schools.com/python/python_while_loops.asp
+
+      - label: Python String strip()
+        url: https://www.w3schools.com/python/ref_string_strip.asp
+
+      - label: Python String lower()
+        url: https://www.w3schools.com/python/ref_string_lower.asp
+
+      - label: Python String upper()
+        url: https://www.w3schools.com/python/ref_string_upper.asp
+
+      - label: Python String capitalize()
+        url: https://www.w3schools.com/python/ref_string_capitalize.asp
+
+      - label: Python String startswith()
+        url: https://www.w3schools.com/python/ref_string_startswith.asp
+
+      - label: Python String endswith()
+        url: https://www.w3schools.com/python/ref_string_endswith.asp
+
+      - label: Python String count()
+        url: https://www.w3schools.com/python/ref_string_count.asp
+
+      - label: Python String find()
+        url: https://www.w3schools.com/python/ref_string_find.asp
+
+      - label: Python String replace()
+        url: https://www.w3schools.com/python/ref_string_replace.asp
+
+      - label: Python String isalpha()
+        url: https://www.w3schools.com/python/ref_string_isalpha.asp
+
+      - label: Python String isdigit()
+        url: https://www.w3schools.com/python/ref_string_isdigit.asp
+
+      - label: Python String isnumeric()
+        url: https://www.w3schools.com/python/ref_string_isnumeric.asp

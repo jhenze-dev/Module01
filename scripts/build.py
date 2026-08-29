@@ -10,7 +10,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from scripts.pdf.build_module import build_module
+from scripts.pdf.build_module import (
+    build_mkdocs,
+    build_module,
+)
 from scripts.pdf.build_understanding import build_understanding_pdf
 
 
@@ -47,24 +50,29 @@ def build_language(language: str) -> None:
     print("=" * 40)
 
     print()
-    print("[1/4] Website")
+    print("[1/5] Website")
     build_site(language, clean=(language == "nl"))
     print("      ✓ Gereed: site/")
 
     print()
-    print("[2/4] Understanding PDF")
+    print("[2/5] PDF-MkDocs")
+    build_mkdocs()
+    print("      ✓ Gereed: build/pdf/mkdocs/")
+
+    print()
+    print("[3/5] Understanding PDF")
     with redirect_stdout(io.StringIO()):
         understanding_pdf = build_understanding_pdf()
     print(f"      ✓ Gereed: {understanding_pdf}")
 
     print()
-    print("[3/4] Module PDF")
+    print("[4/5] Module PDF")
     with redirect_stdout(io.StringIO()):
         module_pdf = build_module()
     print(f"      ✓ Gereed: {module_pdf}")
 
     print()
-    print("[4/4] Standalone PDF")
+    print("[5/5] Standalone PDF")
     print("      ○ Nog niet geïmplementeerd")
 
     print()

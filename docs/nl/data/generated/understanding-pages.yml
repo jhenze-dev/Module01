@@ -2,31 +2,37 @@ visual-first.flowcharts-basics:
   page: 1
 visual-first.flowcharts-decisions-branches:
   page: 2
-visual-first.ipo:
+visual-first.flowcharts-while-loop:
   page: 3
-python.boolean-expressions:
+visual-first.ipo:
   page: 4
+python.boolean-expressions:
+  page: 6
 python.comparison-operators:
-  page: 5
+  page: 6
 python.conditions:
-  page: 6
+  page: 7
 python.if:
-  page: 6
+  page: 7
 python.else:
-  page: 7
+  page: 8
 python.elif:
-  page: 7
+  page: 8
 python.indentation:
-  page: 8
-python.branches:
-  page: 8
-python.sequential-execution:
   page: 9
+python.branches:
+  page: 9
+python.sequential-execution:
+  page: 10
 python.variables:
-  page: 10
-python.arithmetic-expressions:
-  page: 10
-python.and:
   page: 11
+python.arithmetic-expressions:
+  page: 11
+python.and:
+  page: 13
 python.or:
-  page: 12
+  page: 13
+python.while-loops:
+  page: 14
+python.input-validation:
+  page: 16

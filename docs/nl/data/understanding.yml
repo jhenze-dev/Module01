@@ -1,4 +1,4 @@
-visual-first:
+﻿visual-first:
   flowcharts-basics:
     id: visual-first.flowcharts-basics
     title: Flowcharts
@@ -8,6 +8,11 @@ visual-first:
     id: visual-first.flowcharts-decisions-branches
     title: Flowcharts — Decisions & Branches
     source: nl/understanding/_content/visual-first/flowcharts/decisions-branches.md
+
+  flowcharts-while-loop:
+    id: visual-first.flowcharts-while-loop
+    title: Flowcharts — While Loops
+    source: nl/understanding/_content/visual-first/flowcharts/while-loop.md
 
   ipo:
     id: visual-first.ipo
@@ -79,3 +84,13 @@ python:
     id: python.or
     title: or
     source: nl/understanding/_content/python/or.md
+
+  while-loops:
+    id: python.while-loops
+    title: while loops
+    source: nl/understanding/_content/python/while-loops.md
+
+  input-validation:
+    id: python.input-validation
+    title: Input validation
+    source: nl/understanding/_content/python/input-validation.md
