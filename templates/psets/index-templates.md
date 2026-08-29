@@ -225,7 +225,9 @@ Verantwoord leren
 
 ## Wat moet je doen?
 
-## Aanvullende uitleg en bronnen
+## Aanvullende uitleg
+OF
+## Aanvullende uitleg en oefeningen
 
 {{ resource_group("[RESOURCE-GROEP]") }}
 
@@ -233,8 +235,15 @@ Verantwoord leren
 
 ## Hulp nodig?
 
-Deze structuur wordt niet tijdens het invullen van een nieuwe
-week opnieuw ontworpen.
+Gebruik `## Aanvullende uitleg` wanneer de gekoppelde
+resources alleen uitleg, leesmateriaal of naslagmateriaal bevatten.
+
+Bevat de resourcegroep daarnaast ook oefenmateriaal, gebruik dan
+`## Aanvullende uitleg en oefeningen`.
+
+Oefeningen die via de resourcegroep worden aangeboden zijn
+aanvullend oefenmateriaal en zijn niet automatisch verplichte
+onderdelen van de Problem Set.
 
 
 ============================================================
@@ -278,6 +287,9 @@ PSET's.
 
      Voeg alleen badges toe die voor de volledige Problem Set
      gelden.
+
+     Per categorie kunnen meerdere badges worden gebruikt wanneer
+     meerdere badges inhoudelijk van toepassing zijn.
      ======================================================== -->
 
 --8<-- "includes/badges.html:[PYTHON]"
@@ -616,6 +628,8 @@ BRONNEN
 [ ] Wordt dezelfde ID gebruikt in `resource_group(...)`?
 [ ] Zijn geen resourcegegevens handmatig in de index gedupliceerd?
 [ ] Sluiten de centraal beheerde resources aan op de inhoud van deze week?
+[ ] Past de heading bij de inhoud van de resourcegroep:
+    "Aanvullende uitleg" of "Aanvullende uitleg en oefeningen"?
 [ ] Zijn externe bronnen aanvullend en niet noodzakelijk om
     ontbrekende module-uitleg te compenseren?
 
