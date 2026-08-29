@@ -26,9 +26,7 @@ plugins:
       module_name: main
       include_yaml:
         - schedule: docs/data/schedule.yml
-        - understanding_catalog: docs/data/understanding.yml
         - resources_catalog: docs/data/general-resources.yml
-        - understanding_pages: docs/data/generated/understanding-pages.yml
 
 markdown_extensions:
   - admonition

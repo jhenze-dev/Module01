@@ -71,9 +71,32 @@ def define_env(env):
         "nl",
     )
 
+    understanding_pages_path = (
+        DOCS_DIR
+        / language
+        / "data"
+        / "generated"
+        / "understanding-pages.yml"
+    )
+
+    understanding_pages = {}
+
+    if (
+        render_mode == "module_pdf"
+        and understanding_pages_path.exists()
+    ):
+        with understanding_pages_path.open(
+            "r",
+            encoding="utf-8",
+        ) as file:
+            understanding_pages = (
+                yaml.safe_load(file) or {}
+            )    
+
     understanding_path = (
         DOCS_DIR
         / language
+        / "data"
         / "understanding.yml"
     )
 
@@ -89,6 +112,10 @@ def define_env(env):
     env.variables["language"] = language
     env.variables["understanding_catalog"] = (
         understanding_catalog
+    )
+
+    env.variables["understanding_pages"] = (
+        understanding_pages
     )
 
     @env.macro

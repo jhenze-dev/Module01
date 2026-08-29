@@ -26,6 +26,10 @@
       class="pdf-understanding-item"
       id="{{ item.id }}"
     >
+      <span class="pdf-understanding-marker">
+        UNDERSTANDING-{{ item.id }}
+      </span>
+
       {{ item.html | safe }}
     </article>
 

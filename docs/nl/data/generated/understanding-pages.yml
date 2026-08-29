@@ -1,0 +1,28 @@
+visual-first.flowcharts-basics:
+  page: 1
+visual-first.flowcharts-decisions-branches:
+  page: 2
+visual-first.ipo:
+  page: 3
+python.boolean-expressions:
+  page: 4
+python.comparison-operators:
+  page: 5
+python.conditions:
+  page: 6
+python.if:
+  page: 6
+python.else:
+  page: 7
+python.elif:
+  page: 7
+python.indentation:
+  page: 8
+python.branches:
+  page: 8
+python.sequential-execution:
+  page: 9
+python.variables:
+  page: 10
+python.arithmetic-expressions:
+  page: 10

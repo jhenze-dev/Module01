@@ -1,3 +1,19 @@
+visual-first:
+  flowcharts-basics:
+    id: visual-first.flowcharts-basics
+    title: Flowcharts
+    source: nl/understanding/_content/visual-first/flowcharts/basics.md
+
+  flowcharts-decisions-branches:
+    id: visual-first.flowcharts-decisions-branches
+    title: Flowcharts — Decisions & Branches
+    source: nl/understanding/_content/visual-first/flowcharts/decisions-branches.md
+
+  ipo:
+    id: visual-first.ipo
+    title: IPO
+    source: nl/understanding/_content/visual-first/ipo.md
+
 python:
   boolean-expressions:
     id: python.boolean-expressions
@@ -53,19 +69,3 @@ python:
     id: python.arithmetic-expressions
     title: Expressions
     source: nl/understanding/_content/python/arithmetic-expressions.md    
-
-visual-first:
-  flowcharts-basics:
-    id: visual-first.flowcharts-basics
-    title: Flowcharts
-    source: nl/understanding/_content/visual-first/flowcharts/basics.md
-
-  flowcharts-decisions-branches:
-    id: visual-first.flowcharts-decisions-branches
-    title: Flowcharts — Decisions & Branches
-    source: nl/understanding/_content/visual-first/flowcharts/decisions-branches.md
-
-  ipo:
-    id: visual-first.ipo
-    title: IPO
-    source: nl/understanding/_content/visual-first/ipo.md

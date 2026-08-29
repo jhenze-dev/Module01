@@ -52,16 +52,16 @@ def build_language(language: str) -> None:
     print("      ✓ Gereed: site/")
 
     print()
-    print("[2/4] Module PDF")
-    with redirect_stdout(io.StringIO()):
-        module_pdf = build_module()
-    print(f"      ✓ Gereed: {module_pdf}")
-
-    print()
-    print("[3/4] Understanding PDF")
+    print("[2/4] Understanding PDF")
     with redirect_stdout(io.StringIO()):
         understanding_pdf = build_understanding_pdf()
     print(f"      ✓ Gereed: {understanding_pdf}")
+
+    print()
+    print("[3/4] Module PDF")
+    with redirect_stdout(io.StringIO()):
+        module_pdf = build_module()
+    print(f"      ✓ Gereed: {module_pdf}")
 
     print()
     print("[4/4] Standalone PDF")

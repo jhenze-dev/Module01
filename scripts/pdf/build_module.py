@@ -1282,9 +1282,15 @@ def build_understanding() -> list[dict]:
     De content wordt gelezen uit de gerenderde MkDocs-PDF-build.
     """
 
+    language = os.getenv(
+        "LANGUAGE",
+        "nl",
+    )
+
     understanding_path = (
         ROOT
         / "docs"
+        / language
         / "data"
         / "understanding.yml"
     )
@@ -1427,7 +1433,6 @@ def render_module(
     return template.render(
         document_title="Module 01",
         weeks=weeks,
-        understanding=build_understanding(),
         pdf_css="mkdocs/assets/css/badges.css",
     )
 
@@ -1535,9 +1540,9 @@ def write_understanding_page_map(
     output_path = (
         ROOT
         / "docs"
+        / language
         / "data"
         / "generated"
-        / language
         / "understanding-pages.yml"
     )
 
@@ -1781,12 +1786,6 @@ def build_module(verbose: bool = False) -> Path:
             index_pdf
         )
 
-        understanding_page_map = (
-            read_understanding_page_map(
-                index_pdf
-            )
-        )
-
     log(
         "7. Paginamap gevonden:"
     )
@@ -1806,53 +1805,7 @@ def build_module(verbose: bool = False) -> Path:
             )
 
     log(
-        "   Understanding:"
-    )
-
-    for target_id, page_number in sorted(
-        understanding_page_map.items()
-    ):
-        log(
-            f"   {target_id} -> {page_number}"
-        )
-
-    write_understanding_page_map(
-        page_map=understanding_page_map,
-    )
-
-    log(
-        "8. MkDocs-build opnieuw maken met actuele Understanding-paginamap..."
-    )
-
-    build_mkdocs()
-
-    log(
-        "9. Weken opnieuw verzamelen..."
-    )
-
-    weeks = build_weeks(
-        resources=resources,
-    )
-
-    log(
-        f"   {len(weeks)} weken gevonden."
-    )
-
-    log(
-        "10. Module-wrapper opnieuw renderen..."
-    )
-
-    html = render_module(
-        weeks
-    )
-
-    output.write_text(
-        html,
-        encoding="utf-8",
-    )
-
-    log(
-        "11. Paginaverwijzingen toepassen..."
+        "8. Paginaverwijzingen toepassen..."
     )
 
     apply_pdf_page_map(
@@ -1861,7 +1814,7 @@ def build_module(verbose: bool = False) -> Path:
     )
 
     log(
-        "12. Definitieve PDF genereren..."
+        "9. Definitieve PDF genereren..."
     )
 
     render_pdf(

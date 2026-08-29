@@ -5,7 +5,9 @@ from jinja2 import Environment, FileSystemLoader
 
 from scripts.pdf.build_module import (
     build_understanding,
+    read_understanding_page_map,
     render_pdf,
+    write_understanding_page_map,
 )
 
 
@@ -94,6 +96,14 @@ def build_understanding_pdf() -> Path:
         pdf_path=pdf_path,
     )
 
+    page_map = read_understanding_page_map(
+        pdf_path
+    )
+
+    write_understanding_page_map(
+        page_map
+    )
+
     return pdf_path
 
 
@@ -103,6 +113,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
