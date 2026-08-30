@@ -1,4 +1,4 @@
-﻿---
+---
 title: Understanding
 template: understanding.html
 ---
@@ -101,6 +101,20 @@ Gebruik Understanding wanneer je iets wilt terugzoeken, een begrip opnieuw wilt 
 
   </div>
 
+
+  <div id="loops" class="understanding-card understanding-card--python">
+
+<div class="understanding-card-header">
+  <span class="understanding-card-marker"></span>
+  <h3>Loops</h3>
+</div>
+
+<p><a href="python/while-loops/"><code>while</code></a></p>
+<p><a href="python/for-loops/"><code>for</code></a></p>
+<p><a href="python/range/"><code>range()</code></a></p>
+
+  </div>
+
   <div id="lists" class="understanding-card understanding-card--python">
 
 <div class="understanding-card-header">
@@ -110,9 +124,11 @@ Gebruik Understanding wanneer je iets wilt terugzoeken, een begrip opnieuw wilt 
 
 <p><a href="python/lists/">Lists</a></p>
 <p><a href="python/list-indexes/">List Indexes</a></p>
+<p><a href="python/iterating-lists/">Iterating over Lists</a></p>
 <p><a href="python/adding-list-items/">Adding List Items</a></p>
 <p><a href="python/list-information/">List Information</a></p>
 <p><a href="python/lists-and-conditions/">Lists and Conditions</a></p>
+<p><a href="python/changing-list-items/">Changing List Items</a></p>
 
   </div>
 
@@ -161,6 +177,17 @@ Gebruik Understanding wanneer je iets wilt terugzoeken, een begrip opnieuw wilt 
 </div>
 
 <p><a href="visual-first/data-structure-diagrams/basics/">Basics</a></p>
+
+  </div>
+
+  <div id="trace-tables" class="understanding-card understanding-card--visual-first">
+
+<div class="understanding-card-header">
+  <span class="understanding-card-marker"></span>
+  <h3>Trace Tables</h3>
+</div>
+
+<p><a href="visual-first/trace-tables/basics/">Basics</a></p>
 
   </div>
 

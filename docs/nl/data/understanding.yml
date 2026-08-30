@@ -1,4 +1,4 @@
-﻿visual-first:
+visual-first:
   flowcharts-basics:
     id: visual-first.flowcharts-basics
     title: Flowcharts
@@ -23,6 +23,11 @@
     id: visual-first.data-structure-diagrams-basics
     title: Datastructuurdiagram
     source: nl/understanding/_content/visual-first/data-structure-diagrams/basics.md
+
+  trace-tables-basics:
+    id: visual-first.trace-tables-basics
+    title: Trace Table
+    source: nl/understanding/_content/visual-first/trace-tables/basics.md
 
 python:
   boolean-expressions:
@@ -95,6 +100,16 @@ python:
     title: while loops
     source: nl/understanding/_content/python/while-loops.md
 
+  for-loops:
+    id: python.for-loops
+    title: for loops
+    source: nl/understanding/_content/python/for-loops.md
+
+  range:
+    id: python.range
+    title: range()
+    source: nl/understanding/_content/python/range.md
+
   input-validation:
     id: python.input-validation
     title: Input validation
@@ -104,6 +119,11 @@ python:
     id: python.lists
     title: Lists
     source: nl/understanding/_content/python/lists.md
+
+  iterating-lists:
+    id: python.iterating-lists
+    title: Iterating over Lists
+    source: nl/understanding/_content/python/iterating-lists.md
 
   list-indexes:
     id: python.list-indexes
@@ -124,3 +144,8 @@ python:
     id: python.lists-and-conditions
     title: Lists and Conditions
     source: nl/understanding/_content/python/lists-and-conditions.md
+
+  changing-list-items:
+    id: python.changing-list-items
+    title: Changing List Items
+    source: nl/understanding/_content/python/changing-list-items.md

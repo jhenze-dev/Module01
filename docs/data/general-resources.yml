@@ -114,3 +114,19 @@ w3schools:
 
       - label: Python Membership Operators
         url: https://www.w3schools.com/python/python_operators_membership.asp
+
+  week6:
+    label: W3Schools
+    type: group
+    links:
+      - label: Python For Loops
+        url: https://www.w3schools.com/python/python_for_loops.asp
+
+      - label: Python Loop Lists
+        url: https://www.w3schools.com/python/python_lists_loop.asp
+
+      - label: Python Range
+        url: https://www.w3schools.com/python/python_range.asp
+
+      - label: Python Change List Items
+        url: https://www.w3schools.com/python/python_lists_change.asp
