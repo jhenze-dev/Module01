@@ -98,3 +98,19 @@ w3schools:
 
       - label: Python String isnumeric()
         url: https://www.w3schools.com/python/ref_string_isnumeric.asp
+
+  week5:
+    label: W3Schools
+    type: group
+    links:
+      - label: Python Lists
+        url: https://www.w3schools.com/python/python_lists.asp
+
+      - label: Python Access List Items
+        url: https://www.w3schools.com/python/python_lists_access.asp
+
+      - label: Python Add List Items
+        url: https://www.w3schools.com/python/python_lists_add.asp
+
+      - label: Python Membership Operators
+        url: https://www.w3schools.com/python/python_operators_membership.asp

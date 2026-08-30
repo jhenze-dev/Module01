@@ -6,33 +6,45 @@ visual-first.flowcharts-while-loop:
   page: 3
 visual-first.ipo:
   page: 4
+visual-first.data-structure-diagrams-basics:
+  page: 6
 python.boolean-expressions:
-  page: 6
+  page: 7
 python.comparison-operators:
-  page: 6
+  page: 8
 python.conditions:
-  page: 7
+  page: 9
 python.if:
-  page: 7
+  page: 9
 python.else:
-  page: 8
-python.elif:
-  page: 8
-python.indentation:
-  page: 9
-python.branches:
-  page: 9
-python.sequential-execution:
   page: 10
+python.elif:
+  page: 10
+python.indentation:
+  page: 11
+python.branches:
+  page: 11
+python.sequential-execution:
+  page: 12
 python.variables:
-  page: 11
+  page: 13
 python.arithmetic-expressions:
-  page: 11
+  page: 13
 python.and:
-  page: 13
+  page: 15
 python.or:
-  page: 13
+  page: 15
 python.while-loops:
-  page: 14
-python.input-validation:
   page: 16
+python.input-validation:
+  page: 18
+python.lists:
+  page: 20
+python.list-indexes:
+  page: 21
+python.adding-list-items:
+  page: 21
+python.list-information:
+  page: 22
+python.lists-and-conditions:
+  page: 23

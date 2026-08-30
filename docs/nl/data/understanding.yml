@@ -19,6 +19,11 @@
     title: IPO
     source: nl/understanding/_content/visual-first/ipo.md
 
+  data-structure-diagrams-basics:
+    id: visual-first.data-structure-diagrams-basics
+    title: Datastructuurdiagram
+    source: nl/understanding/_content/visual-first/data-structure-diagrams/basics.md
+
 python:
   boolean-expressions:
     id: python.boolean-expressions
@@ -94,3 +99,28 @@ python:
     id: python.input-validation
     title: Input validation
     source: nl/understanding/_content/python/input-validation.md
+
+  lists:
+    id: python.lists
+    title: Lists
+    source: nl/understanding/_content/python/lists.md
+
+  list-indexes:
+    id: python.list-indexes
+    title: List Indexes
+    source: nl/understanding/_content/python/list-indexes.md
+
+  adding-list-items:
+    id: python.adding-list-items
+    title: Adding List Items
+    source: nl/understanding/_content/python/adding-list-items.md
+
+  list-information:
+    id: python.list-information
+    title: List Information
+    source: nl/understanding/_content/python/list-information.md
+
+  lists-and-conditions:
+    id: python.lists-and-conditions
+    title: Lists and Conditions
+    source: nl/understanding/_content/python/lists-and-conditions.md
