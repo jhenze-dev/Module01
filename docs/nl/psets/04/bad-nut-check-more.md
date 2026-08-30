@@ -61,13 +61,15 @@ Breid je controlesysteem uit zodat het invoer robuuster kan controleren.
 
 Je programma moet:
 
-- hoofdletters en kleine letters op een passende manier behandelen;
-- overbodige spaties kunnen verwerken;
-- meerdere voorwaarden kunnen controleren;
-- duidelijke feedback geven wanneer invoer wordt afgekeurd;
+- de gebruiker om een noot vragen;
+- `amandel`, `hazelnoot` en `walnoot` accepteren als geldige invoer;
+- hoofdletters en kleine letters op dezelfde manier behandelen;
+- overbodige spaties voor en na de invoer kunnen verwerken;
+- andere invoer afwijzen;
+- feedback geven wanneer de invoer niet voldoet;
 - bijhouden hoeveel pogingen de gebruiker nodig heeft;
-- opnieuw om invoer vragen zolang de invoer niet voldoet;
-- stoppen zodra aan alle voorwaarden voor acceptatie is voldaan.
+- opnieuw om invoer vragen na een afwijzing;
+- stoppen zodra een geldige noot wordt ingevoerd.
 
 Je bepaalt zelf welke **string methods** nodig zijn om de invoer te onderzoeken of te bewerken.
 
@@ -127,29 +129,30 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
 Een programma is pas betrouwbaar als je controleert of **verschillende schrijfwijzen en verschillende ongeldige situaties correct worden afgehandeld**.
 
-Ontwerp zelf verschillende testgevallen.
+Maak minimaal vijf testgevallen.
 
-Test bijvoorbeeld situaties waarin:
+Zorg dat je testgevallen samen controleren:
 
-- invoer extra spaties bevat;
-- invoer hoofdletters bevat;
-- invoer niet aan één voorwaarde voldoet;
-- invoer niet aan meerdere voorwaarden voldoet;
-- meerdere ongeldige pogingen achter elkaar worden gegeven;
-- de eerste geldige invoer pas na meerdere pogingen wordt gegeven.
+- een geldige noot in kleine letters;
+- een geldige noot met hoofdletters;
+- een geldige noot met overbodige spaties;
+- ongeldige invoer;
+- meerdere ongeldige pogingen achter elkaar;
+- geldige invoer na meerdere pogingen.
 
 | Test | Invoer | Verwachte uitkomst | Werkelijke uitkomst |
 | ---- | ------ | ------------------ | ------------------- |
 | 1    |        |                    |                     |
 | 2    |        |                    |                     |
 | 3    |        |                    |                     |
-| ...  |        |                    |                     |
-
-Controleer niet alleen of het programma uiteindelijk stopt, maar ook of het systeem tijdens iedere poging het verwachte gedrag vertoont.
+| 4    |        |                    |                     |
+| 5    |        |                    |                     |
 
 Bepaal **vooraf** wat de verwachte uitkomst van iedere test is. Voer daarna je programma uit en vergelijk de werkelijke uitkomst met je verwachting.
 
-**Kan je met je testgevallen aantonen dat je controlesysteem verschillende invoer correct behandelt en niet te vroeg stopt?**
+Controleer niet alleen of het programma uiteindelijk stopt, maar ook of iedere invoer op de juiste manier wordt behandeld.
+
+**Kan je met je testgevallen aantonen dat je controlesysteem verschillende schrijfwijzen correct behandelt en niet te vroeg stopt?**
 
 ## Reflectie op de oplossing
 

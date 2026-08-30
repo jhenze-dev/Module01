@@ -58,7 +58,7 @@ Ontwerp en programmeer een systeem dat wisselgeld stap voor stap teruggeeft.
 Je programma moet:
 
 - een bedrag aan wisselgeld vragen;
-- het wisselgeld teruggeven met Nederlandse munten;
+- het wisselgeld teruggeven met Nederlandse munten van **5 cent, 10 cent, 20 cent, 50 cent, 1 euro en 2 euro**;
 - steeds opnieuw bepalen welke munt gebruikt kan worden;
 - na iedere munt het resterende bedrag aanpassen;
 - doorgaan zolang er nog wisselgeld over is;
@@ -68,6 +68,8 @@ Je programma moet:
 Gebruik voor de herhaling een `while`-loop.
 
 Het programma moet het wisselgeld teruggeven met **zo groot mogelijke munten**.
+
+Gebruik voor je programma bedragen in hele centen.
 
 ### Hints
 
@@ -128,20 +130,15 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
 Een programma is pas betrouwbaar als je controleert of **het wisselgeld voor verschillende bedragen correct en volledig wordt teruggegeven**.
 
-Bedenk voor iedere test:
-
-- welk bedrag aan wisselgeld je gebruikt;
-- welke munten je verwacht;
-- hoeveel wisselgeld na iedere stap overblijft;
-- welke uitkomst je programma werkelijk geeft.
+Test minimaal de volgende situaties:
 
 | Test | Wisselgeld | Verwachte munten | Werkelijke munten |
 | ---- | ---------- | ---------------- | ----------------- |
-| 1    |            |                  |                   |
-| 2    |            |                  |                   |
-| 3    |            |                  |                   |
+|  1   |    50      |                  |                   |
+|  2   |    135     |                  |                   |
+|  3   |    285     |                  |                   |
 
-Zorg dat je testgevallen samen verschillende situaties controleren, bijvoorbeeld:
+Zorg dat je testgevallen samen controleren:
 
 - een bedrag waarvoor één munt voldoende is;
 - een bedrag waarvoor meerdere munten nodig zijn;
@@ -153,8 +150,6 @@ Bepaal **vooraf** wat de verwachte uitkomst van iedere test is. Voer daarna je p
 Een test is geslaagd wanneer:
 
 **werkelijke uitkomst = verwachte uitkomst**
-
-Als dat niet zo is, onderzoek dan welke stap in je herhalende proces anders verloopt dan je had verwacht.
 
 **Kun je met je testgevallen aantonen dat je programma het volledige wisselgeld correct teruggeeft en stopt wanneer het klaar is?**
 

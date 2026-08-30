@@ -58,13 +58,15 @@ Ontwerp en programmeer een systeem dat het volledige wisselproces uitvoert en zi
 Je programma moet:
 
 - een bedrag aan wisselgeld vragen;
-- het wisselgeld teruggeven met Nederlandse munten;
+- het wisselgeld teruggeven met Nederlandse munten van **5 cent, 10 cent, 20 cent, 50 cent, 1 euro en 2 euro**;
 - steeds opnieuw bepalen welke munt gebruikt kan worden;
 - na iedere munt het resterende bedrag aanpassen;
 - doorgaan zolang er nog wisselgeld over is;
 - stoppen wanneer het volledige bedrag is teruggegeven;
 - tonen welke munten tijdens het proces zijn gebruikt;
-- zichtbaar maken hoe het resterende bedrag tijdens het proces verandert.
+- zichtbaar maken hoe het resterende bedrag tijdens het proces verandert;
+- bijhouden hoeveel munten van iedere soort zijn gebruikt;
+- aan het einde tonen hoeveel munten er in totaal zijn gebruikt.
 
 Gebruik voor de herhaling een `while`-loop.
 
@@ -128,40 +130,35 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
 ### Testen
 
-Een programma is pas betrouwbaar als je controleert of **het wisselgeld voor verschillende bedragen correct en volledig wordt teruggegeven**.
+Test je programma met minimaal vijf verschillende bedragen.
 
-Test niet alleen het eindresultaat. Kijk ook naar het verloop van het proces.
-
-Bedenk voor iedere test:
-
-- welk bedrag aan wisselgeld je gebruikt;
-- welke munten je verwacht;
-- welke tussenstappen je verwacht;
-- hoe het resterende bedrag verandert;
-- welke uitkomst je programma werkelijk geeft.
-
-| Test | Wisselgeld | Verwachte munten | Verwacht verloop | Werkelijke uitkomst |
-| ---- | ---------- | ---------------- | ----------------- | ------------------- |
-| 1    |            |                  |                   |                     |
-| 2    |            |                  |                   |                     |
-| 3    |            |                  |                   |                     |
-
-Zorg dat je testgevallen verschillende situaties controleren, bijvoorbeeld:
+Zorg dat je testgevallen samen de volgende situaties bevatten:
 
 - een bedrag waarvoor één munt voldoende is;
-- een bedrag waarvoor meerdere munten nodig zijn;
-- een bedrag waarbij verschillende muntwaarden worden gebruikt;
-- een bedrag waarbij de `while`-loop meerdere keren wordt uitgevoerd.
+- een bedrag waarvoor verschillende muntwaarden nodig zijn;
+- een bedrag waarbij dezelfde munt meerdere keren wordt gebruikt;
+- een bedrag waarbij de `while`-loop meerdere keren wordt uitgevoerd;
+- een bedrag waarbij je het verloop van het resterende bedrag kunt controleren.
+
+Noteer voor iedere test:
+
+- het bedrag aan wisselgeld;
+- de verwachte munten;
+- het verwachte aantal munten;
+- het verwachte verloop van het resterende bedrag;
+- de werkelijke uitkomst.
+
+| Test | Wisselgeld | Verwachte munten | Verwacht verloop | Werkelijke uitkomst |
+| ---- | ---------- | ---------------- | ---------------- | ------------------- |
+|  1   |            |                  |                  |                     |
+|  2   |            |                  |                  |                     |
+|  3   |            |                  |                  |                     |
+|  4   |            |                  |                  |                     |
+|  5   |            |                  |                  |                     |
 
 Bepaal **vooraf** wat je verwacht.
 
-Voer daarna je programma uit en vergelijk het werkelijke verloop met je verwachting.
-
-Een test is geslaagd wanneer:
-
-**werkelijke uitkomst = verwachte uitkomst**
-
-Als dat niet zo is, onderzoek dan welke stap in je herhalende proces anders verloopt dan je had verwacht.
+Voer daarna je programma uit en vergelijk de werkelijke uitkomst met je verwachting.
 
 **Kun je met je testgevallen aantonen dat je programma het volledige wisselproces correct uitvoert en zichtbaar maakt?**
 

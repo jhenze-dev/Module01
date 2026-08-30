@@ -34,7 +34,7 @@ Met deze Problem Set werk je aan de volgende leerdoelen:
 
 ## Probleem
 
-In *Charlie and the Chocolate Factory* controleren de eekhoorns de noten van Veruca Salt.
+In *Charlie and the Chocolate Factory* controleren de eekhoorns de noten van Willy Wonka.
 
 Een noot die niet voldoet aan de voorwaarden wordt afgekeurd.
 
@@ -62,12 +62,12 @@ Ontwerp en programmeer een controlesysteem dat invoer blijft controleren totdat 
 
 Je programma moet:
 
-- invoer van de gebruiker vragen;
-- de invoer controleren;
-- ongeldige invoer afwijzen;
+- de gebruiker om een noot vragen;
+- `amandel`, `hazelnoot` en `walnoot` accepteren als geldige invoer;
+- andere invoer afwijzen;
 - feedback geven wanneer de invoer niet voldoet;
-- opnieuw om invoer vragen;
-- stoppen zodra geldige invoer wordt gegeven.
+- opnieuw om invoer vragen na een afwijzing;
+- stoppen zodra een geldige noot wordt ingevoerd.
 
 Het programma moet dus niet vooraf bepalen hoeveel pogingen nodig zijn.
 
@@ -124,11 +124,11 @@ Bedenk voor iedere test:
 - welke uitkomst je verwacht;
 - welke uitkomst je programma werkelijk geeft.
 
-| Test | Invoer | Verwachte uitkomst | Werkelijke uitkomst |
-| ---- | ------ | ------------------ | ------------------- |
-| 1    |        |                    |                     |
-| 2    |        |                    |                     |
-| 3    |        |                    |                     |
+| Test |  Invoer   | Verwachte uitkomst | Werkelijke uitkomst |
+| ---- | --------- | ------------------ | ------------------- |
+| 1    | 'amandel' |                    |                     |
+| 2    | 'pinda'   |                    |                     |
+| 3    | 'walnoot' |                    |                     |
 
 Zorg dat je testgevallen samen verschillende situaties controleren:
 
