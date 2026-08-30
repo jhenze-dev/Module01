@@ -1,4 +1,4 @@
-﻿---
+---
 title: while
 template: understanding.html
 ---
@@ -11,6 +11,6 @@ template: understanding.html
 
 ---
 
-[Terug naar Loops](../index.md)
+[Terug naar Loops](../index.md#loops) · [for →](for-loops.md)
 
 

@@ -11,4 +11,4 @@ template: understanding.html
 
 ---
 
-[Terug naar Visual First](../../index.md#datastructuurdiagram)
+[Terug naar Visual First](../../index.md#data-structure-diagrams)

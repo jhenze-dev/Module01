@@ -11,4 +11,4 @@ template: understanding.html
 
 ---
 
-[← Output](output.md) · [Terug naar Input & Output](../index.md#input-output)
+[← Output](output.md) · [Terug naar Input & Output](../index.md#input-output) · [Input Validation →](input-validation.md)

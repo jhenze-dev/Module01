@@ -11,4 +11,4 @@ template: understanding.html
 
 ---
 
-[Terug naar Loops](../index.md#loops)
+[← while](while-loops.md) · [Terug naar Loops](../index.md#loops) · [range() →](range.md)

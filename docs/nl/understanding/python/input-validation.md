@@ -11,4 +11,4 @@ template: understanding.html
 
 ---
 
-[Terug naar Python](../index.md)
+[← Input](input.md) · [Terug naar Input & Output](../index.md#input-output)

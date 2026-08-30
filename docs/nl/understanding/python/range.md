@@ -11,4 +11,4 @@ template: understanding.html
 
 ---
 
-[Terug naar Loops](../index.md#loops)
+[← for](for-loops.md) · [Terug naar Loops](../index.md#loops)

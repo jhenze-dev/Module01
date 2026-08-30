@@ -11,4 +11,4 @@ template: understanding.html
 
 ---
 
-[Terug naar Lists](../index.md#lists)
+[Vorige: Iterating over Lists](iterating-lists.md) · [Terug naar Lists](../index.md#lists)

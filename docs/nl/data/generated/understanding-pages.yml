@@ -10,51 +10,51 @@ visual-first.data-structure-diagrams-basics:
   page: 6
 visual-first.trace-tables-basics:
   page: 7
-python.boolean-expressions:
-  page: 11
-python.comparison-operators:
-  page: 11
-python.conditions:
-  page: 12
-python.if:
-  page: 13
-python.else:
-  page: 13
-python.elif:
-  page: 13
-python.indentation:
-  page: 14
-python.branches:
-  page: 15
 python.sequential-execution:
-  page: 15
+  page: 11
 python.variables:
-  page: 16
+  page: 11
 python.arithmetic-expressions:
+  page: 12
+python.boolean-expressions:
+  page: 13
+python.comparison-operators:
+  page: 14
+python.conditions:
+  page: 15
+python.if:
+  page: 15
+python.else:
   page: 16
+python.elif:
+  page: 16
+python.indentation:
+  page: 17
+python.branches:
+  page: 17
 python.and:
   page: 18
 python.or:
   page: 18
 python.while-loops:
   page: 19
-python.for-loops:
-  page: 21
-python.range:
-  page: 22
 python.input-validation:
-  page: 24
+  page: 21
 python.lists:
+  page: 23
+python.list-indexes:
+  page: 24
+python.adding-list-items:
+  page: 25
+python.list-information:
+  page: 25
+python.lists-and-conditions:
+  page: 26
+python.for-loops:
   page: 27
 python.iterating-lists:
-  page: 27
-python.list-indexes:
   page: 29
-python.adding-list-items:
+python.range:
   page: 30
-python.list-information:
-  page: 31
-python.lists-and-conditions:
-  page: 32
 python.changing-list-items:
   page: 32

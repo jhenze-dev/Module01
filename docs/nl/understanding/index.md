@@ -42,6 +42,7 @@ Gebruik Understanding wanneer je iets wilt terugzoeken, een begrip opnieuw wilt 
 
 <p><a href="python/output/">Output</a></p>
 <p><a href="python/input/">Input</a></p>
+<p><a href="python/input-validation/">Input Validation</a></p>
 
   </div>
 
@@ -124,10 +125,10 @@ Gebruik Understanding wanneer je iets wilt terugzoeken, een begrip opnieuw wilt 
 
 <p><a href="python/lists/">Lists</a></p>
 <p><a href="python/list-indexes/">List Indexes</a></p>
-<p><a href="python/iterating-lists/">Iterating over Lists</a></p>
 <p><a href="python/adding-list-items/">Adding List Items</a></p>
 <p><a href="python/list-information/">List Information</a></p>
 <p><a href="python/lists-and-conditions/">Lists and Conditions</a></p>
+<p><a href="python/iterating-lists/">Iterating over Lists</a></p>
 <p><a href="python/changing-list-items/">Changing List Items</a></p>
 
   </div>
@@ -145,17 +146,6 @@ Gebruik Understanding wanneer je iets wilt terugzoeken, een begrip opnieuw wilt 
 
 <div class="understanding-card-grid">
 
-  <div id="ipo-diagram" class="understanding-card understanding-card--visual-first">
-
-<div class="understanding-card-header">
-  <span class="understanding-card-marker"></span>
-  <h3>IPO Diagram</h3>
-</div>
-
-<p><a href="visual-first/ipo/">IPO Diagram</a></p>
-
-  </div>
-
   <div id="flowcharts" class="understanding-card understanding-card--visual-first">
 
 <div class="understanding-card-header">
@@ -169,7 +159,18 @@ Gebruik Understanding wanneer je iets wilt terugzoeken, een begrip opnieuw wilt 
 
   </div>
 
-  <div id="datastructuurdiagram" class="understanding-card understanding-card--visual-first">
+  <div id="ipo-diagram" class="understanding-card understanding-card--visual-first">
+
+<div class="understanding-card-header">
+  <span class="understanding-card-marker"></span>
+  <h3>IPO Diagram</h3>
+</div>
+
+<p><a href="visual-first/ipo/">IPO Diagram</a></p>
+
+  </div>
+
+  <div id="data-structure-diagrams" class="understanding-card understanding-card--visual-first">
 
 <div class="understanding-card-header">
   <span class="understanding-card-marker"></span>

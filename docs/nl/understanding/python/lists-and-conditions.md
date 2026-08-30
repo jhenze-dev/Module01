@@ -11,4 +11,4 @@ template: understanding.html
 
 ---
 
-[Vorige: List Information](list-information.md) · [Terug naar Python](../index.md#lists)
+[Vorige: List Information](list-information.md) · [Terug naar Python](../index.md#lists) · [Volgende: Iterating over Lists](iterating-lists.md)

@@ -30,6 +30,21 @@ visual-first:
     source: nl/understanding/_content/visual-first/trace-tables/basics.md
 
 python:
+  sequential-execution:
+    id: python.sequential-execution
+    title: Sequential execution
+    source: nl/understanding/_content/python/sequential-execution.md
+
+  variables:
+    id: python.variables
+    title: Variables
+    source: nl/understanding/_content/python/variables.md
+
+  arithmetic-expressions:
+    id: python.arithmetic-expressions
+    title: Expressions
+    source: nl/understanding/_content/python/arithmetic-expressions.md
+
   boolean-expressions:
     id: python.boolean-expressions
     title: Boolean Expressions
@@ -70,21 +85,6 @@ python:
     title: Branches
     source: nl/understanding/_content/python/branches.md
 
-  sequential-execution:
-    id: python.sequential-execution
-    title: Sequential execution
-    source: nl/understanding/_content/python/sequential-execution.md
-
-  variables:
-    id: python.variables
-    title: Variables
-    source: nl/understanding/_content/python/variables.md
-
-  arithmetic-expressions:
-    id: python.arithmetic-expressions
-    title: Expressions
-    source: nl/understanding/_content/python/arithmetic-expressions.md    
-
   and:
     id: python.and
     title: and
@@ -100,16 +100,6 @@ python:
     title: while loops
     source: nl/understanding/_content/python/while-loops.md
 
-  for-loops:
-    id: python.for-loops
-    title: for loops
-    source: nl/understanding/_content/python/for-loops.md
-
-  range:
-    id: python.range
-    title: range()
-    source: nl/understanding/_content/python/range.md
-
   input-validation:
     id: python.input-validation
     title: Input validation
@@ -119,11 +109,6 @@ python:
     id: python.lists
     title: Lists
     source: nl/understanding/_content/python/lists.md
-
-  iterating-lists:
-    id: python.iterating-lists
-    title: Iterating over Lists
-    source: nl/understanding/_content/python/iterating-lists.md
 
   list-indexes:
     id: python.list-indexes
@@ -144,6 +129,21 @@ python:
     id: python.lists-and-conditions
     title: Lists and Conditions
     source: nl/understanding/_content/python/lists-and-conditions.md
+
+  for-loops:
+    id: python.for-loops
+    title: for loops
+    source: nl/understanding/_content/python/for-loops.md
+
+  iterating-lists:
+    id: python.iterating-lists
+    title: Iterating over Lists
+    source: nl/understanding/_content/python/iterating-lists.md
+
+  range:
+    id: python.range
+    title: range()
+    source: nl/understanding/_content/python/range.md
 
   changing-list-items:
     id: python.changing-list-items

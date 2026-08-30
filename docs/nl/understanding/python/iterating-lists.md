@@ -11,4 +11,4 @@ template: understanding.html
 
 ---
 
-[Terug naar Lists](../index.md#lists)
+[Vorige: Lists and Conditions](lists-and-conditions.md) · [Terug naar Lists](../index.md#lists) · [Volgende: Changing List Items](changing-list-items.md)
