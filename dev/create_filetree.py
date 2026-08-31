@@ -100,7 +100,7 @@ if __name__ == "__main__":
 
     output_path = generate_tree(
         start_path=project_root,
-        output_file=os.path.join(project_root, "filetree.txt"),
+        output_file=os.path.join(project_root, "dev", "filetree.txt"),
     )
 
     print(f"Tree saved to {output_path}")
