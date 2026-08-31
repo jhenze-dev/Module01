@@ -53,6 +53,8 @@ Het programma blijft actief totdat de gebruiker ervoor kiest om te stoppen.
 
 Maak voordat je programmeert een **datastructuurdiagram** waarin zichtbaar is welke gegevens worden opgeslagen en gebruikt.
 
+Werk daarna de stappen van je systeem uit in **pseudocode** als genummerde comments in je `.py`-bestand. Bouw vervolgens de Python-code bij deze stappen.
+
 ### Specificatie
 
 Je systeem gebruikt de vier Hogwarts-huizen:
@@ -103,7 +105,7 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
     Bekijk iedere menukeuze afzonderlijk.
 
-    Beschrijf eerst zonder Python:
+    Werk dit eerst uit in je pseudocode:
 
     - wat registreren moet doen;
     - wat opzoeken moet doen;
@@ -172,6 +174,7 @@ Controleer voordat je inlevert of:
 
 - je programma voldoet aan de specificatie;
 - je datastructuurdiagram is toegevoegd;
+- je pseudocode staat als genummerde comments in je `.py`-bestand;
 - registreren, opzoeken en stoppen zijn getest;
 - nieuw toegevoegde leerlingen daarna correct kunnen worden teruggevonden;
 - je reflectie is uitgewerkt;

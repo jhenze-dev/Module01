@@ -49,6 +49,8 @@ Ontwerp en programmeer een systeem dat de naam van een leerling ontvangt en op b
 
 Maak voordat je programmeert een **datastructuurdiagram** waarin zichtbaar is welke gegevens het systeem nodig heeft om deze beslissing te nemen.
 
+Werk daarna de stappen van je systeem uit in **pseudocode** als genummerde comments in je `.py`-bestand. Bouw vervolgens de Python-code bij deze stappen.
+
 ### Specificatie
 
 Je systeem gebruikt vier lists met minimaal twee opgeslagen leerlingen per huis:
@@ -140,6 +142,7 @@ Controleer voordat je inlevert of:
 
 - je programma voldoet aan de specificatie;
 - je datastructuurdiagram is toegevoegd;
+- je pseudocode staat als genummerde comments in je `.py`-bestand;
 - je systeem met verschillende leerlingen en een onbekende naam is getest;
 - je reflectie is uitgewerkt;
 - je laatste wijzigingen zijn gecommit en gepusht naar Git.

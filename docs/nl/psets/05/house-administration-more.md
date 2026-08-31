@@ -49,6 +49,8 @@ Ontwerp en programmeer een administratie voor alle vier de Hogwarts-huizen waarm
 
 Maak voordat je programmeert een **datastructuurdiagram** van de volledige administratie.
 
+Werk daarna de stappen van je programma uit in **pseudocode** als genummerde comments in je `.py`-bestand. Bouw vervolgens de Python-code bij deze stappen.
+
 ### Specificatie
 
 Gebruik in je administratie de vier Hogwarts-huizen:
@@ -148,6 +150,7 @@ Controleer voordat je inlevert of:
 
 - je programma voldoet aan de specificatie;
 - je datastructuurdiagram is toegevoegd;
+- je pseudocode staat als genummerde comments in je `.py`-bestand;
 - je administratie met verschillende leerlingen en huizen is getest;
 - je reflectie is uitgewerkt;
 - je laatste wijzigingen zijn gecommit en gepusht naar Git.
