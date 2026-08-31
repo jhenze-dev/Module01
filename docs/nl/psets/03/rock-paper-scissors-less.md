@@ -127,13 +127,21 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
     Controleer je flowchart: kan iedere mogelijke combinatie van keuzes via één route bij de juiste uitkomst uitkomen?
 
-??? hint "4 — Hoe vertaal je je flowchart naar Python?"
+??? hint "4 — Hoe zet je je flowchart om in pseudocode?"
 
-    Gebruik je flowchart als ontwerp voor je programma.
+    Beschrijf dezelfde oplossing nu als **pseudocode**.
 
-    Met `if`, `elif` en `else` kun je verschillende combinations en uitkomsten in Python vastleggen.
+    Gebruik je flowchart om de beslissingen en routes om te zetten in een geordende reeks stappen.
 
-    Kijk naar je eigen flowchart:
+    Controleer daarna of je pseudocode voor iedere mogelijke combinatie tot dezelfde uitkomst komt als je flowchart.
+
+??? hint "5 — Hoe vertaal je je pseudocode naar Python?"
+
+    Gebruik je pseudocode als ontwerp voor je programma.
+
+    Met `if`, `elif` en `else` kun je de verschillende combinations en uitkomsten in Python vastleggen.
+
+    Kijk naar je eigen pseudocode:
 
     - welke condition controleer je als eerste?
     - welke volgende mogelijkheden moeten daarna worden gecontroleerd?
@@ -143,7 +151,7 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
 ### Testen
 
-Een programma is pas betrouwbaar als je controleert of **iedere mogelijke combinatie van keuzes** correct wordt afgehandeld.
+Een programma is pas betrouwbaar als je controleert of **iedere mogelijke combinatie van keuzes** correct wordt afgehandeld. Gebruik je flowchart en pseudocode om te controleren of alle mogelijke combinaties in je ontwerp zijn opgenomen.
 
 Bedenk voor iedere test:
 
@@ -186,10 +194,9 @@ Controleer voordat je de Problem Set afrondt:
 - je hebt de verschillende mogelijke combinaties getest;
 - de werkelijke uitkomst van je tests komt overeen met de **verwachte uitkomst**;
 - je kunt uitleggen hoe je vanuit de spelregels tot je **beslisstructuur** bent gekomen;
-- je kunt uitleggen hoe je flowchart is vertaald naar `if`, `elif` en `else`;
+- je kunt uitleggen hoe je vanuit je flowchart via pseudocode tot `if`, `elif` en `else` bent gekomen;
 - je hebt tijdens het werken regelmatig gecommit;
 - je laatste versie staat in Git.
 
 Werk daarna **Portfolio 3** bij.
-
 

@@ -5,6 +5,7 @@ week: 3
 
 understanding:
   - visual-first.flowcharts-decisions-branches
+  - visual-first.pseudocode-basics
 ---
 
 # Thinking Set 3 *Guess the Number*
@@ -48,15 +49,33 @@ flowchart TD
     E --> F
 ```
 
+Zet daarna **dezelfde oplossing** om in pseudocode.
+
+Pseudocode beschrijft de logica van jullie oplossing als een geordende reeks stappen en beslissingen.
+
+```text
+1. Voer een stap uit
+
+2. Controleer de situatie
+   2.1 Als de condition waar is, voer actie A uit
+   2.2 Anders, voer actie B uit
+
+3. Ga verder met de volgende stap
+```
+
+Gebruik gewone taal. Beschrijf **wat er logisch moet gebeuren**, zonder Python-code te schrijven.
+
 ## Understanding
 
 {{ understanding_reference(understanding) }}
 
 ## Test jullie oplossing
 
-Geef jullie flowchart aan een andere groep.
+Geef jullie flowchart en pseudocode aan een andere groep.
 
 Laat hen verschillende situaties door jullie beslissysteem doorlopen.
 
-**Komt het systeem in iedere situatie tot de juiste beslissing?**
+Controleer:
 
+- komen beide uitwerkingen in iedere situatie tot de juiste beslissing?
+- beschrijven de flowchart en pseudocode dezelfde oplossing?

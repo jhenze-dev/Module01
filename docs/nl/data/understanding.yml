@@ -19,6 +19,11 @@ visual-first:
     title: IPO
     source: nl/understanding/_content/visual-first/ipo.md
 
+  pseudocode-basics:
+    id: visual-first.pseudocode-basics
+    title: Pseudocode
+    source: nl/understanding/_content/visual-first/pseudocode/basics.md
+
   data-structure-diagrams-basics:
     id: visual-first.data-structure-diagrams-basics
     title: Datastructuurdiagram

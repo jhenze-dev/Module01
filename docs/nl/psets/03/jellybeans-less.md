@@ -108,9 +108,24 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
     Controleer je flowchart voordat je verdergaat: kan iedere mogelijke gok via één route bij de juiste feedback uitkomen?
 
-??? hint "3 — Hoe vertaal je je flowchart naar Python?"
+??? hint "3 — Hoe zet je je flowchart om in pseudocode?"
 
-    Gebruik nu je flowchart als ontwerp voor je programma. Een beslissing uit je flowchart kun je in Python uitdrukken met een voorwaarde:
+    Gebruik je flowchart als ontwerp en beschrijf dezelfde oplossing nu als **pseudocode**.
+
+    Schrijf de logica als een geordende reeks stappen en beslissingen.
+
+    Let erop dat:
+
+    - iedere regel één logische actie beschrijft;
+    - je de stappen nummert;
+    - stappen die bij een beslissing horen duidelijk zijn ingesprongen;
+    - je beschrijft **wat** er moet gebeuren, zonder Python-code te schrijven.
+
+    Controleer daarna: beschrijven je flowchart en pseudocode dezelfde oplossing?
+
+??? hint "4 — Hoe vertaal je je pseudocode naar Python?"
+
+    Gebruik nu je pseudocode als ontwerp voor je programma. Een beslissing uit je pseudocode kun je in Python uitdrukken met een voorwaarde:
 
     ```python
     if voorwaarde:
@@ -119,7 +134,7 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
     Voor meerdere mogelijke situaties kun je beslissingen combineren met `if`, `elif` en `else`.
 
-    Kijk opnieuw naar je eigen flowchart:
+    Kijk opnieuw naar je eigen pseudocode:
 
     - welke beslissing hoort bij `if`?
     - welke volgende mogelijkheid hoort bij `elif`?
@@ -129,7 +144,7 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
 ### Testen
 
-Een programma is pas betrouwbaar als je controleert of **alle mogelijke situaties** correct worden afgehandeld. Kijk daarom naar je flowchart en je beslisstructuur: iedere mogelijke route door je programma vraagt om een eigen testgeval.
+Een programma is pas betrouwbaar als je controleert of **alle mogelijke situaties** correct worden afgehandeld. Kijk daarom naar je flowchart, pseudocode en je beslisstructuur: iedere mogelijke route door je programma vraagt om een eigen testgeval.
 
 Bedenk voor iedere situatie:
 
@@ -169,9 +184,8 @@ Controleer voordat je de Problem Set afrondt:
 - je hebt voor iedere mogelijke situatie een **testgeval** uitgevoerd;
 - de werkelijke uitkomst van je tests komt overeen met de **verwachte uitkomst**;
 - je kunt uitleggen hoe je vanuit het probleem tot je **beslisstructuur** bent gekomen;
-- je kunt uitleggen hoe je flowchart is vertaald naar `if`, `elif` en `else`;
+- je kunt uitleggen hoe je vanuit je flowchart via pseudocode tot `if`, `elif` en `else` bent gekomen;
 - je hebt tijdens het werken regelmatig gecommit;
 - je laatste versie staat in Git.
 
 Werk daarna **Portfolio 3** bij.
-

@@ -170,6 +170,17 @@ Gebruik Understanding wanneer je iets wilt terugzoeken, een begrip opnieuw wilt 
 
   </div>
 
+  <div id="pseudocode" class="understanding-card understanding-card--visual-first">
+
+<div class="understanding-card-header">
+  <span class="understanding-card-marker"></span>
+  <h3>Pseudocode</h3>
+</div>
+
+<p><a href="visual-first/pseudocode/basics/">Basics</a></p>
+
+  </div>
+
   <div id="data-structure-diagrams" class="understanding-card understanding-card--visual-first">
 
 <div class="understanding-card-header">

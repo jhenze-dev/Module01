@@ -122,23 +122,38 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
     Controleer je ontwerp: kan iedere mogelijke gok via één route bij de juiste feedback uitkomen?
 
-??? hint "4 — Hoe vertaal je je flowchart naar Python?"
+??? hint "4 — Hoe zet je je flowchart om in pseudocode?"
 
-    Gebruik je flowchart als ontwerp voor je programma. Met `if`, `elif` en `else` kun je de hoofdsituaties uitdrukken.
+    Gebruik je flowchart als ontwerp en beschrijf dezelfde oplossing nu als **pseudocode**.
 
-    Als binnen een branch nog een volgende condition moet worden gecontroleerd, kun je binnen die branch opnieuw een `if` statement plaatsen.
+    Schrijf de logica als een geordende reeks stappen en beslissingen.
 
-    Kijk naar je eigen flowchart:
+    Let vooral op de beslissingen binnen beslissingen:
+
+    - nummer de hoofdstappen;
+    - gebruik subnummers en inspringing voor stappen die binnen een beslissing horen;
+    - laat duidelijk zien wanneer binnen een route nog een volgende beslissing nodig is;
+    - beschrijf **wat** er logisch moet gebeuren, zonder Python-code te schrijven.
+
+    Controleer daarna: beschrijven je flowchart en pseudocode dezelfde routes en beslissingen?
+
+??? hint "5 — Hoe vertaal je je pseudocode naar Python?"
+
+    Gebruik je pseudocode als ontwerp voor je programma. Met `if`, `elif` en `else` kun je de hoofdsituaties uitdrukken.
+
+    Als binnen een situatie nog een volgende beslissing nodig is, kijk dan naar de ingesprongen stappen in je pseudocode. Daar moet je programma binnen die branch opnieuw een condition controleren.
+
+    Kijk naar je eigen pseudocode:
 
     - welke beslissingen vormen de hoofdsituaties?
-    - binnen welke branches is nog een volgende beslissing nodig?
+    - binnen welke situaties staat nog een volgende beslissing?
     - welke condition hoort bij iedere beslissing?
 
     Bepaal op basis daarvan waar een **nested conditional** nodig is en programmeer vanuit je ontwerp verder.
 
 ### Testen
 
-Een programma is pas betrouwbaar als je controleert of **alle mogelijke routes** door je beslisstructuur correct worden afgehandeld. Gebruik daarom je flowchart om je testgevallen te bepalen.
+Een programma is pas betrouwbaar als je controleert of **alle mogelijke routes** door je beslisstructuur correct worden afgehandeld. Gebruik daarom je flowchart en pseudocode om je testgevallen te bepalen.
 
 Bedenk voor iedere route:
 
@@ -176,7 +191,7 @@ Controleer voordat je de Problem Set afrondt:
 - je hebt voor iedere mogelijke situatie een **testgeval** uitgevoerd;
 - de werkelijke uitkomst van je tests komt overeen met de **verwachte uitkomst**;
 - je kunt uitleggen hoe je vanuit het probleem tot je **beslisstructuur** bent gekomen;
-- je kunt uitleggen hoe je flowchart is vertaald naar `if`, `elif`, `else` en een nested conditional;
+- je kunt uitleggen hoe je vanuit je flowchart via pseudocode tot `if`, `elif`, `else` en een nested conditional bent gekomen;
 - je hebt tijdens het werken regelmatig gecommit;
 - je laatste versie staat in Git.
 

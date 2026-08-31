@@ -155,13 +155,23 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
     Door de extra keuzes zijn er veel meer mogelijke routes dan bij Rock Paper Scissors. Controleer daarom systematisch of iedere mogelijke combinatie via één route bij de juiste uitkomst uitkomt.
 
-??? hint "5 — Hoe vertaal je je flowchart naar Python?"
+??? hint "5 — Hoe zet je je flowchart om in pseudocode?"
 
-    Gebruik je flowchart als ontwerp voor je programma.
+    Beschrijf dezelfde oplossing nu als **pseudocode**.
 
-    Met `if`, `elif` en `else` kun je de verschillende combinaties en uitkomsten in Python vastleggen. Gebruik `and` wanneer meerdere conditions tegelijk moeten gelden.
+    Gebruik je flowchart om de beslissingen en routes om te zetten in een geordende reeks stappen.
 
-    Kijk naar je eigen flowchart:
+    Door het grote aantal mogelijke combinaties is het belangrijk dat je systematisch werkt. Situaties die tot dezelfde uitkomst leiden, kun je ook in je pseudocode bij elkaar brengen.
+
+    Controleer daarna of je pseudocode alle mogelijke combinaties uit je flowchart beschrijft.
+
+??? hint "6 — Hoe vertaal je je pseudocode naar Python?"
+
+    Gebruik je pseudocode als ontwerp voor je programma.
+
+    Met `if`, `elif` en `else` kun je de verschillende combinaties en uitkomsten in Python vastleggen. Gebruik `and` wanneer meerdere conditions tegelijk moeten gelden en `or` wanneer verschillende situaties tot dezelfde uitkomst leiden.
+
+    Kijk naar je eigen pseudocode:
 
     - welke condition controleer je als eerste?
     - welke combinaties leiden tot dezelfde uitkomst?
@@ -172,7 +182,7 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
 ### Testen
 
-Een programma is pas betrouwbaar als je controleert of **iedere mogelijke combinatie van keuzes** correct wordt afgehandeld.
+Een programma is pas betrouwbaar als je controleert of **iedere mogelijke combinatie van keuzes** correct wordt afgehandeld. Gebruik je flowchart en pseudocode om te controleren of alle mogelijke combinaties in je ontwerp zijn opgenomen.
 
 Bedenk voor iedere test:
 
@@ -215,10 +225,9 @@ Controleer voordat je de Problem Set afrondt:
 - je hebt alle **25 mogelijke combinaties** getest;
 - de werkelijke uitkomst van je tests komt overeen met de **verwachte uitkomst**;
 - je kunt uitleggen hoe je vanuit de spelregels tot je **beslisstructuur** bent gekomen;
-- je kunt uitleggen hoe je flowchart is vertaald naar `if`, `elif` en `else`;
+- je kunt uitleggen hoe je vanuit je flowchart via pseudocode tot `if`, `elif` en `else` bent gekomen;
 - je hebt tijdens het werken regelmatig gecommit;
 - je laatste versie staat in Git.
 
 Werk daarna **Portfolio 3** bij.
-
 
