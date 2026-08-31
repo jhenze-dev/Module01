@@ -81,6 +81,10 @@ Gebruik bij het ontwerpen van je oplossing een **IPO-diagram**.
 
 Gebruik in je programma **variabelen**, `int` en `float`.
 
+Gebruik voor afstand en tijd **positieve getallen**. Waarden groter dan `0` zijn in deze Problem Set geldige invoer.
+
+Andere invoer hoef je in deze Problem Set niet af te handelen.
+
 
 ### Hints
 
@@ -138,29 +142,38 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
 Een programma is pas betrouwbaar als het bij verschillende afstanden en tijden de juiste resultaten berekent en presenteert.
 
-Test je programma daarom met verschillende loopprestaties.
-
-Bedenk voor iedere test **vooraf**:
-
-- welke afstand en tijd je invoert;
-- welke snelheid in meter per seconde je verwacht;
-- welke snelheid in kilometer per uur je verwacht.
+Voer minimaal de volgende tests uit:
 
 | Test | Afstand (m) | Tijd (s) | Verwachte m/s | Verwachte km/h | Werkelijke m/s | Werkelijke km/h |
 | ---- | ----------- | -------- | -------------- | --------------- | --------------- | ---------------- |
-| 1    |             |          |                |                 |                 |                  |
-| 2    |             |          |                |                 |                 |                  |
-| 3    |             |          |                |                 |                 |                  |
+| 1 | 100 | 20 | | | | |
+| 2 | 400 | 50 | | | | |
+| 3 | 1000 | 240 | | | | |
 
-Bepaal **vooraf** wat de verwachte uitkomst van iedere test is. Voer daarna je programma uit en vergelijk de werkelijke uitkomst met je verwachting.
+Bepaal **vooraf** voor iedere test:
+
+- welke snelheid in meter per seconde je verwacht;
+- welke snelheid in kilometer per uur je verwacht.
+
+Voer daarna iedere test uit.
+
+Controleer bij iedere test:
+
+- of de ingevoerde afstand correct in het prestatierapport staat;
+- of de ingevoerde tijd correct in het prestatierapport staat;
+- of de snelheid in meter per seconde overeenkomt met je verwachting;
+- of de snelheid in kilometer per uur overeenkomt met je verwachting;
+- of de juiste eenheden bij de gegevens en resultaten staan.
+
+Vergelijk daarna de werkelijke uitkomsten met je verwachtingen.
 
 Een test is geslaagd wanneer:
 
 **werkelijke uitkomst = verwachte uitkomst**
 
-Als dat niet zo is, onderzoek dan waar je informatiemodel, berekening of programma iets anders doet dan je had verwacht.
+Als dat niet zo is, onderzoek dan waar je informatiemodel, berekening of programma iets anders doet dan je had verwacht en pas je programma waar nodig aan.
 
-**Levert je programma bij verschillende afstanden en tijden steeds de verwachte snelheden op?**
+**Kun je met deze drie testgevallen aantonen dat je programma verschillende loopprestaties correct verwerkt en alle ingevoerde en berekende gegevens in het prestatierapport toont?**
 
 
 ### Inleveren

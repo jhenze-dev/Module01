@@ -87,6 +87,16 @@ Gebruik bij het ontwerpen van je oplossing een **IPO-diagram**.
 
 Gebruik in je programma **variabelen**, `int` en `float`.
 
+Gebruik als invoer:
+
+- een **positieve rondelengte**;
+- een **positief geheel aantal ronden**;
+- een **positieve totale looptijd**.
+
+Waarden groter dan `0` zijn in deze Problem Set geldig.
+
+Andere invoer hoef je in deze Problem Set niet af te handelen.
+
 
 ### Hints
 
@@ -134,35 +144,51 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
 Een programma is pas betrouwbaar als het voor verschillende loopprestaties steeds de juiste berekeningen en een overzichtelijke presentatie van de resultaten oplevert.
 
-Test daarom verschillende combinaties van:
+Ontwerp zelf minimaal drie testgevallen.
 
-- rondelengte;
-- aantal ronden;
-- totale looptijd.
+Kies je testgegevens zo dat je verschillende:
 
-Bepaal voor iedere test **vooraf** welke resultaten je verwacht.
+- rondelengtes;
+- aantallen ronden;
+- totale looptijden
+
+gebruikt.
 
 | Test | Ronde (m) | Ronden | Tijd (s) | Verwachte resultaten | Werkelijke resultaten |
 | ---- | --------- | ------ | -------- | --------------------- | --------------------- |
-| 1    |           |        |          |                       |                       |
-| 2    |           |        |          |                       |                       |
-| 3    |           |        |          |                       |                       |
+| 1 | | | | | |
+| 2 | | | | | |
+| 3 | | | | | |
 
-Controleer bij iedere test in ieder geval:
+Leg bij iedere test **vooraf** bij de verwachte resultaten vast:
 
-- totale afstand in meter en kilometer;
-- gemiddelde snelheid in meter per seconde en kilometer per uur;
-- gemiddelde tijd per kilometer.
+- de totale afstand in meter;
+- de totale afstand in kilometer;
+- de gemiddelde snelheid in meter per seconde;
+- de gemiddelde snelheid in kilometer per uur;
+- de gemiddelde tijd per kilometer.
 
-Bepaal **vooraf** wat de verwachte uitkomst van iedere test is. Voer daarna je programma uit en vergelijk de werkelijke uitkomst met je verwachting.
+Voer daarna iedere test uit en leg dezelfde vijf werkelijke resultaten vast.
+
+Controleer bij iedere test:
+
+- of de ingevoerde rondelengte correct in het prestatierapport staat;
+- of het ingevoerde aantal ronden correct in het prestatierapport staat;
+- of de ingevoerde totale looptijd correct in het prestatierapport staat;
+- of de totale afstand in meter en kilometer klopt;
+- of de gemiddelde snelheid in meter per seconde en kilometer per uur klopt;
+- of de gemiddelde tijd per kilometer klopt;
+- of de juiste eenheden bij de gegevens en resultaten staan.
+
+Vergelijk daarna de werkelijke resultaten met de verwachte resultaten.
 
 Een test is geslaagd wanneer:
 
 **werkelijke uitkomst = verwachte uitkomst**
 
-Als dat niet zo is, onderzoek dan welke invoer, berekening of omzetting in je informatiemodel iets anders doet dan je had verwacht.
+Als dat niet zo is, onderzoek dan welke invoer, berekening of omzetting in je informatiemodel iets anders doet dan je had verwacht en pas je programma waar nodig aan.
 
-**Levert je programma voor verschillende invoergegevens steeds de juiste berekeningen en een overzichtelijke presentatie van de resultaten op?**
+**Kun je met je drie testgevallen aantonen dat je programma verschillende loopprestaties correct verwerkt en alle ingevoerde en berekende gegevens in het prestatierapport toont?**
 
 
 ### Inleveren
