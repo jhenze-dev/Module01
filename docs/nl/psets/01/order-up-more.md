@@ -61,14 +61,19 @@ Je programma moet:
 - duidelijk maken wanneer de bestelroute begint;
 - vier personen achter elkaar dezelfde vaste bestelroute laten doorlopen;
 - steeds duidelijk maken welke persoon aan de beurt is;
-- iedere persoon stap voor stap duidelijk maken welke informatie moet worden ingevoerd;
+- iedere persoon minimaal **drie opeenvolgende invoermomenten** laten doorlopen;
+- bij ieder invoermoment duidelijk maken welke informatie moet worden ingevoerd;
 - met `input()` wachten op een reactie voordat het programma verdergaat;
 - na iedere invoer logisch doorgaan naar de volgende stap;
 - duidelijk maken wanneer de bestelroute van een persoon is afgerond;
 - daarna doorgaan met de volgende persoon;
 - aan het einde duidelijk maken dat de volledige tafel klaar is met bestellen.
 
-De volledige interactie verloopt in een **vaste en logische volgorde**.
+Iedere persoon doorloopt **dezelfde bestelroute in dezelfde vaste en logische volgorde**.
+
+De antwoorden van een persoon veranderen deze volgorde niet. Ongeacht wat wordt ingevoerd, gaat het programma steeds door naar dezelfde volgende stap van de bestelroute.
+
+Pas nadat een persoon de volledige route heeft doorlopen, begint de route van de volgende persoon.
 
 Gebruik in Python `print()` en `input()`.
 
@@ -132,28 +137,52 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
 ### Testen
 
-Je bestelzuil werkt pas goed als alle vier personen de volledige bestelroute in de juiste volgorde kunnen doorlopen.
+Je bestelzuil werkt pas goed als alle vier personen dezelfde volledige bestelroute achter elkaar in de juiste volgorde kunnen doorlopen.
 
-Laat daarom vier gebruikersrollen door het programma lopen. Dit kunnen vier verschillende personen zijn, of één tester die achter elkaar vier verschillende bestellingen invoert.
+Noteer eerst welke route één persoon moet volgen:
 
-Bepaal voor iedere test **vooraf** welke volgorde je verwacht.
+1. het begin van de route;
+2. de opeenvolgende invoermomenten;
+3. het einde van de route.
+
+Ontwerp daarna minimaal drie tests met verschillende antwoorden voor de vier personen.
 
 | Test | Invoer / antwoorden | Verwachte route | Werkelijke route |
 | ---- | ------------------- | --------------- | ---------------- |
-| 1    |                     |                 |                  |
-| 2    |                     |                 |                  |
-| 3    |                     |                 |                  |
+| 1 | | | |
+| 2 | | | |
+| 3 | | | |
 
-Controleer daarbij:
+Bepaal **vooraf** bij iedere test welke volledige route je verwacht.
 
-- komt persoon 1 als eerste;
-- doorloopt iedere persoon de volledige bestelroute;
-- komt daarna steeds de juiste volgende persoon;
-- stopt de interactie pas nadat persoon 4 klaar is.
+Omdat het programma een vaste sequentie uitvoert, moeten verschillende antwoorden steeds dezelfde volgorde opleveren:
 
-Bepaal **vooraf** welke route je programma bij iedere test moet doorlopen en wat je verwacht dat het programma doet. Voer daarna de test uit en vergelijk de werkelijke route met je verwachting.
+**persoon 1 → persoon 2 → persoon 3 → persoon 4 → tafel afgerond**
 
-**Kunnen vier personen de bestelroute achter elkaar zonder uitleg doorlopen en leidt iedere stap logisch naar de volgende?**
+Voer daarna iedere test uit.
+
+Controleer bij iedere test:
+
+- of persoon 1 als eerste begint;
+- of steeds duidelijk is welke persoon aan de beurt is;
+- of iedere persoon alle ontworpen invoermomenten in dezelfde volgorde doorloopt;
+- of het programma bij ieder invoermoment met `input()` wacht op een reactie;
+- of de bestelroute van een persoon wordt afgerond voordat de volgende persoon begint;
+- of persoon 2 pas na persoon 1 begint;
+- of persoon 3 pas na persoon 2 begint;
+- of persoon 4 pas na persoon 3 begint;
+- of verschillende antwoorden de vaste bestelroute niet veranderen;
+- of de melding dat de volledige tafel klaar is pas verschijnt nadat persoon 4 klaar is.
+
+Vergelijk daarna de werkelijke route met de verwachte route.
+
+Een test is geslaagd wanneer:
+
+**werkelijke route = verwachte route**
+
+Als dat niet zo is, onderzoek dan welke stap in je sequentie niet op het verwachte moment wordt uitgevoerd en pas je programma waar nodig aan.
+
+**Kun je met je drie tests aantonen dat vier personen achter elkaar dezelfde vaste bestelroute doorlopen en dat de volledige tafel pas na persoon 4 wordt afgerond?**
 
 
 ### Inleveren
@@ -165,7 +194,7 @@ Controleer voordat je de Problem Set afrondt:
 - steeds is duidelijk wie aan de beurt is;
 - de interactie verloopt in een **vaste en logische volgorde**;
 - je gebruikt `print()` en `input()` om met de gebruikers te communiceren;
-- je hebt de volledige route met verschillende antwoorden getest;
+- je hebt met verschillende antwoorden gecontroleerd dat alle vier personen **dezelfde vaste bestelroute** doorlopen;
 - je kunt uitleggen hoe je ontworpen volgorde is vertaald naar Python;
 - je hebt tijdens het werken regelmatig gecommit;
 - je laatste versie staat in Git.

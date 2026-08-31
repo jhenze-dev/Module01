@@ -58,15 +58,17 @@ Je programma moet:
 
 - de klant duidelijk welkom heten;
 - de klant stap voor stap door een volledige bestelroute leiden;
-- bij iedere stap duidelijk maken welke informatie de klant moet invoeren;
+- minimaal **drie opeenvolgende invoermomenten** bevatten;
+- bij ieder invoermoment duidelijk maken welke informatie de klant moet invoeren;
 - met `input()` wachten op een reactie van de klant voordat het programma verdergaat;
 - na iedere invoer logisch doorgaan naar de volgende stap;
 - aan het einde duidelijk maken dat de bestelling is afgerond.
 
 De volledige interactie verloopt in een **vaste en logische volgorde**.
 
-Gebruik in Python `print()` en `input()`.
+De antwoorden van de klant veranderen deze volgorde niet. Ongeacht wat de klant invoert, gaat het programma steeds door naar dezelfde volgende stap van de ontworpen bestelroute.
 
+Gebruik in Python `print()` en `input()`.
 
 ### Hints
 
@@ -118,28 +120,47 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
 ### Testen
 
-Je bestelzuil werkt pas goed als een gebruiker de volledige bestelroute zelfstandig kan doorlopen.
+Je bestelzuil werkt pas goed als een gebruiker de volledige bestelroute zelfstandig en in de ontworpen volgorde kan doorlopen.
 
-Laat daarom iemand anders je programma gebruiken zonder vooraf uit te leggen wat diegene moet doen.
+Noteer eerst welke route je programma moet volgen:
 
-Controleer:
+1. de beginstap;
+2. de opeenvolgende invoermomenten;
+3. de afsluiting van de bestelling.
 
-- is steeds duidelijk wat de gebruiker moet doen;
-- wacht het programma op de juiste momenten op invoer;
-- volgt iedere stap logisch op de vorige;
-- komt de gebruiker zonder hulp bij het einde van de bestelroute.
-
-Test je programma met verschillende antwoorden op de vragen.
+Test daarna je programma minimaal drie keer met verschillende antwoorden.
 
 | Test | Invoer / antwoorden | Verwachte route | Werkelijke route |
 | ---- | ------------------- | --------------- | ---------------- |
-| 1    |                     |                 |                  |
-| 2    |                     |                 |                  |
-| 3    |                     |                 |                  |
+| 1 | | | |
+| 2 | | | |
+| 3 | | | |
 
-Bepaal **vooraf** welke route je programma bij iedere test moet doorlopen en wat je verwacht dat het programma doet. Voer daarna de test uit en vergelijk de werkelijke route met je verwachting.
+Bepaal **vooraf** welke route je bij iedere test verwacht.
 
-**Kan iemand anders de volledige bestelroute zonder uitleg doorlopen en leidt iedere stap logisch naar de volgende?**
+Omdat je programma een vaste sequentie uitvoert, moet de verwachte route bij verschillende antwoorden steeds dezelfde blijven.
+
+Voer daarna iedere test uit.
+
+Controleer bij iedere test:
+
+- of de beginstap duidelijk wordt getoond;
+- of alle ontworpen invoermomenten in de juiste volgorde verschijnen;
+- of bij ieder invoermoment duidelijk is wat de gebruiker moet invoeren;
+- of het programma met `input()` wacht voordat het naar de volgende stap gaat;
+- of na iedere invoer de juiste volgende stap verschijnt;
+- of de afsluiting pas na het laatste invoermoment verschijnt;
+- of verschillende antwoorden de volgorde van de route niet veranderen.
+
+Vergelijk daarna de werkelijke route met de verwachte route.
+
+Een test is geslaagd wanneer:
+
+**werkelijke route = verwachte route**
+
+Als dat niet zo is, onderzoek dan welke stap in je sequentie niet op het verwachte moment wordt uitgevoerd en pas je programma waar nodig aan.
+
+**Kun je met deze drie tests aantonen dat een gebruiker de volledige bestelroute zelfstandig kan doorlopen en dat verschillende antwoorden de vaste volgorde niet veranderen?**
 
 
 ### Inleveren
@@ -150,7 +171,7 @@ Controleer voordat je de Problem Set afrondt:
 - de interactie verloopt in een **vaste en logische volgorde**;
 - je gebruikt `print()` en `input()` om met de gebruiker te communiceren;
 - een andere gebruiker kan de volledige bestelroute zonder uitleg doorlopen;
-- je hebt verschillende antwoorden getest;
+- je hebt met verschillende antwoorden gecontroleerd dat de **vaste bestelroute hetzelfde blijft**;
 - je kunt uitleggen hoe je ontworpen volgorde is vertaald naar Python;
 - je hebt tijdens het werken regelmatig gecommit;
 - je laatste versie staat in Git.
