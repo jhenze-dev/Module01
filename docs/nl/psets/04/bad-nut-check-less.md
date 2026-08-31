@@ -135,31 +135,35 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
 ### Testen
 
-Een programma is pas betrouwbaar als je controleert of **verschillende soorten invoer correct worden afgehandeld**.
+Een programma is pas betrouwbaar als je controleert of **geldige en ongeldige invoer correct worden afgehandeld en het controleproces op het juiste moment stopt**.
 
-Bedenk voor iedere test:
+Voer minimaal de volgende tests uit:
 
-- welke invoer je gebruikt;
-- of je verwacht dat deze wordt geaccepteerd;
-- welke uitkomst je verwacht;
-- welke uitkomst je programma werkelijk geeft.
+| Test | Invoerreeks | Verwachte uitkomst | Werkelijke uitkomst |
+| ---- | ----------- | ------------------ | ------------------- |
+| 1 | `amandel` | | |
+| 2 | `hazelnoot` | | |
+| 3 | `walnoot` | | |
+| 4 | `pinda` → `amandel` | | |
+| 5 | `pinda` → `cashew` → `walnoot` | | |
 
-| Test |  Invoer   | Verwachte uitkomst | Werkelijke uitkomst |
-| ---- | --------- | ------------------ | ------------------- |
-| 1    | 'amandel' |                    |                     |
-| 2    | 'pinda'   |                    |                     |
-| 3    | 'walnoot' |                    |                     |
+Bepaal **vooraf** wat je bij iedere test verwacht.
 
-Zorg dat je testgevallen samen verschillende situaties controleren:
+Controleer met deze tests:
 
-- geldige invoer;
-- ongeldige invoer;
-- meerdere ongeldige pogingen achter elkaar;
-- geldige invoer na meerdere pogingen.
+- of `amandel`, `hazelnoot` en `walnoot` worden geaccepteerd;
+- of andere invoer wordt afgewezen;
+- of het programma feedback geeft bij iedere afgewezen invoer;
+- of het programma na iedere afwijzing opnieuw om invoer vraagt;
+- of meerdere ongeldige pogingen achter elkaar kunnen worden afgehandeld;
+- of het programma blijft doorgaan zolang de invoer ongeldig is;
+- of het programma stopt zodra geldige invoer wordt gegeven.
 
-Bepaal **vooraf** wat de verwachte uitkomst van iedere test is. Voer daarna je programma uit en vergelijk de werkelijke uitkomst met je verwachting.
+Leg bij iedere test de **verwachte uitkomst** en de **werkelijke uitkomst** vast.
 
-**Kan je met je testgevallen aantonen dat het programma ongeldige invoer blijft afwijzen en op het juiste moment stopt?**
+**Kun je met deze testgevallen aantonen dat het programma iedere ongeldige invoer blijft afwijzen, opnieuw om invoer vraagt en pas stopt wanneer geldige invoer is gegeven?**
+
+Als de werkelijke uitkomst niet overeenkomt met je verwachting, onderzoek dan waar het verschil ontstaat en pas je programma waar nodig aan.
 
 ## Reflectie op de oplossing
 
@@ -184,6 +188,7 @@ Controleer voordat je de Problem Set afrondt:
 - je hebt verschillende soorten invoer getest;
 - je hebt getest met meerdere ongeldige pogingen achter elkaar;
 - je hebt getest met geldige invoer na meerdere pogingen;
+- je verwachte en werkelijke testresultaten zijn vastgelegd;
 - je hebt je antwoorden op de reflectievragen uitgewerkt;
 - je hebt tijdens het werken regelmatig gecommit;
 - je laatste versie staat in Git.

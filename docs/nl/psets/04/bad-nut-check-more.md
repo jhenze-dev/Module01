@@ -71,7 +71,7 @@ Je programma moet:
 - overbodige spaties voor en na de invoer kunnen verwerken;
 - andere invoer afwijzen;
 - feedback geven wanneer de invoer niet voldoet;
-- bijhouden hoeveel pogingen de gebruiker nodig heeft;
+- bijhouden hoeveel pogingen de gebruiker nodig heeft en dit aantal na geldige invoer tonen;
 - opnieuw om invoer vragen na een afwijzing;
 - stoppen zodra een geldige noot wordt ingevoerd.
 
@@ -149,30 +149,36 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
 Een programma is pas betrouwbaar als je controleert of **verschillende schrijfwijzen en verschillende ongeldige situaties correct worden afgehandeld**.
 
-Maak minimaal vijf testgevallen.
+Voer minimaal de volgende tests uit:
 
-Zorg dat je testgevallen samen controleren:
+| Test | Invoerreeks | Verwachte uitkomst | Verwachte pogingen | Werkelijke uitkomst | Werkelijke pogingen |
+| ---- | ----------- | ------------------ | ------------------- | ------------------- | ------------------- |
+| 1 | `amandel` | | | | |
+| 2 | `HAZELNOOT` | | | | |
+| 3 | `  walnoot  ` | | | | |
+| 4 | `pinda` → `AMANDEL` | | | | |
+| 5 | `cashew` → `pinda` → `  WALNOOT  ` | | | | |
 
-- een geldige noot in kleine letters;
-- een geldige noot met hoofdletters;
-- een geldige noot met overbodige spaties;
-- ongeldige invoer;
-- meerdere ongeldige pogingen achter elkaar;
-- geldige invoer na meerdere pogingen.
+Bepaal **vooraf** wat je bij iedere test verwacht.
 
-| Test | Invoer | Verwachte uitkomst | Werkelijke uitkomst |
-| ---- | ------ | ------------------ | ------------------- |
-| 1    |        |                    |                     |
-| 2    |        |                    |                     |
-| 3    |        |                    |                     |
-| 4    |        |                    |                     |
-| 5    |        |                    |                     |
+Controleer met deze tests:
 
-Bepaal **vooraf** wat de verwachte uitkomst van iedere test is. Voer daarna je programma uit en vergelijk de werkelijke uitkomst met je verwachting.
+- of `amandel`, `hazelnoot` en `walnoot` als geldige invoer worden geaccepteerd;
+- of hoofdletters en kleine letters op dezelfde manier worden behandeld;
+- of overbodige spaties voor en na geldige invoer correct worden verwerkt;
+- of andere invoer wordt afgewezen;
+- of het programma feedback geeft bij iedere afgewezen invoer;
+- of het programma na iedere afwijzing opnieuw om invoer vraagt;
+- of meerdere ongeldige pogingen achter elkaar kunnen worden afgehandeld;
+- of het getoonde aantal pogingen overeenkomt met het werkelijke aantal invoerpogingen;
+- of het programma blijft doorgaan zolang de invoer ongeldig is;
+- of het programma stopt zodra geldige invoer wordt gegeven.
 
-Controleer niet alleen of het programma uiteindelijk stopt, maar ook of iedere invoer op de juiste manier wordt behandeld.
+Leg bij iedere test de **verwachte uitkomst**, het **verwachte aantal pogingen**, de **werkelijke uitkomst** en het **werkelijke aantal pogingen** vast.
 
-**Kan je met je testgevallen aantonen dat je controlesysteem verschillende schrijfwijzen correct behandelt en niet te vroeg stopt?**
+**Kun je met deze testgevallen aantonen dat je controlesysteem verschillende schrijfwijzen correct behandelt, iedere ongeldige invoer blijft afwijzen en pas stopt wanneer geldige invoer is gegeven?**
+
+Als de werkelijke uitkomst niet overeenkomt met je verwachting, onderzoek dan waar het verschil ontstaat en pas je programma waar nodig aan.
 
 ## Reflectie op de oplossing
 
@@ -200,6 +206,7 @@ Controleer voordat je de Problem Set afrondt:
 - je hebt meerdere ongeldige situaties getest;
 - je hebt getest met meerdere ongeldige pogingen achter elkaar;
 - je hebt getest met geldige invoer na meerdere pogingen;
+- je verwachte en werkelijke testresultaten en aantallen pogingen zijn vastgelegd;
 - je kunt uitleggen waarom je gekozen string methods passen bij je controles;
 - je hebt je antwoorden op de reflectievragen uitgewerkt;
 - je hebt tijdens het werken regelmatig gecommit;

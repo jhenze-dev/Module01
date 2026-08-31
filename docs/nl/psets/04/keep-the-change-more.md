@@ -64,15 +64,19 @@ Je programma moet:
 - steeds opnieuw bepalen welke munt gebruikt kan worden;
 - na iedere munt het resterende bedrag aanpassen;
 - doorgaan zolang er nog wisselgeld over is;
-- stoppen wanneer het volledige bedrag is teruggegeven;
-- tonen welke munten tijdens het proces zijn gebruikt;
-- zichtbaar maken hoe het resterende bedrag tijdens het proces verandert;
-- bijhouden hoeveel munten van iedere soort zijn gebruikt;
+- stoppen wanneer het resterende bedrag `0` is;
+- iedere gebruikte munt tonen op het moment dat deze wordt teruggegeven;
+- na iedere gebruikte munt tonen hoeveel wisselgeld nog over is;
+- aan het einde tonen hoeveel munten van iedere soort zijn gebruikt;
 - aan het einde tonen hoeveel munten er in totaal zijn gebruikt.
 
 Gebruik voor de herhaling een `while`-loop.
 
 Het programma moet het wisselgeld teruggeven met **zo groot mogelijke munten**.
+
+Gebruik als invoer een **positief geheel aantal centen dat een veelvoud van 5 is**. Dat is in deze Problem Set een geldig bedrag.
+
+Andere bedragen hoef je in deze Problem Set niet af te handelen.
 
 Je oplossing moet voor ieder geldig bedrag zelfstandig het volledige wisselproces uitvoeren.
 
@@ -147,37 +151,49 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
 ### Testen
 
-Test je programma met minimaal vijf verschillende bedragen.
+Test je programma met minimaal vijf verschillende geldige bedragen.
 
 Zorg dat je testgevallen samen de volgende situaties bevatten:
 
 - een bedrag waarvoor één munt voldoende is;
 - een bedrag waarvoor verschillende muntwaarden nodig zijn;
 - een bedrag waarbij dezelfde munt meerdere keren wordt gebruikt;
-- een bedrag waarbij de `while`-loop meerdere keren wordt uitgevoerd;
-- een bedrag waarbij je het verloop van het resterende bedrag kunt controleren.
+- een bedrag waarbij het wisselproces meerdere stappen bevat;
+- een bedrag waarbij meerdere verschillende muntsoorten worden gebruikt.
 
-Noteer voor iedere test:
+Kies zelf passende bedragen voor deze vijf situaties.
 
-- het bedrag aan wisselgeld;
-- de verwachte munten;
-- het verwachte aantal munten;
-- het verwachte verloop van het resterende bedrag;
-- de werkelijke uitkomst.
+Bepaal **vooraf** wat je bij iedere test verwacht.
 
-| Test | Wisselgeld | Verwachte munten | Verwacht verloop | Werkelijke uitkomst |
-| ---- | ---------- | ---------------- | ---------------- | ------------------- |
-|  1   |            |                  |                  |                     |
-|  2   |            |                  |                  |                     |
-|  3   |            |                  |                  |                     |
-|  4   |            |                  |                  |                     |
-|  5   |            |                  |                  |                     |
+| Test | Wisselgeld | Verwachte uitkomst | Werkelijke uitkomst |
+| ---- | ---------- | ------------------ | ------------------- |
+| 1 | | | |
+| 2 | | | |
+| 3 | | | |
+| 4 | | | |
+| 5 | | | |
 
-Bepaal **vooraf** wat je verwacht.
+Leg bij iedere test in zowel de **verwachte uitkomst** als de **werkelijke uitkomst** vast:
 
-Voer daarna je programma uit en vergelijk de werkelijke uitkomst met je verwachting.
+- welke munten worden gebruikt en in welke volgorde;
+- hoe het resterende bedrag na iedere munt verandert;
+- hoeveel munten van iedere soort worden gebruikt;
+- hoeveel munten in totaal worden gebruikt;
+- dat het resterende bedrag uiteindelijk `0` wordt en het programma daarna stopt.
 
-**Kun je met je testgevallen aantonen dat je programma het volledige wisselproces correct uitvoert en zichtbaar maakt?**
+Controleer daarna of:
+
+- steeds de grootst mogelijke munt wordt gebruikt;
+- de gebruikte munten samen precies het gevraagde bedrag vormen;
+- het getoonde resterende bedrag na iedere stap klopt;
+- de aantallen per muntsoort overeenkomen met de werkelijk gebruikte munten;
+- het totale aantal munten klopt;
+- het proces alleen doorgaat zolang er wisselgeld over is;
+- het programma stopt wanneer het resterende bedrag `0` is.
+
+**Kun je met je vijf testgevallen aantonen dat je programma voor verschillende geldige bedragen het volledige wisselproces correct uitvoert en zichtbaar maakt?**
+
+Als een werkelijke uitkomst niet overeenkomt met je verwachting, onderzoek dan waar in het wisselproces het verschil ontstaat en pas je programma waar nodig aan.
 
 ### Inleveren
 
@@ -189,6 +205,7 @@ Controleer voordat je de Problem Set afrondt:
 - het resterende wisselgeld verandert na iedere stap;
 - je programma stopt wanneer het wisselgeld volledig is teruggegeven;
 - je hebt verschillende bedragen en procesverlopen getest;
+- je verwachte en werkelijke testresultaten zijn vastgelegd;
 - je pseudocode staat als genummerde comments in je `.py`-bestand;
 - je kunt uitleggen hoe je flowchart via pseudocode is vertaald naar Python;
 - je hebt tijdens het werken regelmatig gecommit;
