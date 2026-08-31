@@ -11,4 +11,4 @@ template: understanding.html
 
 ---
 
-[Terug naar Pseudocode](../../index.md#pseudocode)
+[Terug naar Pseudocode](../../index.md#pseudocode) · [Herhaling →](pseudocode-repetition.md)

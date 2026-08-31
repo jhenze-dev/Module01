@@ -178,6 +178,7 @@ Gebruik Understanding wanneer je iets wilt terugzoeken, een begrip opnieuw wilt 
 </div>
 
 <p><a href="visual-first/pseudocode/basics/">Basics</a></p>
+<p><a href="visual-first/pseudocode/pseudocode-repetition/">Herhaling</a></p>
 
   </div>
 

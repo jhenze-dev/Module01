@@ -24,6 +24,11 @@ visual-first:
     title: Pseudocode
     source: nl/understanding/_content/visual-first/pseudocode/basics.md
 
+  pseudocode-repetition:
+    id: visual-first.pseudocode-repetition
+    title: Pseudocode — Herhaling
+    source: nl/understanding/_content/visual-first/pseudocode/pseudocode-repetition.md
+
   data-structure-diagrams-basics:
     id: visual-first.data-structure-diagrams-basics
     title: Datastructuurdiagram

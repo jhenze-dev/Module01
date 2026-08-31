@@ -58,6 +58,10 @@ Nu ga je deze kennis gebruiken om het probleem van **Bad Nut Check** op te losse
 
 Ontwerp en programmeer een controlesysteem dat invoer blijft controleren totdat bruikbare invoer wordt gegeven.
 
+Werk je oplossing eerst uit als een **flowchart**.
+
+Zet daarna dezelfde oplossing om in **pseudocode**. Schrijf je pseudocode als genummerde comments in je `.py`-bestand en bouw daarna de Python-code bij deze stappen.
+
 ### Specificatie
 
 Je programma moet:
@@ -105,9 +109,25 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
     Controleer of je flowchart ook werkt wanneer meerdere pogingen nodig zijn.
 
-??? hint "4 — Hoe vertaal je je ontwerp naar Python?"
+??? hint "4 — Hoe zet je je flowchart om in pseudocode?"
 
-    Gebruik je flowchart als ontwerp voor je programma.
+    Beschrijf dezelfde oplossing nu in gewone taal.
+
+    Maak zichtbaar:
+
+    - waar invoer wordt ontvangen;
+    - welke controles worden uitgevoerd;
+    - wat er gebeurt wanneer invoer niet voldoet;
+    - welke stappen daarna opnieuw worden uitgevoerd;
+    - wanneer het controleproces stopt.
+
+    Schrijf deze stappen als genummerde comments in je `.py`-bestand.
+
+    Beschrijf **wat** het systeem moet doen. Schrijf hier nog geen Python-syntax.
+
+??? hint "5 — Hoe vertaal je je ontwerp naar Python?"
+
+    Gebruik je pseudocode als ontwerp voor je programma.
 
     Kijk naar de controles en de waarden die tijdens het proces nodig zijn.
 
@@ -159,6 +179,8 @@ Controleer voordat je de Problem Set afrondt:
 
 - je programma voldoet aan de **specificatie**;
 - je flowchart laat het controlesysteem duidelijk zien;
+- je pseudocode staat als genummerde comments in je `.py`-bestand;
+- je kunt uitleggen hoe je flowchart via pseudocode is vertaald naar Python;
 - je hebt verschillende soorten invoer getest;
 - je hebt getest met meerdere ongeldige pogingen achter elkaar;
 - je hebt getest met geldige invoer na meerdere pogingen;

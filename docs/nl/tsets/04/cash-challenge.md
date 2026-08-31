@@ -5,6 +5,7 @@ week: 4
 
 understanding:
   - visual-first.flowcharts-while-loop
+  - visual-first.pseudocode-repetition
 ---
 
 # Thinking Set 4 *Cash Challenge*
@@ -42,6 +43,28 @@ flowchart TD
     C -->|True| B
     C -->|False| D([End])
 ```
+Zet daarna **dezelfde oplossing** om in pseudocode.
+
+Een herhalend proces kan er in pseudocode bijvoorbeeld zo uitzien:
+
+```text
+1. Bepaal de beginsituatie
+
+2. Zolang het doel nog niet is bereikt
+   2.1 Voer de volgende stap uit
+   2.2 Werk de toestand bij
+
+3. Toon het resultaat
+```
+
+Maak in jullie pseudocode zichtbaar:
+
+- welke stappen worden herhaald;
+- wanneer de herhaling doorgaat;
+- wat tijdens iedere herhaling verandert;
+- en wanneer het proces stopt.
+
+Gebruik gewone taal en beschrijf **wat er logisch moet gebeuren**, zonder Python-code te schrijven.
 
 ## Understanding
 
@@ -49,9 +72,11 @@ flowchart TD
 
 ## Test jullie oplossing
 
-Geef jullie **flowchart** aan een andere groep.
+Geef jullie **flowchart en pseudocode** aan een andere groep.
 
 Laat hen verschillende bedragen door jullie systeem doorlopen.
 
 **Geeft het systeem voor verschillende bedragen steeds het juiste wisselgeld terug en stopt het precies wanneer er geen wisselgeld meer over is?**
+
+**Beschrijven jullie flowchart en pseudocode daarbij dezelfde oplossing?**
 

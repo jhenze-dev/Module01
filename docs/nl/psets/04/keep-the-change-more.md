@@ -16,8 +16,6 @@ understanding:
 --8<-- "includes/badges.html:ct-algoritmen"
 --8<-- "includes/badges.html:process-expressing"
 
---8<-- "includes/videos.html:keep-the-change"
-
 ## Waar werk je aan?
 
 Met deze Problem Set werk je aan de volgende leerdoelen:
@@ -52,6 +50,10 @@ De eigenaar van Little Nero's wil bovendien kunnen zien hoe het systeem tot het 
 Nu ga je deze kennis gebruiken om het probleem van **Keep the Change** op te lossen.
 
 Ontwerp en programmeer een systeem dat het volledige wisselproces uitvoert en zichtbaar maakt.
+
+Werk je oplossing eerst uit als een **loop-flowchart**.
+
+Zet daarna dezelfde oplossing om in **pseudocode**. Schrijf je pseudocode als genummerde comments in je `.py`-bestand en bouw daarna de Python-code bij deze stappen.
 
 ### Specificatie
 
@@ -109,9 +111,24 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
     Controleer of je flowchart iedere herhaling van het proces kan beschrijven.
 
-??? hint "4 — Hoe vertaal je het proces naar Python?"
+??? hint "4 — Hoe zet je je flowchart om in pseudocode?"
 
-    Gebruik je flowchart als ontwerp.
+    Beschrijf dezelfde oplossing nu in gewone taal.
+
+    Maak zichtbaar:
+
+    - welke stappen worden herhaald;
+    - wanneer de herhaling doorgaat;
+    - wat tijdens iedere herhaling verandert;
+    - wanneer het proces stopt.
+
+    Schrijf deze stappen als genummerde comments in je `.py`-bestand.
+
+    Beschrijf **wat** er moet gebeuren. Schrijf hier nog geen Python-syntax.
+
+??? hint "5 — Hoe vertaal je het proces naar Python?"
+
+    Gebruik je pseudocode als ontwerp.
 
     Een `while`-loop herhaalt code zolang een voorwaarde waar is:
 
@@ -172,7 +189,8 @@ Controleer voordat je de Problem Set afrondt:
 - het resterende wisselgeld verandert na iedere stap;
 - je programma stopt wanneer het wisselgeld volledig is teruggegeven;
 - je hebt verschillende bedragen en procesverlopen getest;
-- je kunt uitleggen hoe je ontwerp is vertaald naar Python;
+- je pseudocode staat als genummerde comments in je `.py`-bestand;
+- je kunt uitleggen hoe je flowchart via pseudocode is vertaald naar Python;
 - je hebt tijdens het werken regelmatig gecommit;
 - je laatste versie staat in Git.
 

@@ -57,6 +57,10 @@ Nu ga je deze kennis gebruiken om het probleem van **Bad Nut Check** op te losse
 
 Breid je controlesysteem uit zodat het invoer robuuster kan controleren.
 
+Werk je oplossing eerst uit als een **flowchart**.
+
+Zet daarna dezelfde oplossing om in **pseudocode**. Schrijf je pseudocode als genummerde comments in je `.py`-bestand en bouw daarna de Python-code bij deze stappen.
+
 ### Specificatie
 
 Je programma moet:
@@ -109,15 +113,31 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
     - hoe een nieuwe poging ontstaat;
     - wanneer het systeem stopt.
 
-??? hint "4 — Hoe vertaal je het proces naar Python?"
+??? hint "4 — Hoe zet je je flowchart om in pseudocode?"
 
-    Gebruik je flowchart als ontwerp.
+    Beschrijf dezelfde oplossing nu in gewone taal.
+
+    Maak zichtbaar:
+
+    - welke bewerkingen op de invoer plaatsvinden;
+    - welke controles worden uitgevoerd;
+    - wat er gebeurt wanneer invoer niet voldoet;
+    - welke stappen daarna opnieuw worden uitgevoerd;
+    - wanneer het controleproces stopt.
+
+    Schrijf deze stappen als genummerde comments in je `.py`-bestand.
+
+    Beschrijf **wat** het systeem moet doen. Schrijf hier nog geen Python-syntax.
+
+??? hint "5 — Hoe vertaal je het proces naar Python?"
+
+    Gebruik je pseudocode als ontwerp.
 
     Kijk naar iedere bewerking en iedere controle in je ontwerp.
 
     Bepaal daarna welke string methods en conditions je nodig hebt om het ontworpen gedrag in Python uit te voeren.
 
-??? hint "5 — Hoe weet je dat je oplossing robuust is?"
+??? hint "6 — Hoe weet je dat je oplossing robuust is?"
 
     Denk niet alleen aan een invoer die precies volgens jouw verwachting wordt geschreven.
 
@@ -174,6 +194,8 @@ Controleer voordat je de Problem Set afrondt:
 
 - je programma voldoet aan de **specificatie**;
 - je flowchart laat de bewerkingen, controles en herhaling duidelijk zien;
+- je pseudocode staat als genummerde comments in je `.py`-bestand;
+- je kunt uitleggen hoe je flowchart via pseudocode is vertaald naar Python;
 - je hebt verschillende schrijfwijzen van invoer getest;
 - je hebt meerdere ongeldige situaties getest;
 - je hebt getest met meerdere ongeldige pogingen achter elkaar;

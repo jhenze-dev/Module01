@@ -8,55 +8,57 @@ visual-first.ipo:
   page: 4
 visual-first.pseudocode-basics:
   page: 6
-visual-first.data-structure-diagrams-basics:
+visual-first.pseudocode-repetition:
   page: 8
+visual-first.data-structure-diagrams-basics:
+  page: 11
 visual-first.trace-tables-basics:
-  page: 10
-python.sequential-execution:
   page: 13
-python.variables:
-  page: 14
-python.arithmetic-expressions:
-  page: 15
-python.boolean-expressions:
+python.sequential-execution:
   page: 16
+python.variables:
+  page: 17
+python.arithmetic-expressions:
+  page: 17
+python.boolean-expressions:
+  page: 19
 python.comparison-operators:
-  page: 17
+  page: 19
 python.conditions:
-  page: 17
+  page: 20
 python.if:
-  page: 18
+  page: 20
 python.else:
-  page: 18
-python.elif:
-  page: 19
-python.indentation:
-  page: 19
-python.branches:
-  page: 20
-python.and:
-  page: 20
-python.or:
   page: 21
-python.while-loops:
+python.elif:
+  page: 21
+python.indentation:
   page: 22
-python.input-validation:
+python.branches:
+  page: 22
+python.and:
   page: 23
-python.lists:
+python.or:
+  page: 23
+python.while-loops:
+  page: 24
+python.input-validation:
   page: 26
-python.list-indexes:
-  page: 27
-python.adding-list-items:
-  page: 27
-python.list-information:
-  page: 28
-python.lists-and-conditions:
+python.lists:
   page: 29
-python.for-loops:
+python.list-indexes:
+  page: 29
+python.adding-list-items:
   page: 30
-python.iterating-lists:
+python.list-information:
+  page: 30
+python.lists-and-conditions:
   page: 31
+python.for-loops:
+  page: 32
+python.iterating-lists:
+  page: 34
 python.range:
-  page: 33
+  page: 36
 python.changing-list-items:
-  page: 35
+  page: 37

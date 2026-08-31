@@ -16,8 +16,6 @@ understanding:
 --8<-- "includes/badges.html:ct-algoritmen"
 --8<-- "includes/badges.html:process-expressing"
 
---8<-- "includes/videos.html:keep-the-change"
-
 ## Waar werk je aan?
 
 Met deze Problem Set werk je aan de volgende leerdoelen:
@@ -52,6 +50,10 @@ Het proces gaat door totdat het volledige bedrag is teruggegeven.
 Nu ga je deze kennis gebruiken om het probleem van **Keep the Change** op te lossen.
 
 Ontwerp en programmeer een systeem dat wisselgeld stap voor stap teruggeeft.
+
+Werk je oplossing eerst uit als een **loop-flowchart**.
+
+Zet daarna dezelfde oplossing om in **pseudocode**. Schrijf je pseudocode als genummerde comments in je `.py`-bestand en bouw daarna de Python-code bij deze stappen.
 
 ### Specificatie
 
@@ -107,9 +109,24 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
     Controleer daarna of je flowchart ook werkt wanneer er meerdere munten nodig zijn.
 
-??? hint "4 — Hoe vertaal je de herhaling naar Python?"
+??? hint "4 — Hoe zet je je flowchart om in pseudocode?"
 
-    Gebruik je flowchart als ontwerp voor je programma.
+    Beschrijf dezelfde oplossing nu in gewone taal.
+
+    Maak zichtbaar:
+
+    - welke stappen worden herhaald;
+    - wanneer de herhaling doorgaat;
+    - wat tijdens iedere herhaling verandert;
+    - wanneer het proces stopt.
+
+    Schrijf deze stappen als genummerde comments in je `.py`-bestand.
+
+    Beschrijf **wat** er moet gebeuren. Schrijf hier nog geen Python-syntax.
+
+??? hint "5 — Hoe vertaal je de herhaling naar Python?"
+
+    Gebruik je pseudocode als ontwerp voor je programma.
 
     Een `while`-loop herhaalt een blok code zolang een voorwaarde waar is.
 
@@ -162,7 +179,8 @@ Controleer voordat je de Problem Set afrondt:
 - het resterende wisselgeld wordt na iedere stap aangepast;
 - je programma stopt wanneer het wisselgeld volledig is teruggegeven;
 - je hebt verschillende bedragen getest;
-- je kunt uitleggen hoe je ontwerp is vertaald naar Python;
+- je pseudocode staat als genummerde comments in je `.py`-bestand;
+- je kunt uitleggen hoe je flowchart via pseudocode is vertaald naar Python;
 - je hebt tijdens het werken regelmatig gecommit;
 - je laatste versie staat in Git.
 
