@@ -75,14 +75,18 @@ Je programma moet:
 - de gebruiker vragen om een geheel getal;
 - de ingevoerde gok vergelijken met het geheime aantal;
 - `Precies goed` tonen wanneer de gok gelijk is aan het geheime aantal;
-- wanneer de gok te laag is, bepalen of de gok **dichtbij** of **ver weg** is;
-- wanneer de gok te hoog is, bepalen of de gok **dichtbij** of **ver weg** is;
-- een gok als **dichtbij** beschouwen wanneer het verschil met het geheime aantal 10 of minder is;
-- passende feedback tonen voor iedere mogelijke situatie.
+- `Te laag — dichtbij` tonen wanneer de gok lager is dan het geheime aantal en het verschil 10 of minder is;
+- `Te laag — ver weg` tonen wanneer de gok lager is dan het geheime aantal en het verschil groter dan 10 is;
+- `Te hoog — dichtbij` tonen wanneer de gok hoger is dan het geheime aantal en het verschil 10 of minder is;
+- `Te hoog — ver weg` tonen wanneer de gok hoger is dan het geheime aantal en het verschil groter dan 10 is.
 
 Gebruik voor de beslisstructuur `if`, `elif` en `else`. Gebruik daarnaast een **nested conditional** om binnen een situatie een volgende beslissing te nemen.
 
 Voor iedere mogelijke gok moet het programma **precies één** passende reactie geven.
+
+Gebruik als invoer een **geheel getal**. Dat is in deze Problem Set geldige invoer.
+
+Andere invoer hoef je in deze Problem Set niet af te handelen.
 
 ### Hints
 
@@ -153,35 +157,41 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
 ### Testen
 
-Een programma is pas betrouwbaar als je controleert of **alle mogelijke routes** door je beslisstructuur correct worden afgehandeld. Gebruik daarom je flowchart en pseudocode om je testgevallen te bepalen.
+Een programma is pas betrouwbaar als je controleert of **alle mogelijke routes door je beslisstructuur correct worden afgehandeld**.
 
-Bedenk voor iedere route:
+Noteer eerst welk geheime aantal je in je programma gebruikt.
 
-- welke **invoer** je gebruikt;
-- welke **uitkomst je verwacht**;
-- welke **uitkomst je programma werkelijk geeft**.
+Kies daarna zelf voor iedere onderstaande situatie een passende gok.
 
-Gebruik bijvoorbeeld een tabel als deze:
+| Test | Situatie | Gok | Verwachte uitkomst | Werkelijke uitkomst |
+| ---- | -------- | --- | ------------------ | ------------------- |
+| 1 | lager, verschil 10 | | `Te laag — dichtbij` | |
+| 2 | lager, verschil 11 | | `Te laag — ver weg` | |
+| 3 | precies gelijk | | `Precies goed` | |
+| 4 | hoger, verschil 10 | | `Te hoog — dichtbij` | |
+| 5 | hoger, verschil 11 | | `Te hoog — ver weg` | |
 
-| Test | Invoer | Verwachte uitkomst | Werkelijke uitkomst |
-| ---- | ------ | ------------------ | ------------------- |
-| 1    |        |                    |                     |
-| 2    |        |                    |                     |
-| 3    |        |                    |                     |
-| 4    |        |                    |                     |
-| 5    |        |                    |                     |
+Bepaal **vooraf** welke concrete gok bij iedere situatie hoort en controleer of de verwachte uitkomst daarbij klopt.
 
-Zorg dat je minimaal iedere mogelijke soort feedback test. Test daarnaast zorgvuldig de **grens** tussen dichtbij en ver weg.
+Voer daarna iedere test uit.
 
-Bepaal **vooraf** wat de verwachte uitkomst van iedere test is. Voer daarna je programma uit en vergelijk de werkelijke uitkomst met je verwachting.
+Controleer met deze testgevallen:
+
+- of iedere mogelijke soort feedback wordt bereikt;
+- of een verschil van precies `10` als **dichtbij** wordt behandeld;
+- of een verschil van `11` als **ver weg** wordt behandeld;
+- of de grens zowel onder als boven het geheime aantal correct werkt;
+- of iedere gok **precies één** reactie oplevert.
+
+Vergelijk bij iedere test de werkelijke uitkomst met de verwachte uitkomst.
 
 Een test is geslaagd wanneer:
 
 **werkelijke uitkomst = verwachte uitkomst**
 
-Als dat niet zo is, onderzoek dan welke condition of branch in je algoritme niet doet wat je had verwacht.
+Als dat niet zo is, onderzoek dan welke condition of branch in je algoritme niet doet wat je had verwacht en pas je programma waar nodig aan.
 
-**Kun je met je testgevallen aantonen dat iedere mogelijke route door je beslisstructuur correct wordt afgehandeld?**
+**Kun je met deze vijf testgevallen aantonen dat iedere mogelijke route en de grens tussen dichtbij en ver weg correct worden afgehandeld?**
 
 ### Inleveren
 

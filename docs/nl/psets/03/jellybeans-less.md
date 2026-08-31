@@ -82,6 +82,10 @@ Gebruik voor de beslisstructuur `if`, `elif` en `else`.
 
 Voor iedere mogelijke gok moet het programma **precies één** van de drie mogelijke reacties geven.
 
+Gebruik als invoer een **geheel getal**. Dat is in deze Problem Set geldige invoer.
+
+Andere invoer hoef je in deze Problem Set niet af te handelen.
+
 ### Hints
 
 Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
@@ -144,37 +148,33 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
 ### Testen
 
-Een programma is pas betrouwbaar als je controleert of **alle mogelijke situaties** correct worden afgehandeld. Kijk daarom naar je flowchart, pseudocode en je beslisstructuur: iedere mogelijke route door je programma vraagt om een eigen testgeval.
+Een programma is pas betrouwbaar als je controleert of **alle mogelijke situaties correct worden afgehandeld**.
 
-Bedenk voor iedere situatie:
+Noteer eerst welk geheime aantal je in je programma gebruikt.
 
-- welke **invoer** je gebruikt;
-- welke **uitkomst je verwacht**;
-- welke **uitkomst je programma werkelijk geeft**.
+Kies daarna voor iedere situatie een passende gok en bepaal **vooraf** welke uitkomst je verwacht.
 
-Gebruik bijvoorbeeld een tabel als deze:
+| Test | Situatie | Gok | Verwachte uitkomst | Werkelijke uitkomst |
+| ---- | -------- | --- | ------------------ | ------------------- |
+| 1 | lager dan het geheime aantal | | `Te laag` | |
+| 2 | hoger dan het geheime aantal | | `Te hoog` | |
+| 3 | gelijk aan het geheime aantal | | `Precies goed` | |
 
-| Test | Invoer | Verwachte uitkomst | Werkelijke uitkomst |
-| ---- | ------ | ------------------ | ------------------- |
-| 1    |        |                    |                     |
-| 2    |        |                    |                     |
-| 3    |        |                    |                     |
+Voer daarna iedere test uit.
 
-Zorg dat je minimaal test:
+Controleer bij iedere test:
 
-- een gok die lager is dan het geheime aantal;
-- een gok die hoger is dan het geheime aantal;
-- een gok die precies gelijk is aan het geheime aantal.
-
-Bepaal **vooraf** wat de verwachte uitkomst van iedere test is. Voer daarna je programma uit en vergelijk de werkelijke uitkomst met je verwachting.
+- of de werkelijke uitkomst overeenkomt met de verwachte uitkomst;
+- of de juiste situatie wordt herkend;
+- of het programma **precies één** reactie toont.
 
 Een test is geslaagd wanneer:
 
 **werkelijke uitkomst = verwachte uitkomst**
 
-Als dat niet zo is, onderzoek dan welke stap of beslissing in je algoritme niet doet wat je had verwacht.
+Als dat niet zo is, onderzoek dan welke stap of beslissing in je algoritme niet doet wat je had verwacht en pas je programma waar nodig aan.
 
-**Kun je met je testgevallen aantonen dat iedere mogelijke situatie correct wordt afgehandeld?**
+**Kun je met deze drie testgevallen aantonen dat iedere mogelijke situatie correct wordt afgehandeld en iedere gok precies één reactie oplevert?**
 
 ### Inleveren
 

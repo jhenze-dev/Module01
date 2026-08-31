@@ -89,6 +89,16 @@ Je programma moet voor **iedere mogelijke combinatie van keuzes** steeds precies
 - speler 2 wint;
 - gelijkspel.
 
+Gebruik voor beide spelers als invoer één van deze drie keuzes:
+
+- `Rock`;
+- `Paper`;
+- `Scissors`.
+
+Dit zijn in deze Problem Set de geldige keuzes.
+
+Andere invoer hoef je in deze Problem Set niet af te handelen.
+
 ### Hints
 
 Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
@@ -151,47 +161,49 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
 ### Testen
 
-Een programma is pas betrouwbaar als je controleert of **iedere mogelijke combinatie van keuzes** correct wordt afgehandeld. Gebruik je flowchart en pseudocode om te controleren of alle mogelijke combinaties in je ontwerp zijn opgenomen.
+Een programma is pas betrouwbaar als je controleert of **iedere mogelijke combinatie van keuzes correct wordt afgehandeld**.
 
-Bedenk voor iedere test:
-
-- welke keuze **speler 1** maakt;
-- welke keuze **speler 2** maakt;
-- welke **uitkomst je verwacht**;
-- welke **uitkomst je programma werkelijk geeft**.
-
-Gebruik bijvoorbeeld een tabel als deze:
+Bij Rock Paper Scissors zijn er negen mogelijke combinaties. Test ze allemaal.
 
 | Test | Speler 1 | Speler 2 | Verwachte uitkomst | Werkelijke uitkomst |
 | ---- | -------- | -------- | ------------------ | ------------------- |
-| 1    |          |          |                    |                     |
-| 2    |          |          |                    |                     |
-| 3    |          |          |                    |                     |
-| ...  |          |          |                    |                     |
-| 9    |          |          |                    |                     |
+| 1 | `Rock` | `Rock` | | |
+| 2 | `Rock` | `Paper` | | |
+| 3 | `Rock` | `Scissors` | | |
+| 4 | `Paper` | `Rock` | | |
+| 5 | `Paper` | `Paper` | | |
+| 6 | `Paper` | `Scissors` | | |
+| 7 | `Scissors` | `Rock` | | |
+| 8 | `Scissors` | `Paper` | | |
+| 9 | `Scissors` | `Scissors` | | |
 
-Zorg dat je testgevallen samen alle verschillende soorten uitkomsten controleren:
+Bepaal **vooraf** bij iedere combinatie welke uitkomst je verwacht.
 
-- speler 1 wint;
-- speler 2 wint;
-- gelijkspel.
+Voer daarna iedere test uit.
 
-Bepaal **vooraf** wat de verwachte uitkomst van iedere test is. Voer daarna je programma uit en vergelijk de werkelijke uitkomst met je verwachting.
+Controleer met deze testgevallen:
+
+- of alle drie de gelijkspelen correct worden herkend;
+- of alle situaties waarin speler 1 wint correct worden afgehandeld;
+- of alle situaties waarin speler 2 wint correct worden afgehandeld;
+- of iedere combinatie **precies één** uitkomst oplevert.
+
+Vergelijk bij iedere test de werkelijke uitkomst met de verwachte uitkomst.
 
 Een test is geslaagd wanneer:
 
 **werkelijke uitkomst = verwachte uitkomst**
 
-Als dat niet zo is, onderzoek dan welke condition of branch in je algoritme niet doet wat je had verwacht.
+Als dat niet zo is, onderzoek dan welke condition of branch in je algoritme niet doet wat je had verwacht en pas je programma waar nodig aan.
 
-**Kun je met je testgevallen aantonen dat je programma iedere mogelijke combinatie correct afhandelt?**
+**Kun je met deze negen testgevallen aantonen dat iedere mogelijke combinatie correct wordt afgehandeld en steeds precies één uitkomst oplevert?**
 
 ### Inleveren
 
 Controleer voordat je de Problem Set afrondt:
 
 - je programma voldoet aan de **specificatie**;
-- je hebt de verschillende mogelijke combinaties getest;
+- je hebt alle **9 mogelijke combinaties** getest;
 - de werkelijke uitkomst van je tests komt overeen met de **verwachte uitkomst**;
 - je kunt uitleggen hoe je vanuit de spelregels tot je **beslisstructuur** bent gekomen;
 - je kunt uitleggen hoe je vanuit je flowchart via pseudocode tot `if`, `elif` en `else` bent gekomen;

@@ -104,6 +104,18 @@ Je programma moet voor **iedere mogelijke combinatie van keuzes** steeds precies
 - speler 2 wint;
 - gelijkspel.
 
+Gebruik voor beide spelers als invoer één van deze vijf keuzes:
+
+- `Rock`;
+- `Paper`;
+- `Scissors`;
+- `Lizard`;
+- `Spock`.
+
+Dit zijn in deze Problem Set de geldige keuzes.
+
+Andere invoer hoef je in deze Problem Set niet af te handelen.
+
 ### Hints
 
 Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
@@ -182,40 +194,41 @@ Kom je niet verder? Open dan eerst alleen de hint die je nodig hebt.
 
 ### Testen
 
-Een programma is pas betrouwbaar als je controleert of **iedere mogelijke combinatie van keuzes** correct wordt afgehandeld. Gebruik je flowchart en pseudocode om te controleren of alle mogelijke combinaties in je ontwerp zijn opgenomen.
+Een programma is pas betrouwbaar als je controleert of **iedere mogelijke combinatie van keuzes correct wordt afgehandeld**.
 
-Bedenk voor iedere test:
+Met vijf keuzes per speler zijn er **25 mogelijke combinaties**.
 
-- welke keuze **speler 1** maakt;
-- welke keuze **speler 2** maakt;
-- welke **uitkomst je verwacht**;
-- welke **uitkomst je programma werkelijk geeft**.
-
-Gebruik voor het testen alle **25 mogelijke combinaties** van keuzes.
+Maak zelf een systematische verzameling testgevallen waarin iedere combinatie precies één keer voorkomt.
 
 | Test | Speler 1 | Speler 2 | Verwachte uitkomst | Werkelijke uitkomst |
 | ---- | -------- | -------- | ------------------ | ------------------- |
-| 1    |          |          |                    |                     |
-| 2    |          |          |                    |                     |
-| 3    |          |          |                    |                     |
-| ...  |          |          |                    |                     |
-| 25   |          |          |                    |                     |
+| 1 | | | | |
+| 2 | | | | |
+| 3 | | | | |
+| ... | | | | |
+| 25 | | | | |
 
-Zorg dat je testgevallen samen alle verschillende soorten uitkomsten controleren:
+Bepaal **vooraf** bij iedere combinatie welke uitkomst je volgens de spelregels verwacht.
 
-- speler 1 wint;
-- speler 2 wint;
-- gelijkspel.
+Voer daarna alle 25 tests uit.
 
-Bepaal **vooraf** wat de verwachte uitkomst van iedere test is. Voer daarna je programma uit en vergelijk de werkelijke uitkomst met je verwachting.
+Controleer met je testgevallen:
+
+- of iedere mogelijke combinatie van de vijf keuzes voorkomt;
+- of alle gelijkspelen correct worden herkend;
+- of de combinaties waarin speler 1 wint correct worden afgehandeld;
+- of de omgekeerde combinaties waarin speler 2 wint correct worden afgehandeld;
+- of iedere combinatie **precies één** uitkomst oplevert.
+
+Vergelijk bij iedere test de werkelijke uitkomst met de verwachte uitkomst.
 
 Een test is geslaagd wanneer:
 
 **werkelijke uitkomst = verwachte uitkomst**
 
-Als dat niet zo is, onderzoek dan welke condition of branch in je algoritme niet doet wat je had verwacht.
+Als dat niet zo is, onderzoek dan welke condition of branch in je algoritme niet doet wat je had verwacht en pas je programma waar nodig aan.
 
-**Kun je met je 25 testgevallen aantonen dat je programma iedere mogelijke combinatie correct afhandelt?**
+**Kun je met je 25 testgevallen aantonen dat iedere mogelijke combinatie correct wordt afgehandeld en steeds precies één uitkomst oplevert?**
 
 ### Inleveren
 
