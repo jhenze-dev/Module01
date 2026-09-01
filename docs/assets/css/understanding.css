@@ -115,6 +115,18 @@
 
 
 /* =========================================================
+   ALGORITHMS & EFFICIENCY HEADER
+   ========================================================= */
+
+.understanding-page
+.understanding-card--algorithms-efficiency
+.understanding-card-header
+> h3 {
+  background: rgb(15, 118, 110);
+}
+
+
+/* =========================================================
    CARD LINKS
    ========================================================= */
 
@@ -343,6 +355,17 @@ details.understanding-domain--python
 details.understanding-domain--visual-first
 .understanding-domain-bar {
   background: rgb(126, 87, 194);
+}
+
+
+/* ---------------------------------------------------------
+   Algorithms & Efficiency
+   --------------------------------------------------------- */
+
+.understanding-page
+details.understanding-domain--algorithms-efficiency
+.understanding-domain-bar {
+  background: rgb(15, 118, 110);
 }
 
 

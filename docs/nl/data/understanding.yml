@@ -39,6 +39,37 @@ visual-first:
     title: Trace Table
     source: nl/understanding/_content/visual-first/trace-tables/basics.md
 
+algorithms-efficiency:
+  counting-operations-basics:
+    id: algorithms-efficiency.counting-operations-basics
+    title: Bewerkingen tellen
+    source: nl/understanding/_content/algorithms-efficiency/counting-operations/counting-operations-basics.md
+
+  counting-operations-repeated-operations:
+    id: algorithms-efficiency.counting-operations-repeated-operations
+    title: Herhaalde bewerkingen
+    source: nl/understanding/_content/algorithms-efficiency/counting-operations/repeated-operations.md
+
+  describing-with-n-basics:
+    id: algorithms-efficiency.describing-with-n-basics
+    title: Beschrijven met n
+    source: nl/understanding/_content/algorithms-efficiency/describing-with-n/describing-with-n-basics.md
+
+  describing-with-n-operation-count-function:
+    id: algorithms-efficiency.describing-with-n-operation-count-function
+    title: Aantal bewerkingen als functie van n
+    source: nl/understanding/_content/algorithms-efficiency/describing-with-n/operation-count-function.md
+
+  repeated-processing-with-n-basics:
+    id: algorithms-efficiency.repeated-processing-with-n-basics
+    title: Herhaalde verwerking met n
+    source: nl/understanding/_content/algorithms-efficiency/repeated-processing-with-n/repeated-processing-with-n-basics.md
+
+  repeated-processing-with-n-operation-count-with-repetition:
+    id: algorithms-efficiency.repeated-processing-with-n-operation-count-with-repetition
+    title: Aantal bewerkingen bij herhaling
+    source: nl/understanding/_content/algorithms-efficiency/repeated-processing-with-n/operation-count-with-repetition.md
+
 python:
   sequential-execution:
     id: python.sequential-execution

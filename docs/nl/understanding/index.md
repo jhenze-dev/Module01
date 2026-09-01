@@ -207,3 +207,52 @@ Gebruik Understanding wanneer je iets wilt terugzoeken, een begrip opnieuw wilt 
 </div>
 
 </details>
+
+<details class="understanding-domain understanding-domain--algorithms-efficiency">
+
+<summary>
+  <span class="understanding-domain-label">Algorithms &amp; Efficiency</span>
+  <span class="understanding-domain-bar"></span>
+</summary>
+
+<div class="understanding-card-grid">
+
+  <div id="counting-operations" class="understanding-card understanding-card--algorithms-efficiency">
+
+<div class="understanding-card-header">
+  <span class="understanding-card-marker"></span>
+  <h3>Bewerkingen tellen</h3>
+</div>
+
+<p><a href="algorithms-efficiency/counting-operations/counting-operations-basics/">Basics</a></p>
+<p><a href="algorithms-efficiency/counting-operations/repeated-operations/">Herhaalde bewerkingen</a></p>
+
+  </div>
+
+  <div id="describing-with-n" class="understanding-card understanding-card--algorithms-efficiency">
+
+<div class="understanding-card-header">
+  <span class="understanding-card-marker"></span>
+  <h3>Beschrijven met n</h3>
+</div>
+
+<p><a href="algorithms-efficiency/describing-with-n/describing-with-n-basics/">Basics</a></p>
+<p><a href="algorithms-efficiency/describing-with-n/operation-count-function/">Aantal bewerkingen als functie van n</a></p>
+
+  </div>
+
+  <div id="repeated-processing-with-n" class="understanding-card understanding-card--algorithms-efficiency">
+
+<div class="understanding-card-header">
+  <span class="understanding-card-marker"></span>
+  <h3>Herhaalde verwerking met n</h3>
+</div>
+
+<p><a href="algorithms-efficiency/repeated-processing-with-n/repeated-processing-with-n-basics/">Basics</a></p>
+<p><a href="algorithms-efficiency/repeated-processing-with-n/operation-count-with-repetition/">Aantal bewerkingen bij herhaling</a></p>
+
+  </div>
+
+</div>
+
+</details>

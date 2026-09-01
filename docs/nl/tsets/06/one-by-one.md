@@ -5,11 +5,13 @@ week: 6
 
 understanding:
   - visual-first.trace-tables-basics
+  - algorithms-efficiency.counting-operations-basics
 ---
 
 # Thinking Set 6 *One by One*
 
 --8<-- "includes/badges.html:ct-patroonherkenning"
+--8<-- "includes/badges.html:ae-counting-operations"
 --8<-- "includes/badges.html:process-formulating"
 
 ## Waar werk je aan?
@@ -68,6 +70,11 @@ Noteer na afloop ook:
 ## Understanding
 
 {{ understanding_reference(understanding) }}
+
+Wil je verder onderzoeken hoe je herhaalde bewerkingen in een algoritme zichtbaar kunt maken?
+
+Lees dan [Herhaalde bewerkingen](../../understanding/algorithms-efficiency/counting-operations/repeated-operations.md).
+
 
 ## Test jullie oplossing
 

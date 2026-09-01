@@ -9,6 +9,7 @@ understanding:
   - python.iterating-lists
   - python.range
   - python.list-indexes
+  - algorithms-efficiency.describing-with-n-basics
 ---
 
 # Monk's Magazine Check
@@ -17,6 +18,7 @@ understanding:
 --8<-- "includes/badges.html:python-for"
 --8<-- "includes/badges.html:visual-trace-table"
 --8<-- "includes/badges.html:ct-patroonherkenning"
+--8<-- "includes/badges.html:ae-describing-with-n"
 --8<-- "includes/badges.html:process-formulating"
 --8<-- "includes/badges.html:process-reflecting-solution"
 
@@ -42,6 +44,10 @@ Een computersysteem moet daarvoor de volledige verzameling systematisch kunnen v
 ## Understanding
 
 {{ understanding_reference(understanding) }}
+
+Wil je verder onderzoeken hoe je het aantal bewerkingen als functie van `n` kunt beschrijven?
+
+Lees dan [Aantal bewerkingen als functie van n](../../understanding/algorithms-efficiency/describing-with-n/operation-count-function.md).
 
 ## Opdracht
 

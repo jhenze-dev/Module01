@@ -6,6 +6,7 @@ level: less
 
 understanding:
   - python.changing-list-items
+  - algorithms-efficiency.repeated-processing-with-n-basics
 ---
 
 # Monk's Perfect Order
@@ -14,6 +15,7 @@ understanding:
 --8<-- "includes/badges.html:python-for"
 --8<-- "includes/badges.html:visual-trace-table"
 --8<-- "includes/badges.html:ct-algoritmen"
+--8<-- "includes/badges.html:ae-repeated-processing-with-n"
 --8<-- "includes/badges.html:process-expressing"
 --8<-- "includes/badges.html:process-reflecting-solution"
 
@@ -41,6 +43,10 @@ Een computer moet deze werkwijze systematisch kunnen uitvoeren totdat de volledi
 ## Understanding
 
 {{ understanding_reference(understanding) }}
+
+Wil je ook onderzoeken hoe je het aantal bewerkingen algemeen kunt beschrijven wanneer een verwerking meerdere keren wordt herhaald?
+
+Lees dan [Aantal bewerkingen bij herhaling](../../understanding/algorithms-efficiency/repeated-processing-with-n/operation-count-with-repetition.md).
 
 ## Opdracht
 

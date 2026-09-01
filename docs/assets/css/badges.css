@@ -124,6 +124,13 @@
 }
 
 
+/* Algorithms & Efficiency */
+
+.module-page .badge-algorithms-efficiency .badge-value {
+  background: #0f766e;
+}
+
+
 /* =========================================================
    CODE BINNEN BADGES
    Voor bijvoorbeeld if / elif / else
