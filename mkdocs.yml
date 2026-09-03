@@ -3,7 +3,7 @@ site_description: Computational Thinking met Python
 site_author: Jack Henze
 
 # Aanpassen als het naar de ONC github repo gaat
-site_url: https://jhenze-dev.github.io/Module01/
+site_url: https://jhenze-dev.github.io/module01/
 
 theme:
   name: material
@@ -14,7 +14,7 @@ theme:
     # - navigation.instant
     - navigation.tracking
     - toc.follow
-    - toc.integrate
+    #- toc.integrate
     - search.suggest
     - search.highlight
     - content.code.copy

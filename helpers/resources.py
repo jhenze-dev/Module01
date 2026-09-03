@@ -251,7 +251,7 @@ def get_resource_target_url(
 
     wordt voor Nederlands:
 
-        https://jhenze-dev.github.io/Module01/
+        https://jhenze-dev.github.io/module01/
         nl/pdf-resources/03/w3schools/
     """
 
